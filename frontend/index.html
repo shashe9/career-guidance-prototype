@@ -1,65 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Guidance Prototype</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Career Guidance — Landing</title>
+  <link rel= "stylesheet" href="style.css">
+  <!-- Attach style.css later. This HTML contains semantic structure, IDs and classes for JS/CSS integration. -->
 </head>
 <body>
-    <header>
-        <h1>Career Guidance Platform</h1>
-        <p>Answer a few questions and get recommended streams, colleges, and career paths!</p>
-    </header>
+  <!-- App wrapper -->
+  <div id="app" class="app-shell">
 
-    <main>
-        <section id="quiz-section">
-            <form id="quizForm">
-                <fieldset>
-                    <legend>Interest & Aptitude Questions</legend>
+    <!-- Left sidebar -->
+    <aside id="sidebar" class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-top">
+        <div class="brand">
+          <img src="logo-placeholder.png" alt="Platform logo" class="brand-logo" />
+          <h1 class="brand-title">Career Guidance</h1>
+        </div>
 
-                    <label>1. Do you like science?</label><br>
-                    <input type="radio" name="science" value="yes"> Yes
-                    <input type="radio" name="science" value="no"> No
-                    <br><br>
+        <!-- Profile mini -->
+        <div id="profileMini" class="profile-mini" role="region" aria-label="User profile summary">
+          <img src="avatar-placeholder.png" alt="User avatar" class="avatar" />
+          <div class="profile-info">
+            <div id="profileName">Guest User</div>
+            <div id="profileStatus">New — Take Quiz</div>
+          </div>
+        </div>
+      </div>
 
-                    <label>2. Do you enjoy working with numbers and logic?</label><br>
-                    <input type="radio" name="maths" value="yes"> Yes
-                    <input type="radio" name="maths" value="no"> No
-                    <br><br>
+      <!-- Sidebar menu -->
+      <nav id="mainNav" class="nav" role="navigation" aria-label="Sidebar menu">
+        <ul>
+          <li class="nav-item"><a href="#" data-view="dashboard" class="nav-link active">Dashboard</a></li>
+          <li class="nav-item"><a href="#" data-view="take-quiz" class="nav-link">Take Quiz</a></li>
+          <li class="nav-item"><a href="#" data-view="colleges" class="nav-link">Nearby Colleges</a></li>
+          <li class="nav-item"><a href="#" data-view="scholarships" class="nav-link">Scholarships</a></li>
+          <li class="nav-item"><a href="#" data-view="roadmap" class="nav-link">Course → Career Roadmap</a></li>
+          <li class="nav-item"><a href="#" data-view="resources" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="#" data-view="notifications" class="nav-link">Notifications</a></li>
+          <li class="nav-item"><a href="#" data-view="settings" class="nav-link">Settings</a></li>
+        </ul>
+      </nav>
 
-                    <label>3. Do you prefer creative/artistic work?</label><br>
-                    <input type="radio" name="arts" value="yes"> Yes
-                    <input type="radio" name="arts" value="no"> No
-                    <br><br>
+      <div class="sidebar-bottom">
+        <button id="offlineToggle" class="btn small">Offline Mode</button>
+        <button id="languageToggle" class="btn small">Language: EN</button>
+      </div>
+    </aside>
 
-                    <label>4. Do you want to study locally or are you open to distant colleges?</label><br>
-                    <input type="radio" name="local" value="local"> Local
-                    <input type="radio" name="local" value="anywhere"> Anywhere
-                    <br><br>
+    <!-- Main content area (right) -->
+    <main id="mainContent" class="main-content" role="main">
 
-                    <label>5. Is affordability a major concern?</label><br>
-                    <input type="radio" name="budget" value="yes"> Yes
-                    <input type="radio" name="budget" value="no"> No
-                    <br><br>
+      <!-- Topbar: search, quick actions, notifications -->
+      <header id="topbar" class="topbar" role="banner">
+        <div class="topbar-left">
+          <button id="sidebarCollapse" class="icon-btn" aria-label="Collapse sidebar">☰</button>
+          <div class="search">
+            <input id="globalSearch" type="search" placeholder="Search colleges, courses, scholarships..." aria-label="Search" />
+            <button id="searchBtn" class="icon-btn" aria-label="Search">🔍</button>
+          </div>
+        </div>
 
-                    <button type="submit">Get Recommendations</button>
-                </fieldset>
-            </form>
+        <div class="topbar-right">
+          <div id="quickActions" class="quick-actions">
+            <button data-action="start-quiz" class="btn">Start Quiz</button>
+            <button data-action="view-timeline" class="btn outline">Timelines</button>
+          </div>
+
+          <div id="notifBell" class="notifications" role="button" aria-pressed="false" aria-label="Notifications">
+            🔔 <span class="notif-count" aria-hidden="true">3</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Two-column layout: left (main dashboard panes) right (assistant / widgets) -->
+      <section class="page-grid">
+
+        <!-- Left column: Dashboard panels -->
+        <section id="dashboard" class="dashboard-column" aria-live="polite">
+          <!-- Welcome / Summary card -->
+          <article class="card welcome-card" id="welcomeCard" role="region" aria-label="Welcome">
+            <h2 id="welcomeTitle">Welcome to Career Guidance</h2>
+            <p id="welcomeSubtitle">Personalized, hyper-local, actionable pathways from subject choice to job-ready skills.</p>
+
+            <div class="user-cta">
+              <button id="ctaStartQuiz" class="btn primary">Take Quick Quiz</button>
+              <button id="ctaBrowseColleges" class="btn">Find Nearby Colleges</button>
+            </div>
+
+            <div class="progress-summary" aria-hidden="false">
+              <div class="progress-item">
+                <div class="label">Quiz Progress</div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="width:0%"></div>
+                </div>
+              </div>
+
+              <div class="small-cards">
+                <div class="small-card">
+                  <div class="small-title">Nearby Colleges</div>
+                  <div id="nearbyCount" class="small-value">—</div>
+                </div>
+                <div class="small-card">
+                  <div class="small-title">Scholarships</div>
+                  <div id="scholarshipCount" class="small-value">—</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Personalized snapshot -->
+          <article class="card snapshot-card" id="snapshotCard" role="region" aria-label="Personal snapshot">
+            <h3>Personal Snapshot</h3>
+            <dl class="snapshot-list">
+              <dt>Name</dt><dd id="snapshotName">Not provided</dd>
+              <dt>Education Level</dt><dd id="snapshotEducation">—</dd>
+              <dt>Monthly Income</dt><dd id="snapshotIncome">—</dd>
+              <dt>Preferred Mode</dt><dd id="snapshotMode">—</dd>
+            </dl>
+            <div class="explaination">
+              <button id="whyRecommended" class="btn small">Why this recommendation?</button>
+            </div>
+          </article>
+
+          <!-- Quick recommendations list -->
+          <article class="card rec-card" id="quickRecommendations" role="region" aria-label="Quick recommendations">
+            <h3>Quick Recommendations</h3>
+            <ul id="recList" class="rec-list">
+              <!-- Example items (to be generated by JS/backend) -->
+              <li class="rec-item" data-rec-id="r1">
+                <div class="rec-left">
+                  <div class="rec-title">Suggested Stream: Science (Biotech)</div>
+                  <div class="rec-meta">Reason: strong lab interest, local college offers lab internships</div>
+                </div>
+                <div class="rec-actions">
+                  <button class="btn tiny" data-action="view-roadmap">View Roadmap</button>
+                  <button class="btn tiny outline" data-action="save">Save</button>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Timeline / upcoming deadlines -->
+          <article class="card timeline-card" id="timelineCard" role="region" aria-label="Important dates">
+            <h3>Upcoming Deadlines</h3>
+            <ul id="timelineList" class="timeline-list">
+              <li><strong>Admissions —</strong> Government College Y: Opens 10 Oct</li>
+              <li><strong>Scholarship Z —</strong> Apply by 30 Sep</li>
+              <li><strong>Bridge Course —</strong> Start 15 Nov</li>
+            </ul>
+            <div class="card-actions">
+              <button class="btn small" id="viewAllDeadlines">View all</button>
+            </div>
+          </article>
         </section>
 
-        <section id="result">
-            <h2>Results</h2>
-            <div id="streamResult"></div>
-            <div id="collegeList"></div>
-            <div id="careerList"></div>
-        </section>
+        <!-- Right column: AI Dashboard / Assistant and interactive widgets -->
+        <aside id="aiPanel" class="ai-panel" role="complementary" aria-label="AI assistant and widgets">
+
+          <!-- AI Assistant box (default view) -->
+          <section class="card assistant-card" id="assistantCard" role="region" aria-label="AI Assistant">
+            <h3>AI Guidance Assistant</h3>
+            <div id="assistantIntro" class="assistant-intro">
+              <p>Ask for subject choices, shortlists of colleges nearby, scholarship help, or step-by-step application checklists.</p>
+            </div>
+
+            <!-- Quick chat input -->
+            <div class="assistant-chat">
+              <div id="chatLog" class="chat-log" aria-live="polite">
+                <!-- AI messages and user messages appended here -->
+                <div class="chat-message ai">Hi! I can help you choose a stream. Try: "Suggest me streams for science & lab work".</div>
+              </div>
+
+              <form id="chatForm" class="chat-form" aria-label="Ask the assistant">
+                <input type="text" id="chatInput" placeholder="Ask the assistant (e.g. 'Which nearby colleges offer B.Sc?')" aria-label="Assistant input" />
+                <button type="submit" class="icon-btn" aria-label="Send">➤</button>
+              </form>
+            </div>
+
+            <div class="assistant-actions">
+              <button id="askQuickQuiz" class="btn tiny">Take Quick Skill Quiz</button>
+              <button id="explainChoice" class="btn tiny outline">Explain a Recommendation</button>
+            </div>
+          </section>
+
+          <!-- Take Quiz widget (collapsible / default hidden) -->
+          <section class="card quiz-card" id="takeQuizWidget" role="region" aria-label="Take Quiz" aria-hidden="true">
+            <h3>Personal Quiz</h3>
+
+            <!-- Progress and step indicator -->
+            <div class="quiz-progress" aria-hidden="false">
+              <div id="quizStepIndicator" class="step-indicator">Step <span id="currentStep">1</span> of <span id="totalSteps">4</span></div>
+              <div class="progress-bar slim" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                <div id="quizProgressFill" class="progress-fill" style="width:0%"></div>
+              </div>
+            </div>
+
+            <!-- Multi-step container -->
+            <div id="quizMulti" class="quiz-multi">
+              <!-- Step 1: Personal info (short) -->
+              <form id="quizStep1" class="quiz-step" data-step="1">
+                <h4>Personal Info</h4>
+                <label for="q_name">Name</label>
+                <input id="q_name" name="name" type="text" />
+                <label for="q_level">Education Level</label>
+                <select id="q_level" name="education">
+                  <option value="">Select</option>
+                  <option value="10">Class 10</option>
+                  <option value="12">Class 12</option>
+                  <option value="grad">Graduation</option>
+                  <option value="working">Working</option>
+                  <option value="other">Other</option>
+                </select>
+                <label for="q_location">Pincode / City</label>
+                <input id="q_location" name="location" type="text" />
+                <div class="quiz-step-actions">
+                  <button type="button" class="btn tiny outline" data-action="save-quiz">Save & Continue Later</button>
+                  <button type="button" class="btn tiny" data-action="next-step">Next</button>
+                </div>
+              </form>
+
+              <!-- Step 2: Tagged multi-choice skill/interest questions -->
+              <form id="quizStep2" class="quiz-step" data-step="2" style="display:none;">
+                <h4>Strengths & Interests (short)</h4>
+
+                <!-- Question card example, each option carries tags via data-tags attribute -->
+                <div class="question-card" data-qid="q1">
+                  <div class="q-text">I enjoy solving puzzles and logic problems</div>
+                  <div class="q-options">
+                    <label><input type="radio" name="q1" value="always" data-tags="analytical,maths" /> Always</label>
+                    <label><input type="radio" name="q1" value="sometimes" data-tags="analytical" /> Sometimes</label>
+                    <label><input type="radio" name="q1" value="rarely" data-tags="creative" /> Rarely</label>
+                  </div>
+                </div>
+
+                <div class="question-card" data-qid="q2">
+                  <div class="q-text">I prefer hands-on lab work to reading theory</div>
+                  <div class="q-options">
+                    <label><input type="radio" name="q2" value="always" data-tags="lab,practical" /> Always</label>
+                    <label><input type="radio" name="q2" value="sometimes" data-tags="lab" /> Sometimes</label>
+                    <label><input type="radio" name="q2" value="never" data-tags="theory" /> Never</label>
+                  </div>
+                </div>
+
+                <div class="question-card" data-qid="q3">
+                  <div class="q-text">I enjoy writing or speaking on social topics</div>
+                  <div class="q-options">
+                    <label><input type="radio" name="q3" value="always" data-tags="communication,arts" /> Always</label>
+                    <label><input type="radio" name="q3" value="sometimes" data-tags="communication" /> Sometimes</label>
+                    <label><input type="radio" name="q3" value="never" data-tags="no-communication" /> Never</label>
+                  </div>
+                </div>
+
+                <div class="quiz-step-actions">
+                  <button type="button" class="btn tiny outline" data-action="prev-step">Back</button>
+                  <button type="button" class="btn tiny" data-action="next-step">Next</button>
+                </div>
+              </form>
+
+              <!-- Step 3: Constraints & preferences (distance, budget, medium) -->
+              <form id="quizStep3" class="quiz-step" data-step="3" style="display:none;">
+                <h4>Constraints & Preferences</h4>
+                <label>Prefer colleges within:</label>
+                <select name="distance" id="q_distance">
+                  <option value="10">Within 10 km</option>
+                  <option value="25">Within 25 km</option>
+                  <option value="50">Within 50 km</option>
+                  <option value="any">Any distance</option>
+                </select>
+
+                <label>Monthly budget for studies (₹):</label>
+                <input name="budget" id="q_budget" type="number" min="0" />
+
+                <label>Preferred teaching medium:</label>
+                <select id="q_medium" name="medium">
+                  <option value="any">Any</option>
+                  <option value="hindi">Hindi</option>
+                  <option value="english">English</option>
+                </select>
+
+                <div class="quiz-step-actions">
+                  <button type="button" class="btn tiny outline" data-action="prev-step">Back</button>
+                  <button type="button" class="btn tiny" data-action="next-step">Next</button>
+                </div>
+              </form>
+
+              <!-- Step 4: Confirm & submit -->
+              <form id="quizStep4" class="quiz-step" data-step="4" style="display:none;">
+                <h4>Review & Submit</h4>
+                <div id="quizReview" class="quiz-review">
+                  <!-- JS will inject summary of answers here -->
+                  <p>No answers yet — review will appear here.</p>
+                </div>
+                <div class="quiz-step-actions">
+                  <button type="button" class="btn tiny outline" data-action="prev-step">Back</button>
+                  <button type="button" class="btn tiny primary" data-action="submit-quiz">Submit Quiz</button>
+                </div>
+              </form>
+
+            </div> <!-- end quiz-multi -->
+          </section>
+
+          <!-- Quick map / nearby colleges preview -->
+          <section class="card map-card" id="mapCard" role="region" aria-label="Map preview">
+            <h3>Nearby Government Colleges</h3>
+            <div id="mapPlaceholder" class="map-placeholder">MAP VIEW (placeholder)</div>
+            <div id="mapListPreview" class="map-list-preview">
+              <ul>
+                <li>Govt Science College A — 5 km — B.Sc, B.Sc (Chem)</li>
+                <li>Govt Arts College X — 8 km — BA, B.Com</li>
+              </ul>
+            </div>
+            <div class="card-actions">
+              <button class="btn tiny" id="exploreAllColleges">Explore all</button>
+            </div>
+          </section>
+
+          <!-- Saved / bookmarked items -->
+          <section class="card saved-card" id="savedCard" role="region" aria-label="Saved items">
+            <h3>Saved for later</h3>
+            <ul id="savedList">
+              <!-- populated by JS -->
+              <li class="saved-item">Govt Science College A — Saved</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <!-- Invisible container for modals / overlays (error, confirm) -->
+      <div id="modals" aria-hidden="true">
+        <!-- modal templates go here -->
+      </div>
+
     </main>
+  </div>
 
-    <footer>
-        <p>Prototype by Team Career Guidance | For demo purposes only</p>
-    </footer>
+  <!-- Notes for developers (invisible to users) -->
+  <!-- 
+    IDs & classes to use in JS:
+      #startQuiz, #ctaStartQuiz, #takeQuizWidget, #quizMulti, forms: #quizStep1..#quizStep4
+      data-action attributes: next-step, prev-step, submit-quiz, save-quiz
+      question cards: .question-card with data-qid and radio inputs using data-tags attribute
+      #assistantCard chat: #chatForm #chatInput #chatLog
+      #mapPlaceholder and #mapListPreview for map integration
+      #snapshot... fields for profile summary
+  -->
+      <script src="script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>
