@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Career Guidance Platform</h1>
+        <p>Answer a few questions and get recommended streams, colleges, and career paths!</p>
+    </header>
+
+    <main>
+        <section id="quiz-section">
+            <form id="quizForm">
+                <fieldset>
+                    <legend>Interest & Aptitude Questions</legend>
+
+                    <label>1. Do you like science?</label><br>
+                    <input type="radio" name="science" value="yes"> Yes
+                    <input type="radio" name="science" value="no"> No
+                    <br><br>
+
+                    <label>2. Do you enjoy working with numbers and logic?</label><br>
+                    <input type="radio" name="maths" value="yes"> Yes
+                    <input type="radio" name="maths" value="no"> No
+                    <br><br>
+
+                    <label>3. Do you prefer creative/artistic work?</label><br>
+                    <input type="radio" name="arts" value="yes"> Yes
+                    <input type="radio" name="arts" value="no"> No
+                    <br><br>
+
+                    <label>4. Do you want to study locally or are you open to distant colleges?</label><br>
+                    <input type="radio" name="local" value="local"> Local
+                    <input type="radio" name="local" value="anywhere"> Anywhere
+                    <br><br>
+
+                    <label>5. Is affordability a major concern?</label><br>
+                    <input type="radio" name="budget" value="yes"> Yes
+                    <input type="radio" name="budget" value="no"> No
+                    <br><br>
+
+                    <button type="submit">Get Recommendations</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="result">
+            <h2>Results</h2>
+            <div id="streamResult"></div>
+            <div id="collegeList"></div>
+            <div id="careerList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototype by Team Career Guidance | For demo purposes only</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
