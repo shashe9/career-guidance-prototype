@@ -1,352 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Career Guidance — Landing</title>
-  <link rel= "stylesheet" href="style.css">
-  <!-- Attach style.css later. This HTML contains semantic structure, IDs and classes for JS/CSS integration. -->
+  <title>Career Path — Login / Sign up</title>
+
+  <!-- styles only - you will create style.css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- no script tag here by request; you'll add script.js separately -->
 </head>
 <body>
-  <!-- App wrapper -->
-  <div id="app" class="app-shell">
-
-    <!-- Left sidebar -->
-    <aside id="sidebar" class="sidebar" aria-label="Main navigation">
-      <div class="sidebar-top">
-        <div class="brand">
-          <img src="logo-placeholder.png" alt="Platform logo" class="brand-logo" />
-          <h1 class="brand-title">Career Guidance</h1>
-        </div>
-
-        <!-- Profile mini -->
-        <div id="profileMini" class="profile-mini" role="region" aria-label="User profile summary">
-          <img src="avatar-placeholder.png" alt="User avatar" class="avatar" />
-          <div class="profile-info">
-            <div id="profileName">Guest User</div>
-            <div id="profileStatus">New — Take Quiz</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sidebar menu -->
-      <nav id="mainNav" class="nav" role="navigation" aria-label="Sidebar menu">
-        <ul>
-          <li class="nav-item"><a href="#" data-view="dashboard" class="nav-link active">Dashboard</a></li>
-          <li class="nav-item"><a href="#" data-view="take-quiz" class="nav-link">Take Quiz</a></li>
-          <li class="nav-item"><a href="#" data-view="colleges" class="nav-link">Nearby Colleges</a></li>
-          <li class="nav-item"><a href="#" data-view="scholarships" class="nav-link">Scholarships</a></li>
-          <li class="nav-item"><a href="#" data-view="roadmap" class="nav-link">Course → Career Roadmap</a></li>
-          <li class="nav-item"><a href="#" data-view="resources" class="nav-link">Resources</a></li>
-          <li class="nav-item"><a href="#" data-view="notifications" class="nav-link">Notifications</a></li>
-          <li class="nav-item"><a href="#" data-view="settings" class="nav-link">Settings</a></li>
-        </ul>
-      </nav>
-
-      <div class="sidebar-bottom">
-        <button id="offlineToggle" class="btn small">Offline Mode</button>
-        <button id="languageToggle" class="btn small">Language: EN</button>
-      </div>
-    </aside>
-
-    <!-- Main content area (right) -->
-    <main id="mainContent" class="main-content" role="main">
-
-      <!-- Topbar: search, quick actions, notifications -->
-      <header id="topbar" class="topbar" role="banner">
-        <div class="topbar-left">
-          <button id="sidebarCollapse" class="icon-btn" aria-label="Collapse sidebar">☰</button>
-          <div class="search">
-            <input id="globalSearch" type="search" placeholder="Search colleges, courses, scholarships..." aria-label="Search" />
-            <button id="searchBtn" class="icon-btn" aria-label="Search">🔍</button>
-          </div>
-        </div>
-
-        <div class="topbar-right">
-          <div id="quickActions" class="quick-actions">
-            <button data-action="start-quiz" class="btn">Start Quiz</button>
-            <button data-action="view-timeline" class="btn outline">Timelines</button>
-          </div>
-
-          <div id="notifBell" class="notifications" role="button" aria-pressed="false" aria-label="Notifications">
-            🔔 <span class="notif-count" aria-hidden="true">3</span>
-          </div>
-        </div>
-      </header>
-
-      <!-- Two-column layout: left (main dashboard panes) right (assistant / widgets) -->
-      <section class="page-grid">
-
-        <!-- Left column: Dashboard panels -->
-        <section id="dashboard" class="dashboard-column" aria-live="polite">
-          <!-- Welcome / Summary card -->
-          <article class="card welcome-card" id="welcomeCard" role="region" aria-label="Welcome">
-            <h2 id="welcomeTitle">Welcome to Career Guidance</h2>
-            <p id="welcomeSubtitle">Personalized, hyper-local, actionable pathways from subject choice to job-ready skills.</p>
-
-            <div class="user-cta">
-              <button id="ctaStartQuiz" class="btn primary">Take Quick Quiz</button>
-              <button id="ctaBrowseColleges" class="btn">Find Nearby Colleges</button>
-            </div>
-
-            <div class="progress-summary" aria-hidden="false">
-              <div class="progress-item">
-                <div class="label">Quiz Progress</div>
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-fill" style="width:0%"></div>
-                </div>
-              </div>
-
-              <div class="small-cards">
-                <div class="small-card">
-                  <div class="small-title">Nearby Colleges</div>
-                  <div id="nearbyCount" class="small-value">—</div>
-                </div>
-                <div class="small-card">
-                  <div class="small-title">Scholarships</div>
-                  <div id="scholarshipCount" class="small-value">—</div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Personalized snapshot -->
-          <article class="card snapshot-card" id="snapshotCard" role="region" aria-label="Personal snapshot">
-            <h3>Personal Snapshot</h3>
-            <dl class="snapshot-list">
-              <dt>Name</dt><dd id="snapshotName">Not provided</dd>
-              <dt>Education Level</dt><dd id="snapshotEducation">—</dd>
-              <dt>Monthly Income</dt><dd id="snapshotIncome">—</dd>
-              <dt>Preferred Mode</dt><dd id="snapshotMode">—</dd>
-            </dl>
-            <div class="explaination">
-              <button id="whyRecommended" class="btn small">Why this recommendation?</button>
-            </div>
-          </article>
-
-          <!-- Quick recommendations list -->
-          <article class="card rec-card" id="quickRecommendations" role="region" aria-label="Quick recommendations">
-            <h3>Quick Recommendations</h3>
-            <ul id="recList" class="rec-list">
-              <!-- Example items (to be generated by JS/backend) -->
-              <li class="rec-item" data-rec-id="r1">
-                <div class="rec-left">
-                  <div class="rec-title">Suggested Stream: Science (Biotech)</div>
-                  <div class="rec-meta">Reason: strong lab interest, local college offers lab internships</div>
-                </div>
-                <div class="rec-actions">
-                  <button class="btn tiny" data-action="view-roadmap">View Roadmap</button>
-                  <button class="btn tiny outline" data-action="save">Save</button>
-                </div>
-              </li>
-            </ul>
-          </article>
-
-          <!-- Timeline / upcoming deadlines -->
-          <article class="card timeline-card" id="timelineCard" role="region" aria-label="Important dates">
-            <h3>Upcoming Deadlines</h3>
-            <ul id="timelineList" class="timeline-list">
-              <li><strong>Admissions —</strong> Government College Y: Opens 10 Oct</li>
-              <li><strong>Scholarship Z —</strong> Apply by 30 Sep</li>
-              <li><strong>Bridge Course —</strong> Start 15 Nov</li>
-            </ul>
-            <div class="card-actions">
-              <button class="btn small" id="viewAllDeadlines">View all</button>
-            </div>
-          </article>
-        </section>
-
-        <!-- Right column: AI Dashboard / Assistant and interactive widgets -->
-        <aside id="aiPanel" class="ai-panel" role="complementary" aria-label="AI assistant and widgets">
-
-          <!-- AI Assistant box (default view) -->
-          <section class="card assistant-card" id="assistantCard" role="region" aria-label="AI Assistant">
-            <h3>AI Guidance Assistant</h3>
-            <div id="assistantIntro" class="assistant-intro">
-              <p>Ask for subject choices, shortlists of colleges nearby, scholarship help, or step-by-step application checklists.</p>
-            </div>
-
-            <!-- Quick chat input -->
-            <div class="assistant-chat">
-              <div id="chatLog" class="chat-log" aria-live="polite">
-                <!-- AI messages and user messages appended here -->
-                <div class="chat-message ai">Hi! I can help you choose a stream. Try: "Suggest me streams for science & lab work".</div>
-              </div>
-
-              <form id="chatForm" class="chat-form" aria-label="Ask the assistant">
-                <input type="text" id="chatInput" placeholder="Ask the assistant (e.g. 'Which nearby colleges offer B.Sc?')" aria-label="Assistant input" />
-                <button type="submit" class="icon-btn" aria-label="Send">➤</button>
-              </form>
-            </div>
-
-            <div class="assistant-actions">
-              <button id="askQuickQuiz" class="btn tiny">Take Quick Skill Quiz</button>
-              <button id="explainChoice" class="btn tiny outline">Explain a Recommendation</button>
-            </div>
-          </section>
-
-          <!-- Take Quiz widget (collapsible / default hidden) -->
-          <section class="card quiz-card" id="takeQuizWidget" role="region" aria-label="Take Quiz" aria-hidden="true">
-            <h3>Personal Quiz</h3>
-
-            <!-- Progress and step indicator -->
-            <div class="quiz-progress" aria-hidden="false">
-              <div id="quizStepIndicator" class="step-indicator">Step <span id="currentStep">1</span> of <span id="totalSteps">4</span></div>
-              <div class="progress-bar slim" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                <div id="quizProgressFill" class="progress-fill" style="width:0%"></div>
-              </div>
-            </div>
-
-            <!-- Multi-step container -->
-            <div id="quizMulti" class="quiz-multi">
-              <!-- Step 1: Personal info (short) -->
-              <form id="quizStep1" class="quiz-step" data-step="1">
-                <h4>Personal Info</h4>
-                <label for="q_name">Name</label>
-                <input id="q_name" name="name" type="text" />
-                <label for="q_level">Education Level</label>
-                <select id="q_level" name="education">
-                  <option value="">Select</option>
-                  <option value="10">Class 10</option>
-                  <option value="12">Class 12</option>
-                  <option value="grad">Graduation</option>
-                  <option value="working">Working</option>
-                  <option value="other">Other</option>
-                </select>
-                <label for="q_location">Pincode / City</label>
-                <input id="q_location" name="location" type="text" />
-                <div class="quiz-step-actions">
-                  <button type="button" class="btn tiny outline" data-action="save-quiz">Save & Continue Later</button>
-                  <button type="button" class="btn tiny" data-action="next-step">Next</button>
-                </div>
-              </form>
-
-              <!-- Step 2: Tagged multi-choice skill/interest questions -->
-              <form id="quizStep2" class="quiz-step" data-step="2" style="display:none;">
-                <h4>Strengths & Interests (short)</h4>
-
-                <!-- Question card example, each option carries tags via data-tags attribute -->
-                <div class="question-card" data-qid="q1">
-                  <div class="q-text">I enjoy solving puzzles and logic problems</div>
-                  <div class="q-options">
-                    <label><input type="radio" name="q1" value="always" data-tags="analytical,maths" /> Always</label>
-                    <label><input type="radio" name="q1" value="sometimes" data-tags="analytical" /> Sometimes</label>
-                    <label><input type="radio" name="q1" value="rarely" data-tags="creative" /> Rarely</label>
-                  </div>
-                </div>
-
-                <div class="question-card" data-qid="q2">
-                  <div class="q-text">I prefer hands-on lab work to reading theory</div>
-                  <div class="q-options">
-                    <label><input type="radio" name="q2" value="always" data-tags="lab,practical" /> Always</label>
-                    <label><input type="radio" name="q2" value="sometimes" data-tags="lab" /> Sometimes</label>
-                    <label><input type="radio" name="q2" value="never" data-tags="theory" /> Never</label>
-                  </div>
-                </div>
-
-                <div class="question-card" data-qid="q3">
-                  <div class="q-text">I enjoy writing or speaking on social topics</div>
-                  <div class="q-options">
-                    <label><input type="radio" name="q3" value="always" data-tags="communication,arts" /> Always</label>
-                    <label><input type="radio" name="q3" value="sometimes" data-tags="communication" /> Sometimes</label>
-                    <label><input type="radio" name="q3" value="never" data-tags="no-communication" /> Never</label>
-                  </div>
-                </div>
-
-                <div class="quiz-step-actions">
-                  <button type="button" class="btn tiny outline" data-action="prev-step">Back</button>
-                  <button type="button" class="btn tiny" data-action="next-step">Next</button>
-                </div>
-              </form>
-
-              <!-- Step 3: Constraints & preferences (distance, budget, medium) -->
-              <form id="quizStep3" class="quiz-step" data-step="3" style="display:none;">
-                <h4>Constraints & Preferences</h4>
-                <label>Prefer colleges within:</label>
-                <select name="distance" id="q_distance">
-                  <option value="10">Within 10 km</option>
-                  <option value="25">Within 25 km</option>
-                  <option value="50">Within 50 km</option>
-                  <option value="any">Any distance</option>
-                </select>
-
-                <label>Monthly budget for studies (₹):</label>
-                <input name="budget" id="q_budget" type="number" min="0" />
-
-                <label>Preferred teaching medium:</label>
-                <select id="q_medium" name="medium">
-                  <option value="any">Any</option>
-                  <option value="hindi">Hindi</option>
-                  <option value="english">English</option>
-                </select>
-
-                <div class="quiz-step-actions">
-                  <button type="button" class="btn tiny outline" data-action="prev-step">Back</button>
-                  <button type="button" class="btn tiny" data-action="next-step">Next</button>
-                </div>
-              </form>
-
-              <!-- Step 4: Confirm & submit -->
-              <form id="quizStep4" class="quiz-step" data-step="4" style="display:none;">
-                <h4>Review & Submit</h4>
-                <div id="quizReview" class="quiz-review">
-                  <!-- JS will inject summary of answers here -->
-                  <p>No answers yet — review will appear here.</p>
-                </div>
-                <div class="quiz-step-actions">
-                  <button type="button" class="btn tiny outline" data-action="prev-step">Back</button>
-                  <button type="button" class="btn tiny primary" data-action="submit-quiz">Submit Quiz</button>
-                </div>
-              </form>
-
-            </div> <!-- end quiz-multi -->
-          </section>
-
-          <!-- Quick map / nearby colleges preview -->
-          <section class="card map-card" id="mapCard" role="region" aria-label="Map preview">
-            <h3>Nearby Government Colleges</h3>
-            <div id="mapPlaceholder" class="map-placeholder">MAP VIEW (placeholder)</div>
-            <div id="mapListPreview" class="map-list-preview">
-              <ul>
-                <li>Govt Science College A — 5 km — B.Sc, B.Sc (Chem)</li>
-                <li>Govt Arts College X — 8 km — BA, B.Com</li>
-              </ul>
-            </div>
-            <div class="card-actions">
-              <button class="btn tiny" id="exploreAllColleges">Explore all</button>
-            </div>
-          </section>
-
-          <!-- Saved / bookmarked items -->
-          <section class="card saved-card" id="savedCard" role="region" aria-label="Saved items">
-            <h3>Saved for later</h3>
-            <ul id="savedList">
-              <!-- populated by JS -->
-              <li class="saved-item">Govt Science College A — Saved</li>
-            </ul>
-          </section>
-        </aside>
+  <!-- ===========================
+       MAIN LANDING / LOGIN PAGE
+       =========================== -->
+  <main class="page-root">
+    <div class="container landing-container" id="landing-container">
+      <section class="left-panel" aria-hidden="false">
+        <h1 class="brand">Career Path</h1>
+        <p class="tagline">Discover your strengths. Explore colleges, careers &amp; courses. Build your future.</p>
       </section>
 
-      <!-- Invisible container for modals / overlays (error, confirm) -->
-      <div id="modals" aria-hidden="true">
-        <!-- modal templates go here -->
-      </div>
+      <section class="right-panel" aria-labelledby="login-heading">
+        <form id="login-form" class="login-form" autocomplete="on" role="form" aria-describedby="login-note">
+          <h2 id="login-heading">Welcome Back</h2>
+          <p id="login-note" class="subtitle">Login to continue to your dashboard</p>
 
-    </main>
+          <div class="input-group">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+          </div>
+
+          <div class="input-group">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary" id="login-submit">Login</button>
+          </div>
+
+          <p class="footer-text">
+            Don’t have an account?
+            <a href="#signup" id="open-signup">Sign up</a>
+          </p>
+
+          <div id="login-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===========================
+       SIGNUP MODAL (top-level overlay)
+       - wrapper acts as the backdrop (click outside modal -> wrapper receives event)
+       - initially hidden via .hidden
+       =========================== -->
+  <div id="signup-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="signup-title" aria-hidden="true">
+    <div class="modal-content" role="document" aria-describedby="signup-instructions">
+      <button class="modal-close" aria-label="Close signup" data-action="close-signup">✕</button>
+
+      <h2 id="signup-title">Create your account</h2>
+      <p id="signup-instructions" class="small">Enter full name, email and a password. After verification you'll continue to the setup quiz.</p>
+
+      <form id="signup-form" class="auth-form" autocomplete="off" novalidate>
+        <div class="input-row">
+          <label for="signup-fullname">Full name</label>
+          <input id="signup-fullname" name="full_name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="input-row">
+          <label for="signup-email">Email</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="input-row">
+          <label for="signup-password">Password</label>
+          <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="6" required>
+        </div>
+
+        <div class="input-row">
+          <label for="signup-password2">Confirm password</label>
+          <input id="signup-password2" name="password2" type="password" autocomplete="new-password" minlength="6" required>
+        </div>
+
+        <div class="form-actions">
+          <button id="signup-submit" class="btn primary" type="submit" data-action="signup">Create account &amp; continue</button>
+          <button type="button" class="btn secondary" data-action="cancel-signup">Cancel</button>
+        </div>
+
+        <div id="signup-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
   </div>
 
-  <!-- Notes for developers (invisible to users) -->
-  <!-- 
-    IDs & classes to use in JS:
-      #startQuiz, #ctaStartQuiz, #takeQuizWidget, #quizMulti, forms: #quizStep1..#quizStep4
-      data-action attributes: next-step, prev-step, submit-quiz, save-quiz
-      question cards: .question-card with data-qid and radio inputs using data-tags attribute
-      #assistantCard chat: #chatForm #chatInput #chatLog
-      #mapPlaceholder and #mapListPreview for map integration
-      #snapshot... fields for profile summary
-  -->
-      <script src="script.js"></script>
-       <!--Comment comment  -->
+  <!-- ===========================
+       CAREER SETUP WIZARD OVERLAY (top-level)
+       - wrapper acts as the backdrop too
+       - hidden by default via .hidden
+       =========================== -->
+  <div id="career-setup-overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="career-setup-title" aria-hidden="true">
+    <div class="overlay-modal" role="document" aria-describedby="career-setup-instructions">
+      <button class="modal-close" aria-label="Close wizard" data-action="close-wizard">✕</button>
+
+      <header class="modal-header">
+        <h1 id="career-setup-title">Career Setup Wizard</h1>
+        <p id="career-setup-instructions" class="small">Tell us a bit about yourself — this will help personalize your recommendations.</p>
+      </header>
+
+      <!-- progress -->
+      <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="progress-bar" class="progress-bar" style="width:0%"></div>
+      </div>
+
+      <!-- wizard form -->
+      <form id="career-setup-form" class="wizard-form" autocomplete="off" novalidate>
+        <!-- STEP 1 -->
+        <section class="wizard-step active" data-step="1" aria-hidden="false">
+          <h2>Basic Identification</h2>
+
+          <label for="ws-full_name">Full name</label>
+          <input id="ws-full_name" name="full_name" type="text" required>
+
+          <label for="ws-location">Location (City / District / State)</label>
+          <input id="ws-location" name="location" type="text">
+
+          <label for="ws-dob">Date of birth</label>
+          <input id="ws-dob" name="date_of_birth" type="date">
+
+          <fieldset class="field-group" aria-label="Gender">
+            <legend>Gender (optional)</legend>
+            <label><input name="gender" type="radio" value="male"> Male</label>
+            <label><input name="gender" type="radio" value="female"> Female</label>
+            <label><input name="gender" type="radio" value="other"> Other</label>
+            <label><input name="gender" type="radio" value="" checked> Prefer not to say</label>
+          </fieldset>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="wizard-step" data-step="2" aria-hidden="true">
+          <h2>Academic Info</h2>
+
+          <label for="ws-class_grade">Current class / grade</label>
+          <select id="ws-class_grade" name="class_grade">
+            <option value="">Select</option>
+            <option value="9">9th</option>
+            <option value="10">10th</option>
+            <option value="11">11th</option>
+            <option value="12">12th</option>
+            <option value="ug1">1st year UG</option>
+            <option value="ug2">2nd year UG</option>
+            <option value="ug3">3rd year UG</option>
+            <option value="ug4">4th year UG</option>
+            <option value="pg">Postgraduate</option>
+          </select>
+
+          <label for="ws-previous_percentage">Previous class percentage (or GPA)</label>
+          <input id="ws-previous_percentage" name="previous_class_percentage" type="number" min="0" max="100" step="0.01" placeholder="eg. 85.5">
+
+          <label for="ws-stream">Stream</label>
+          <select id="ws-stream" name="stream">
+            <option value="">Select</option>
+            <option value="science">Science</option>
+            <option value="commerce">Commerce</option>
+            <option value="arts">Arts</option>
+            <option value="vocational">Vocational</option>
+          </select>
+
+          <label for="ws-favourite_subject">Favourite subject</label>
+          <input id="ws-favourite_subject" name="favourite_subject" type="text">
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="wizard-step" data-step="3" aria-hidden="true">
+          <h2>Personal Interests</h2>
+
+          <label for="ws-hobby">Hobby</label>
+          <input id="ws-hobby" name="hobby" type="text">
+
+          <label for="ws-skills">Skills (comma separated)</label>
+          <textarea id="ws-skills" name="skills" rows="3" placeholder="e.g., coding, communication, drawing"></textarea>
+
+          <label for="ws-career_interest">Career interest (initial)</label>
+          <input id="ws-career_interest" name="career_interest" type="text" placeholder="eg. Engineer, Designer">
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="wizard-step" data-step="4" aria-hidden="true">
+          <h2>Socio-economic Info</h2>
+
+          <label for="ws-financial_condition">Annual family income</label>
+          <select id="ws-financial_condition" name="financial_condition">
+            <option value="">Select</option>
+            <option value="<3LPA">&lt;3 LPA</option>
+            <option value="3-6LPA">3-6 LPA</option>
+            <option value="6-10LPA">6-10 LPA</option>
+            <option value=">10LPA">&gt;10 LPA</option>
+          </select>
+
+          <label for="ws-parents_occupation">Parents' occupation</label>
+          <input id="ws-parents_occupation" name="parents_occupation" type="text">
+        </section>
+
+        <!-- STEP 5 -->
+        <section class="wizard-step" data-step="5" aria-hidden="true">
+          <h2>Other Useful Info</h2>
+
+          <label for="ws-language_preference">Language preference</label>
+          <select id="ws-language_preference" name="language_preference">
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="ws-extracurricular">Extracurricular activities</label>
+          <input id="ws-extracurricular" name="extracurricular" type="text">
+
+          <label for="ws-learning_style">Learning style</label>
+          <select id="ws-learning_style" name="learning_style">
+            <option value="visual">Visual</option>
+            <option value="practical">Practical</option>
+            <option value="theoretical">Theoretical</option>
+          </select>
+        </section>
+
+        <!-- navigation inside modal -->
+        <footer class="modal-footer">
+          <div class="navigation" role="group" aria-label="Wizard navigation">
+            <button type="button" id="ws-prev" class="btn secondary" disabled data-action="prev">Previous</button>
+            <button type="button" id="ws-next" class="btn primary" data-action="next">Next</button>
+            <button type="submit" id="ws-submit" class="btn primary" style="display:none;" data-action="finish">Finish &amp; save</button>
+          </div>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ===========================
+     DASHBOARD PLACEHOLDER
+     =========================== -->
+  <div id="dashboardShell" class="hidden">
+    <h1>Welcome to your dashboard!</h1>
+    <p>This will be replaced with real content later.</p>
+  </div>
+
+
+
+  
+
+  <!-- end body -->
+   <script src="script.js"></script>
 </body>
 </html>

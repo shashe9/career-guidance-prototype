@@ -1,0 +1,2108 @@
+[
+  {
+    "id": "car001",
+    "title": "Doctor",
+    "required_courses": [
+      "med001"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Medical Ethics",
+      "Patient Care"
+    ],
+    "average_salary": "6-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Consistent demand due to growing healthcare needs worldwide",
+    "opportunity_score": 71,
+    "tags": [
+      "medicine",
+      "surgery",
+      "research"
+    ]
+  },
+  {
+    "id": "car002",
+    "title": "Surgeon",
+    "required_courses": [
+      "med002"
+    ],
+    "skills_needed": [
+      "Surgical Techniques",
+      "Critical Thinking",
+      "Emergency Care"
+    ],
+    "average_salary": "8-50 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand for specialized surgical care and trauma centers",
+    "opportunity_score": 72,
+    "tags": [
+      "surgery",
+      "trauma",
+      "specialization"
+    ]
+  },
+  {
+    "id": "car003",
+    "title": "Dentist",
+    "required_courses": [
+      "med003"
+    ],
+    "skills_needed": [
+      "Dental Anatomy",
+      "Patient Communication",
+      "Manual Dexterity"
+    ],
+    "average_salary": "4-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing awareness of oral health and cosmetic dentistry",
+    "opportunity_score": 73,
+    "tags": [
+      "dental",
+      "healthcare",
+      "surgery"
+    ]
+  },
+  {
+    "id": "car004",
+    "title": "Nurse",
+    "required_courses": [
+      "med005"
+    ],
+    "skills_needed": [
+      "Patient Care",
+      "Medical Procedures",
+      "Communication"
+    ],
+    "average_salary": "3-8 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Increasing demand in hospitals, clinics, and global health sectors",
+    "opportunity_score": 74,
+    "tags": [
+      "nursing",
+      "patient care",
+      "healthcare"
+    ]
+  },
+  {
+    "id": "car005",
+    "title": "Geneticist",
+    "required_courses": [
+      "med006"
+    ],
+    "skills_needed": [
+      "Genetic Research",
+      "Laboratory Techniques",
+      "Data Analysis"
+    ],
+    "average_salary": "5-22 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Expanding role in personalized medicine and biotech industries",
+    "opportunity_score": 75,
+    "tags": [
+      "genetics",
+      "research",
+      "biotech"
+    ]
+  },
+  {
+    "id": "car006",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "health001"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 76,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car007",
+    "title": "Pharmacist",
+    "required_courses": [
+      "med007"
+    ],
+    "skills_needed": [
+      "Pharmaceutical Knowledge",
+      "Drug Formulation",
+      "Patient Counseling"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High scope in drug development, healthcare services, and global supply chains",
+    "opportunity_score": 77,
+    "tags": [
+      "pharmacy",
+      "drugs",
+      "healthcare"
+    ]
+  },
+  {
+    "id": "car008",
+    "title": "Public Health Officer",
+    "required_courses": [
+      "med008"
+    ],
+    "skills_needed": [
+      "Epidemiology",
+      "Health Policy",
+      "Data Analysis"
+    ],
+    "average_salary": "5-18 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing focus on global health, preventive care, and policy-making",
+    "opportunity_score": 78,
+    "tags": [
+      "public health",
+      "epidemiology",
+      "policy"
+    ]
+  },
+  {
+    "id": "car009",
+    "title": "Lab Technician",
+    "required_courses": [
+      "med009"
+    ],
+    "skills_needed": [
+      "Laboratory Techniques",
+      "Sample Analysis",
+      "Safety Protocols"
+    ],
+    "average_salary": "2-6 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in diagnostic labs, hospitals, and research facilities",
+    "opportunity_score": 79,
+    "tags": [
+      "lab",
+      "medical",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car010",
+    "title": "Microbiologist",
+    "required_courses": [
+      "med010"
+    ],
+    "skills_needed": [
+      "Microbial Research",
+      "Lab Techniques",
+      "Data Interpretation"
+    ],
+    "average_salary": "4-14 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Important in vaccine development, diagnostics, and healthcare research",
+    "opportunity_score": 80,
+    "tags": [
+      "microbiology",
+      "lab",
+      "research"
+    ]
+  },
+  {
+    "id": "car011",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng001"
+    ],
+    "skills_needed": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "opportunity_score": 81,
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "car012",
+    "title": "Mechanical Engineer",
+    "required_courses": [
+      "eng003"
+    ],
+    "skills_needed": [
+      "Thermodynamics",
+      "Machine Design",
+      "Problem-Solving"
+    ],
+    "average_salary": "4-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Increasing demand in automotive, manufacturing, and robotics industries",
+    "opportunity_score": 82,
+    "tags": [
+      "mechanical",
+      "design",
+      "manufacturing"
+    ]
+  },
+  {
+    "id": "car013",
+    "title": "Civil Engineer",
+    "required_courses": [
+      "eng004"
+    ],
+    "skills_needed": [
+      "Structural Analysis",
+      "Construction Planning",
+      "Project Management"
+    ],
+    "average_salary": "3-15 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Strong growth in infrastructure, real estate, and transportation sectors",
+    "opportunity_score": 83,
+    "tags": [
+      "civil",
+      "construction",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car014",
+    "title": "Electrical Engineer",
+    "required_courses": [
+      "eng005"
+    ],
+    "skills_needed": [
+      "Circuit Design",
+      "Power Systems",
+      "Signal Processing"
+    ],
+    "average_salary": "5-22 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising energy needs, renewable energy projects, and automation systems",
+    "opportunity_score": 84,
+    "tags": [
+      "electrical",
+      "power",
+      "automation"
+    ]
+  },
+  {
+    "id": "car015",
+    "title": "Aerospace Engineer",
+    "required_courses": [
+      "eng006"
+    ],
+    "skills_needed": [
+      "Aerodynamics",
+      "Propulsion",
+      "Materials Science"
+    ],
+    "average_salary": "6-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growth in space exploration, defense, and aviation sectors",
+    "opportunity_score": 85,
+    "tags": [
+      "aerospace",
+      "aviation",
+      "defense"
+    ]
+  },
+  {
+    "id": "car016",
+    "title": "Chemical Engineer",
+    "required_courses": [
+      "eng007"
+    ],
+    "skills_needed": [
+      "Process Design",
+      "Chemical Analysis",
+      "Safety Management"
+    ],
+    "average_salary": "4-18 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High scope in pharmaceuticals, energy, and manufacturing industries",
+    "opportunity_score": 86,
+    "tags": [
+      "chemical",
+      "process",
+      "safety"
+    ]
+  },
+  {
+    "id": "car017",
+    "title": "Environmental Engineer",
+    "required_courses": [
+      "eng008"
+    ],
+    "skills_needed": [
+      "Water Treatment",
+      "Waste Management",
+      "Environmental Policy"
+    ],
+    "average_salary": "3-12 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand for sustainable development and environmental conservation",
+    "opportunity_score": 87,
+    "tags": [
+      "environment",
+      "sustainability",
+      "consulting"
+    ]
+  },
+  {
+    "id": "car018",
+    "title": "Industrial Engineer",
+    "required_courses": [
+      "eng009"
+    ],
+    "skills_needed": [
+      "Operations Research",
+      "Process Optimization",
+      "Data Analysis"
+    ],
+    "average_salary": "4-16 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in manufacturing, logistics, and process optimization industries",
+    "opportunity_score": 88,
+    "tags": [
+      "industrial",
+      "operations",
+      "efficiency"
+    ]
+  },
+  {
+    "id": "car019",
+    "title": "Robotics Engineer",
+    "required_courses": [
+      "eng010"
+    ],
+    "skills_needed": [
+      "Automation",
+      "Control Systems",
+      "Machine Learning"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing use of robotics in manufacturing, healthcare, and space exploration",
+    "opportunity_score": 89,
+    "tags": [
+      "robotics",
+      "automation",
+      "ai"
+    ]
+  },
+  {
+    "id": "car020",
+    "title": "Biotech Engineer",
+    "required_courses": [
+      "eng011"
+    ],
+    "skills_needed": [
+      "Biological Systems",
+      "Genetics",
+      "Bioinformatics"
+    ],
+    "average_salary": "5-22 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Expanding biotech and healthcare industries with innovations in medicine and agriculture",
+    "opportunity_score": 90,
+    "tags": [
+      "biotech",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "car021",
+    "title": "Architect",
+    "required_courses": [
+      "eng002"
+    ],
+    "skills_needed": [
+      "Creativity",
+      "Design",
+      "Mathematics"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 91,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car022",
+    "title": "Research Scientist",
+    "required_courses": [
+      "sci001"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 92,
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "car023",
+    "title": "Dietician",
+    "required_courses": [
+      "hea005"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 93,
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "car024",
+    "title": "Dietician",
+    "required_courses": [
+      "hea006"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 94,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car025",
+    "title": "Physicist",
+    "required_courses": [
+      "sci007"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "4-12 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Innovation in chemical industries and labs",
+    "opportunity_score": 95,
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "car026",
+    "title": "Dietician",
+    "required_courses": [
+      "hea009"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 96,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car027",
+    "title": "Chemist",
+    "required_courses": [
+      "sci010"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "opportunity_score": 97,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car028",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng012"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 98,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car029",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng013"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 99,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car030",
+    "title": "Dietician",
+    "required_courses": [
+      "hea014"
+    ],
+    "skills_needed": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 70,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car031",
+    "title": "Research Scientist",
+    "required_courses": [
+      "sci015"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "opportunity_score": 71,
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "car032",
+    "title": "Physicist",
+    "required_courses": [
+      "sci018"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 72,
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "car033",
+    "title": "Chemist",
+    "required_courses": [
+      "sci021"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 73,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car034",
+    "title": "Physicist",
+    "required_courses": [
+      "sci023"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "4-12 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 74,
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "car035",
+    "title": "Chemist",
+    "required_courses": [
+      "sci028"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Innovation in chemical industries and labs",
+    "opportunity_score": 75,
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "car036",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea032"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "3-8 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 76,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car037",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea033"
+    ],
+    "skills_needed": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing need for emergency and critical care services",
+    "opportunity_score": 77,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car038",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng034"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 78,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car039",
+    "title": "Paramedic",
+    "required_courses": [
+      "hea035"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 79,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car040",
+    "title": "Paramedic",
+    "required_courses": [
+      "hea036"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 80,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car041",
+    "title": "Architect",
+    "required_courses": [
+      "eng038"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 81,
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "car042",
+    "title": "Dietician",
+    "required_courses": [
+      "hea040"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 82,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car043",
+    "title": "Network Engineer",
+    "required_courses": [
+      "eng042"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 83,
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "car044",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea045"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-8 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 84,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car045",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea046"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 85,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car046",
+    "title": "Network Engineer",
+    "required_courses": [
+      "eng053"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "7-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 86,
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "car047",
+    "title": "Paramedic",
+    "required_courses": [
+      "hea055"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing need for emergency and critical care services",
+    "opportunity_score": 87,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car048",
+    "title": "Network Engineer",
+    "required_courses": [
+      "eng056"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "7-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 88,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car049",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng057"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "7-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "opportunity_score": 89,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car050",
+    "title": "Physicist",
+    "required_courses": [
+      "sci061"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 90,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car051",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng065"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "opportunity_score": 91,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car052",
+    "title": "Dietician",
+    "required_courses": [
+      "hea067"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 92,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car053",
+    "title": "Chemist",
+    "required_courses": [
+      "sci068"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "opportunity_score": 93,
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "car054",
+    "title": "Research Scientist",
+    "required_courses": [
+      "sci070"
+    ],
+    "skills_needed": [
+      "Physics",
+      "Mathematical Modeling",
+      "Research"
+    ],
+    "average_salary": "4-12 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Innovation in chemical industries and labs",
+    "opportunity_score": 94,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car055",
+    "title": "Architect",
+    "required_courses": [
+      "eng071"
+    ],
+    "skills_needed": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 95,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car056",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng073"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 96,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car057",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng075"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "7-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 97,
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "car058",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea076"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing need for emergency and critical care services",
+    "opportunity_score": 98,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car059",
+    "title": "Chemist",
+    "required_courses": [
+      "sci077"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 99,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car060",
+    "title": "Network Engineer",
+    "required_courses": [
+      "eng079"
+    ],
+    "skills_needed": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 70,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car061",
+    "title": "Physicist",
+    "required_courses": [
+      "sci080"
+    ],
+    "skills_needed": [
+      "Physics",
+      "Mathematical Modeling",
+      "Research"
+    ],
+    "average_salary": "5-20 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Innovation in chemical industries and labs",
+    "opportunity_score": 71,
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "car062",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea081"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 72,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car063",
+    "title": "Physicist",
+    "required_courses": [
+      "sci082"
+    ],
+    "skills_needed": [
+      "Physics",
+      "Mathematical Modeling",
+      "Research"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 73,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car064",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea083"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "3-8 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 74,
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "car065",
+    "title": "Architect",
+    "required_courses": [
+      "eng084"
+    ],
+    "skills_needed": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "opportunity_score": 75,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car066",
+    "title": "Research Scientist",
+    "required_courses": [
+      "sci086"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Innovation in chemical industries and labs",
+    "opportunity_score": 76,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car067",
+    "title": "Dietician",
+    "required_courses": [
+      "hea088"
+    ],
+    "skills_needed": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 77,
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "car068",
+    "title": "Chemist",
+    "required_courses": [
+      "sci090"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 78,
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "car069",
+    "title": "Physicist",
+    "required_courses": [
+      "sci091"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "opportunity_score": 79,
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "car070",
+    "title": "Paramedic",
+    "required_courses": [
+      "hea094"
+    ],
+    "skills_needed": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 80,
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "car071",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng097"
+    ],
+    "skills_needed": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "opportunity_score": 81,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "car072",
+    "title": "Physiotherapist",
+    "required_courses": [
+      "hea098"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "3-10 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 82,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car073",
+    "title": "Dietician",
+    "required_courses": [
+      "hea100"
+    ],
+    "skills_needed": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "opportunity_score": 83,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car074",
+    "title": "Chemist",
+    "required_courses": [
+      "sci101"
+    ],
+    "skills_needed": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "average_salary": "4-12 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "opportunity_score": 84,
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "car075",
+    "title": "Chemist",
+    "required_courses": [
+      "sci102"
+    ],
+    "skills_needed": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "average_salary": "6-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Innovation in chemical industries and labs",
+    "opportunity_score": 85,
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "car076",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng103"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "7-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "opportunity_score": 86,
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "car077",
+    "title": "Paramedic",
+    "required_courses": [
+      "hea104"
+    ],
+    "skills_needed": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "average_salary": "3-8 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "opportunity_score": 87,
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "car078",
+    "title": "Paramedic",
+    "required_courses": [
+      "hea105"
+    ],
+    "skills_needed": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "average_salary": "4-15 LPA",
+    "growth_rate": "Medium",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing need for emergency and critical care services",
+    "opportunity_score": 88,
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "car079",
+    "title": "Architect",
+    "required_courses": [
+      "eng108"
+    ],
+    "skills_needed": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "average_salary": "5-25 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 89,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car080",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng109"
+    ],
+    "skills_needed": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "average_salary": "8-40 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 90,
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "car081",
+    "title": "Software Engineer",
+    "required_courses": [
+      "eng110"
+    ],
+    "skills_needed": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "average_salary": "7-30 LPA",
+    "growth_rate": "High",
+    "industries": [
+      "Healthcare",
+      "Technology",
+      "Research"
+    ],
+    "future_scope": "Growing urban development and infrastructure projects",
+    "opportunity_score": 91,
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  }
+]

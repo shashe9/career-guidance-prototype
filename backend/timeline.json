@@ -1,0 +1,1049 @@
+{
+    "title": "The Ultimate Guide to the Science-Biology (Without Maths) Stream in India",
+    "introduction": "Choosing the Science-Biology stream (Physics, Chemistry, Biology - PCB) after Class 10 opens doors to a world of healthcare, research, and life sciences. This path is ideal for students passionate about medicine, organisms, and natural processes. With opportunities ranging from clinical roles to cutting-edge research, biology offers diverse and impactful careers.",
+    "what_is_pcb": {
+        "description": "The PCB stream focuses on subjects related to living organisms, healthcare, and natural sciences.",
+        "core_subjects": [
+            "Physics",
+            "Chemistry",
+            "Biology (Botany and Zoology)"
+        ],
+        "additional_subjects": [
+            "Psychology",
+            "Computer Science",
+            "Physical Education"
+        ],
+        "note": "Mathematics is optional but sometimes recommended for certain fields like biotechnology or bioinformatics."
+    },
+    "major_career_paths": {
+        "description": "PCB graduates can pursue traditional medical roles like becoming a doctor or dentist, as well as emerging fields in biotechnology, research, and allied health sciences.",
+        "careers": [
+            {
+                "name": "Medicine (MBBS)",
+                "role": "Diagnosing and treating illnesses, patient care, surgery.",
+                "entrance_exam": "NEET-UG",
+                "top_colleges": [
+                    "AIIMS Delhi",
+                    "Christian Medical College Vellore",
+                    "Maulana Azad Medical College"
+                ],
+                "duration": "5.5 years including internship",
+                "salary": {
+                    "freshers": "₹8-15 LPA",
+                    "experienced": "₹15-25+ LPA"
+                },
+                "working_conditions": "Long and irregular hours, high-pressure environments in hospitals or clinics. Requires continuous learning and resilience. On-call duties and emergencies are common."
+            },
+            {
+                "name": "Dentistry (BDS)",
+                "role": "Oral healthcare, dental surgery, orthodontics.",
+                "entrance_exam": "NEET-UG",
+                "top_colleges": [
+                    "Maulana Azad Institute of Dental Sciences",
+                    "Manipal College of Dental Sciences"
+                ],
+                "duration": "5 years",
+                "salary": {
+                    "freshers": "₹6-10 LPA",
+                    "experienced": "₹10-15+ LPA"
+                },
+                "working_conditions": "Typically clinic-based with regular hours, though some emergencies may occur. Patient interaction is high, and environment is usually sterile and organized."
+            },
+            {
+                "name": "Ayurvedic Medicine (BAMS)",
+                "role": "Practicing traditional Ayurvedic medicine, wellness consulting.",
+                "entrance_exam": "NEET-UG",
+                "top_colleges": [],
+                "duration": "5.5 years",
+                "salary": {
+                    "freshers": "₹4-7 LPA",
+                    "experienced": "₹7-12 LPA"
+                },
+                "working_conditions": "Holistic and wellness-centered environments. May involve private practice, hospitals, or wellness centers. Hours are generally regular unless running an independent clinic."
+            },
+            {
+                "name": "Homeopathy (BHMS)",
+                "role": "Homeopathic treatment and patient care.",
+                "entrance_exam": "NEET-UG",
+                "top_colleges": [],
+                "duration": "5.5 years",
+                "salary": {
+                    "freshers": "₹3-6 LPA",
+                    "experienced": "₹6-10 LPA"
+                },
+                "working_conditions": "Similar to BAMS, with a focus on holistic care. Often involves private practice with flexible hours."
+            },
+            {
+                "name": "Pharmacy (B.Pharm)",
+                "role": "Dispensing medications, pharmaceutical research, drug development.",
+                "eligibility": "12th PCB",
+                "duration": "4 years",
+                "salary": {
+                    "freshers": "₹3-5 LPA",
+                    "experienced": "₹5-10 LPA"
+                },
+                "working_conditions": "Roles in retail pharmacies, hospitals, or pharmaceutical companies. Environments are structured, with shifts possible in hospital settings. Research roles involve lab work."
+            },
+            {
+                "name": "Biotechnology (B.Sc./B.Tech)",
+                "role": "Research and development in healthcare, agriculture, or industry.",
+                "entrance_exam": [
+                    "CUET",
+                    "JNU CEEB",
+                    "state-level exams"
+                ],
+                "top_colleges": [
+                    "Indian Institute of Science (IISc)",
+                    "VIT University",
+                    "Jawaharlal Nehru University (JNU)"
+                ],
+                "duration": "3-4 years",
+                "salary": {
+                    "freshers": "₹4-6 LPA",
+                    "experienced": "₹6-12 LPA"
+                },
+                "working_conditions": "Lab-based roles with regular hours, though research projects may require flexibility. Collaborative environments in academia or industry."
+            },
+            {
+                "name": "Microbiology (B.Sc.)",
+                "role": "Studying microorganisms, research in healthcare, food, or environment.",
+                "eligibility": "12th PCB",
+                "duration": "3 years",
+                "salary": {
+                    "freshers": "₹3-5 LPA",
+                    "experienced": "₹5-9 LPA"
+                },
+                "working_conditions": "Primarily laboratory-based with standard hours. May involve working in hospitals, research institutes, or industries like pharmaceuticals."
+            },
+            {
+                "name": "Nursing (B.Sc. Nursing)",
+                "role": "Patient care, ICU management, healthcare support.",
+                "eligibility": "12th PCB + entrance exams for some colleges",
+                "duration": "4 years",
+                "salary": {
+                    "freshers": "₹3-5 LPA",
+                    "experienced": "₹5-8 LPA"
+                },
+                "working_conditions": "Demanding and emotionally taxing, with long shifts including nights and weekends. High interaction with patients and healthcare teams. Globally in demand."
+            },
+            {
+                "name": "Physiotherapy (BPT)",
+                "role": "Rehabilitation, mobility improvement, pain management.",
+                "eligibility": "12th PCB",
+                "duration": "4.5 years",
+                "salary": {
+                    "freshers": "₹4-6 LPA",
+                    "experienced": "₹6-9 LPA"
+                },
+                "working_conditions": "Clinical or hospital settings with regular hours. Physical demanding job requiring patience and interpersonal skills."
+            },
+            {
+                "name": "Forensic Science (B.Sc.)",
+                "role": "Crime scene analysis, evidence examination, forensic reporting.",
+                "eligibility": "12th PCB",
+                "duration": "3 years",
+                "salary": {
+                    "freshers": "₹5-7 LPA",
+                    "experienced": "₹7-10 LPA"
+                },
+                "working_conditions": "Lab and field work, often for law enforcement. Requires attention to detail and tolerance for unpleasant scenes. Hours may be irregular during investigations."
+            },
+            {
+                "name": "Agriculture (B.Sc. Agriculture)",
+                "role": "Farming management, agricultural research, soil science.",
+                "eligibility": "12th PCB/PCM",
+                "duration": "4 years",
+                "salary": {
+                    "freshers": "₹4-6 LPA",
+                    "experienced": "₹6-10 LPA"
+                },
+                "working_conditions": "Mix of field work and office/lab environments. Hours can be long during planting/harvest seasons. Opportunities in government and private sectors."
+            },
+            {
+                "name": "Veterinary Science (BVSc)",
+                "role": "Animal healthcare, surgery, disease control.",
+                "eligibility": "12th PCB + entrance exam",
+                "duration": "5 years",
+                "salary": {
+                    "freshers": "₹4-6 LPA",
+                    "experienced": "₹6-10 LPA"
+                },
+                "working_conditions": "Clinical settings, farms, or wildlife reserves. Physical demanding with irregular hours during emergencies. High interaction with animals and owners."
+            }
+        ]
+    },
+    "entrance_exams": {
+        "description": "After Class 12, PCB students must appear for various entrance exams to secure admission to undergraduate courses.",
+        "exams": [
+            {
+                "name": "NEET-UG",
+                "conducting_body": "National Testing Agency (NTA)",
+                "purpose": "Admission to MBBS, BDS, BAMS, BHMS, and other medical courses"
+            },
+            {
+                "name": "CUET",
+                "conducting_body": "NTA",
+                "purpose": "Admission to B.Sc. courses in central universities"
+            },
+            {
+                "name": "AIIMS Nursing",
+                "conducting_body": "AIIMS",
+                "purpose": "For B.Sc. Nursing at AIIMS"
+            },
+            {
+                "name": "JNU CEEB",
+                "conducting_body": "Jawaharlal Nehru University",
+                "purpose": "For biotechnology programs"
+            },
+            {
+                "name": "ICAR AIEEA",
+                "conducting_body": "Indian Council of Agricultural Research",
+                "purpose": "For agricultural courses"
+            }
+        ]
+    },
+    "top_colleges": [
+        "All India Institute of Medical Sciences (AIIMS), Delhi",
+        "Christian Medical College (CMC), Vellore",
+        "Armed Forces Medical College (AFMC), Pune",
+        "Banaras Hindu University (BHU), Varanasi",
+        "Indian Institute of Science (IISc), Bangalore",
+        "Jawaharlal Nehru University (JNU), Delhi",
+        "Maulana Azad Medical College, Delhi",
+        "Lovely Professional University (LPU), Punjab",
+        "University of Delhi",
+        "Amity University, Noida"
+    ],
+    "salary_expectations": {
+        "description": "Salaries in biology fields vary based on role, experience, and location.",
+        "salary_table": [
+            {
+                "job_role": "MBBS Doctor",
+                "entry_level": "8-15 LPA",
+                "mid_career": "15-25+"
+            },
+            {
+                "job_role": "Dentist (BDS)",
+                "entry_level": "6-10 LPA",
+                "mid_career": "10-15+"
+            },
+            {
+                "job_role": "Ayurvedic Doctor (BAMS)",
+                "entry_level": "4-7 LPA",
+                "mid_career": "7-12 LPA"
+            },
+            {
+                "job_role": "Biotechnologist",
+                "entry_level": "4-6 LPA",
+                "mid_career": "6-12 LPA"
+            },
+            {
+                "job_role": "Pharmacist",
+                "entry_level": "3-5 LPA",
+                "mid_career": "5-10 LPA"
+            },
+            {
+                "job_role": "Microbiologist",
+                "entry_level": "3-5 LPA",
+                "mid_career": "5-9 LPA"
+            },
+            {
+                "job_role": "Nurse",
+                "entry_level": "3-5 LPA",
+                "mid_career": "5-8 LPA"
+            },
+            {
+                "job_role": "Forensic Scientist",
+                "entry_level": "5-7 LPA",
+                "mid_career": "7-10 LPA"
+            }
+        ],
+        "note": "Metropolitan cities and private hospitals offer higher salaries."
+    },
+    "how_to_choose": {
+        "steps": [
+            "Assess your interests: If you love patient care, consider MBBS or BDS. If you prefer research, opt for biotechnology or microbiology.",
+            "Check eligibility: Ensure you meet the subject requirements for your chosen course (e.g., PCB for most medical fields).",
+            "Plan for exams: Start preparing early for entrance exams like NEET.",
+            "Consider future trends: Fields like biotechnology, genomics, and environmental science are growing rapidly."
+        ]
+    },
+    "conclusion": {
+        "description": "The PCB stream offers diverse opportunities in healthcare, research, and allied sciences. Whether you aim to become a doctor, pursue research in biotechnology, or work in emerging fields like forensic science or agriculture, biology provides a strong foundation for a rewarding career.",
+        "note": "Each path comes with its own working environment, from high-pressure hospital settings to flexible research labs, allowing you to choose based on your interests and lifestyle."
+    },
+    "science_pcm": {
+        "title": "The Ultimate Guide to the Science-Mathematics (PCM) Stream in India",
+        "introduction": "Choosing the Science-Mathematics stream (Physics, Chemistry, Mathematics - PCM) after Class 10 is ideal for students who enjoy problem-solving, design, and technology. PCM opens diverse pathways across engineering, architecture, data and computing, aviation, defence, and pure sciences.",
+        "what_is_pcm": {
+            "description": "The PCM stream builds strong quantitative and analytical foundations used in engineering, technology, research, and quantitative finance.",
+            "core_subjects": [
+                "Physics",
+                "Chemistry",
+                "Mathematics"
+            ],
+            "additional_subjects": [
+                "Computer Science / Informatics Practices",
+                "Engineering Graphics",
+                "Economics",
+                "Physical Education"
+            ],
+            "note": "Biology can be added as an extra subject in some boards to keep bio-tech and medical-adjacent options open."
+        },
+        "major_career_paths": {
+            "description": "PCM graduates can pursue professional degrees in engineering/architecture, quantitative roles in analytics/finance, or research in physical sciences.",
+            "careers": [
+                {
+                    "name": "Engineering (B.E./B.Tech)",
+                    "role": "Designing, building, testing products and systems—software, electronics, mechanical devices, civil infrastructure, chemical plants, etc.",
+                    "entrance_exam": [
+                        "JEE Main",
+                        "JEE Advanced",
+                        "State CETs (MHT-CET, KCET, WBJEE)",
+                        "BITSAT",
+                        "VITEEE"
+                    ],
+                    "top_colleges": [
+                        "IITs",
+                        "NITs",
+                        "IIITs",
+                        "BITS Pilani",
+                        "VIT",
+                        "State Govt. Engineering Colleges"
+                    ],
+                    "duration": "4 years",
+                    "salary": {
+                        "freshers": "₹6-18 LPA (varies widely by branch and institute)",
+                        "experienced": "₹12-40+ LPA"
+                    },
+                    "working_conditions": "Mix of lab, field, and office work. Software tends to be office/remote; core engineering may involve plants, project sites, or R&D labs; deadlines can be intense around releases or commissioning."
+                },
+                {
+                    "name": "Architecture (B.Arch)",
+                    "role": "Designing buildings and spaces, blending aesthetics with function, climate, and safety; coordination with engineers and clients.",
+                    "entrance_exam": [
+                        "NATA",
+                        "JEE (Paper 2)"
+                    ],
+                    "top_colleges": [
+                        "SPA Delhi",
+                        "CEPT University",
+                        "IIT Roorkee",
+                        "IIT Kharagpur",
+                        "Sir J. J. College of Architecture",
+                        "NITs (Architecture)"
+                    ],
+                    "duration": "5 years",
+                    "salary": {
+                        "freshers": "₹3-7 LPA",
+                        "experienced": "₹8-20+ LPA"
+                    },
+                    "working_conditions": "Studio and site visits; iterative design reviews; client-facing work; deadlines before submissions/tenders can be demanding."
+                },
+                {
+                    "name": "Computer Science / Data Science (B.Tech/B.Sc.)",
+                    "role": "Software development, data engineering, machine learning, product engineering, and analytics.",
+                    "entrance_exam": [
+                        "JEE Main/Advanced",
+                        "BITSAT",
+                        "State CETs",
+                        "CUET (for B.Sc.)"
+                    ],
+                    "top_colleges": [
+                        "IITs",
+                        "IIITs",
+                        "NITs",
+                        "IISc (B.Sc. Research)",
+                        "BITS Pilani",
+                        "Top Central/State Universities"
+                    ],
+                    "duration": "3-4 years",
+                    "salary": {
+                        "freshers": "₹6-20 LPA",
+                        "experienced": "₹15-45+ LPA"
+                    },
+                    "working_conditions": "Primarily office/remote; collaborative sprints; rapid upskilling; product deadlines; on-call rotations in some roles."
+                },
+                {
+                    "name": "Pure Sciences (B.Sc./B.S.)",
+                    "role": "Research and development in physics, chemistry, mathematics, astronomy, materials; academia or industry R&D.",
+                    "entrance_exam": [
+                        "CUET",
+                        "IISER IAT",
+                        "ISI Admission Test (for Statistics/Math)",
+                        "IISc (separate process)"
+                    ],
+                    "top_colleges": [
+                        "IISc Bengaluru",
+                        "IISERs",
+                        "ISI Kolkata/Delhi",
+                        "Top DU Colleges",
+                        "IIT B.S. programs"
+                    ],
+                    "duration": "3-4 years (+2 years for M.Sc./M.S. desirable for research roles)",
+                    "salary": {
+                        "freshers": "₹4-8 LPA (industry roles)",
+                        "experienced": "₹8-18+ LPA (industry); academia varies by qualification"
+                    },
+                    "working_conditions": "Lab and computational work; research timelines; conferences; possible PhD track for advanced research."
+                },
+                {
+                    "name": "Aviation (Commercial Pilot)",
+                    "role": "Operating commercial aircraft, flight planning, safety checks, and navigation.",
+                    "entrance_exam": [
+                        "DGCA exams (CPL), Class 1 Medical",
+                        "Airline-specific selections"
+                    ],
+                    "top_colleges": [
+                        "Indira Gandhi Rashtriya Uran Akademi (IGRUA)",
+                        "Rajiv Gandhi Academy for Aviation Technology",
+                        "Recognised Flying Clubs/Schools"
+                    ],
+                    "duration": "18–36 months (training and hours)",
+                    "salary": {
+                        "freshers": "₹12-24 LPA (after line training)",
+                        "experienced": "₹30-70+ LPA"
+                    },
+                    "working_conditions": "Irregular shifts, travel across time zones, high responsibility, strong health/medical standards."
+                },
+                {
+                    "name": "Defence Services (NDA/Technical Entry)",
+                    "role": "Officer roles in Army, Navy, Air Force; technical, aviation, and leadership tracks.",
+                    "entrance_exam": [
+                        "NDA/NA (UPSC)",
+                        "TES (Indian Army)",
+                        "AFCAT (after graduation)"
+                    ],
+                    "top_colleges": [
+                        "National Defence Academy",
+                        "Indian Military Academy",
+                        "Air Force Academy",
+                        "Naval Academy"
+                    ],
+                    "duration": "3-4 years (training + degree depending on entry)",
+                    "salary": {
+                        "freshers": "₹9-15 LPA (CTC equivalent incl. allowances)",
+                        "experienced": "₹15-25+ LPA"
+                    },
+                    "working_conditions": "Highly disciplined; postings across terrains; physical fitness; command responsibilities."
+                },
+                {
+                    "name": "Actuarial Science / Quant Finance",
+                    "role": "Risk modelling for insurance, pensions, and financial products; stochastic modelling, pricing, reserving.",
+                    "entrance_exam": [
+                        "ACET (IFoA India)",
+                        "University-specific tests"
+                    ],
+                    "top_colleges": [
+                        "ISI Kolkata/Delhi (Statistics)",
+                        "Amity (Actuarial), University of Mumbai (Actuarial), International programs via IFoA/SOA pathways"
+                    ],
+                    "duration": "3-year degree + professional exams (multi-year)",
+                    "salary": {
+                        "freshers": "₹6-12 LPA",
+                        "experienced": "₹15-35+ LPA (post qualification)"
+                    },
+                    "working_conditions": "Office roles; modelling and reporting cycles; exam preparation alongside work."
+                },
+                {
+                    "name": "Merchant Navy (B.Tech Marine/ DNS)",
+                    "role": "Navigation/engineering roles aboard ships; logistics and maritime operations.",
+                    "entrance_exam": [
+                        "IMU CET",
+                        "Company-sponsored tests + medical (DG Shipping)"
+                    ],
+                    "top_colleges": [
+                        "TS Chanakya/ IMU campuses",
+                        "MERI Kolkata",
+                        "Tolani Maritime Institute"
+                    ],
+                    "duration": "3-4 years + sea time",
+                    "salary": {
+                        "freshers": "₹6-12 LPA (stipend at sea)",
+                        "experienced": "₹15-40+ LPA (rank dependent)"
+                    },
+                    "working_conditions": "Months at sea; rotating shifts; international exposure; strict medical/vision standards."
+                }
+            ]
+        },
+        "entrance_exams": {
+            "description": "Key entrance routes after Class 12 PCM for professional and science degrees.",
+            "exams": [
+                {
+                    "name": "JEE Main/Advanced",
+                    "conducting_body": "NTA / IITs",
+                    "purpose": "Admission to NITs/IIITs/IITs for B.E./B.Tech"
+                },
+                {
+                    "name": "BITSAT",
+                    "conducting_body": "BITS Pilani",
+                    "purpose": "Admission to BITS Pilani/Goa/Hyderabad"
+                },
+                {
+                    "name": "State CETs",
+                    "conducting_body": "State exam bodies",
+                    "purpose": "State engineering admissions (e.g., MHT-CET, KCET, WBJEE)"
+                },
+                {
+                    "name": "IISER IAT",
+                    "conducting_body": "IISERs",
+                    "purpose": "Admission to BS-MS dual degree at IISERs"
+                },
+                {
+                    "name": "NATA / JEE Paper 2",
+                    "conducting_body": "CoA / NTA",
+                    "purpose": "Admission to B.Arch"
+                },
+                {
+                    "name": "IMU CET",
+                    "conducting_body": "Indian Maritime University",
+                    "purpose": "Admission to maritime programmes"
+                },
+                {
+                    "name": "ACET",
+                    "conducting_body": "IFoA India",
+                    "purpose": "Entry test for Actuarial profession"
+                }
+            ]
+        },
+        "top_colleges": [
+            "IITs, NITs, IIITs",
+            "BITS Pilani (Pilani/Goa/Hyderabad)",
+            "IISc Bengaluru / IISERs",
+            "Top State Govt. Engineering Colleges",
+            "SPA Delhi / CEPT (Architecture)",
+            "ISI Kolkata/Delhi (Statistics)"
+        ],
+        "salary_expectations": {
+            "description": "Salaries vary by branch, college, role, and city. Tech roles often pay more initially; core engineering grows strongly with experience.",
+            "salary_table": [
+                {
+                    "job_role": "Software Engineer / Data Engineer",
+                    "entry_level": "₹6-20 LPA",
+                    "mid_career": "₹15-45+ LPA"
+                },
+                {
+                    "job_role": "Core Engineer (Mech/Civil/EE/EC)",
+                    "entry_level": "₹4-12 LPA",
+                    "mid_career": "₹10-30+ LPA"
+                },
+                {
+                    "job_role": "Architect",
+                    "entry_level": "₹3-7 LPA",
+                    "mid_career": "₹8-20+ LPA"
+                },
+                {
+                    "job_role": "Quant/Actuarial Analyst",
+                    "entry_level": "₹6-12 LPA",
+                    "mid_career": "₹15-35+ LPA"
+                },
+                {
+                    "job_role": "Research Associate (Sciences)",
+                    "entry_level": "₹4-8 LPA",
+                    "mid_career": "₹8-18+ LPA"
+                }
+            ],
+            "note": "Placements cluster around major tech/core hubs; internships significantly influence offers."
+        },
+        "how_to_choose": {
+            "steps": [
+                "Map interests to work styles—hands-on (core), creative-technical (architecture), or computational (CS/data).",
+                "Check eligibility/medical standards for aviation, defence, and merchant navy.",
+                "Use mock tests for JEE/CETs to gauge aptitude and plan coaching self-study balance.",
+                "Explore labs, hackathons, and projects early to build a portfolio."
+            ]
+        },
+        "conclusion": {
+            "description": "PCM keeps the door open to both tech and scientific research careers. With disciplined preparation for entrances and a portfolio of projects, you can chart pathways from engineering to pure research to high-responsibility roles like aviation and defence.",
+            "note": "Choose based on the day-to-day you enjoy—coding, designing spaces, tinkering with hardware, or flying."
+        }
+    },
+    "commerce": {
+        "title": "The Ultimate Guide to the Commerce Stream in India",
+        "introduction": "Commerce after Class 10 is ideal for students interested in business, finance, economics, accounting, marketing, and entrepreneurship. It leads to professional qualifications (CA/CS/CMA), management degrees, and fast-growing domains like fintech and analytics.",
+        "what_is_commerce": {
+            "description": "Commerce builds foundations in business, finance, and quantitative reasoning used in corporate and entrepreneurial careers.",
+            "core_subjects": [
+                "Accountancy",
+                "Business Studies",
+                "Economics",
+                "Mathematics/Applied Maths (recommended)"
+            ],
+            "additional_subjects": [
+                "Informatics Practices",
+                "Entrepreneurship",
+                "Physical Education",
+                "Statistics"
+            ],
+            "note": "Mathematics strengthens eligibility for top colleges and careers like finance, analytics, and economics."
+        },
+        "major_career_paths": {
+            "description": "Commerce students can pursue professional certifications, management tracks, economics, analytics, and law/business specialisations.",
+            "careers": [
+                {
+                    "name": "Chartered Accountancy (CA)",
+                    "role": "Financial reporting, audit, taxation, advisory; independent practice or corporate roles.",
+                    "entrance_exam": [
+                        "ICAI CA Foundation → Intermediate → Final"
+                    ],
+                    "top_colleges": [
+                        "Articleship with reputed CA firms; undergraduate college choice is flexible"
+                    ],
+                    "duration": "3–5 years (depends on exam progression + articleship)",
+                    "salary": {
+                        "freshers": "₹6-12 LPA (post-qualification)",
+                        "experienced": "₹15-40+ LPA"
+                    },
+                    "working_conditions": "Busy periods during audits/filings; client-facing; compliance-heavy; strong ethics and accuracy required."
+                },
+                {
+                    "name": "Company Secretary (CS)",
+                    "role": "Corporate governance, compliance with SEBI/RBI/MCA norms, board advisory.",
+                    "entrance_exam": [
+                        "ICSI CSEET → Executive → Professional"
+                    ],
+                    "top_colleges": [
+                        "Qualification-centric; parallel UG like B.Com/BBA helpful"
+                    ],
+                    "duration": "3–4 years (varies with attempts)",
+                    "salary": {
+                        "freshers": "₹5-9 LPA",
+                        "experienced": "₹12-25+ LPA"
+                    },
+                    "working_conditions": "Office roles; board meetings; filings; coordination with legal/finance teams."
+                },
+                {
+                    "name": "Cost & Management Accountancy (CMA)",
+                    "role": "Costing, management accounting, performance analysis, pricing strategy.",
+                    "entrance_exam": [
+                        "ICMAI CMA Foundation → Inter → Final"
+                    ],
+                    "top_colleges": [
+                        "Qualification-centric; B.Com with analytics helpful"
+                    ],
+                    "duration": "3–4 years",
+                    "salary": {
+                        "freshers": "₹5-9 LPA",
+                        "experienced": "₹12-22+ LPA"
+                    },
+                    "working_conditions": "Office roles; reporting cycles; manufacturing/services analytics; cross-functional work."
+                },
+                {
+                    "name": "B.Com / BMS / BBA",
+                    "role": "Business, finance, marketing, HR, operations; stepping stone to MBA or specialisations.",
+                    "entrance_exam": [
+                        "CUET",
+                        "NPAT (for NMIMS BBA/B.Com)",
+                        "Christ/SET/IPMAT (various universities)"
+                    ],
+                    "top_colleges": [
+                        "SRCC/SSCBS/DU Colleges",
+                        "NMIMS",
+                        "Christ University",
+                        "Symbiosis (SCMS/SSBF)",
+                        "St. Xavier’s (various)"
+                    ],
+                    "duration": "3 years (B.Com/BMS/BBA)",
+                    "salary": {
+                        "freshers": "₹3-8 LPA",
+                        "experienced": "₹8-18+ LPA (post MBA/experience)"
+                    },
+                    "working_conditions": "Office roles; team projects; client interaction in sales/marketing; periodic travel in consulting/sales."
+                },
+                {
+                    "name": "Economics (B.A. Hons)",
+                    "role": "Economic analysis, policy, research, data analytics in public and private sectors.",
+                    "entrance_exam": [
+                        "CUET",
+                        "ISI (for quant tracks)",
+                        "Ashoka/Krea/Private assessments"
+                    ],
+                    "top_colleges": [
+                        "SRCC",
+                        "St. Stephen’s",
+                        "IIT Kharagpur (Eco)",
+                        "Ashoka University",
+                        "ISI (for quant/stat)"
+                    ],
+                    "duration": "3 years (+2 years for M.A. desirable for policy/research)",
+                    "salary": {
+                        "freshers": "₹4-10 LPA",
+                        "experienced": "₹10-25+ LPA"
+                    },
+                    "working_conditions": "Research/analytical roles; policy engagements; consulting; data-heavy environments."
+                },
+                {
+                    "name": "Banking, Finance & FinTech",
+                    "role": "Retail/commercial banking, investment analysis, risk, product management in fintech.",
+                    "entrance_exam": [
+                        "CUET/University-specific",
+                        "Bank PO after graduation"
+                    ],
+                    "top_colleges": [
+                        "DU Colleges",
+                        "NMIMS",
+                        "Christ",
+                        "Private universities with finance majors"
+                    ],
+                    "duration": "3-4 years",
+                    "salary": {
+                        "freshers": "₹4-10 LPA",
+                        "experienced": "₹10-25+ LPA"
+                    },
+                    "working_conditions": "Office + client-facing; compliance; product launches; fast iteration in fintech."
+                },
+                {
+                    "name": "Law (B.B.A./B.Com LL.B)",
+                    "role": "Corporate law, taxation, IPR, compliance; litigation or in-house counsel.",
+                    "entrance_exam": [
+                        "CLAT",
+                        "AILET",
+                        "LSAT—India"
+                    ],
+                    "top_colleges": [
+                        "NLUs",
+                        "NALSAR",
+                        "NLSIU",
+                        "JGLS",
+                        "GNLU"
+                    ],
+                    "duration": "5 years (integrated)",
+                    "salary": {
+                        "freshers": "₹6-18 LPA (big law higher)",
+                        "experienced": "₹12-35+ LPA"
+                    },
+                    "working_conditions": "High reading/writing; client negotiations; court appearances for litigation; long hours around filings."
+                }
+            ]
+        },
+        "entrance_exams": {
+            "description": "Admissions and professional routes for Commerce pathways.",
+            "exams": [
+                {
+                    "name": "ICAI CA Foundation/Inter/Final",
+                    "conducting_body": "ICAI",
+                    "purpose": "Chartered Accountancy"
+                },
+                {
+                    "name": "ICSI CSEET/Executive/Professional",
+                    "conducting_body": "ICSI",
+                    "purpose": "Company Secretary"
+                },
+                {
+                    "name": "ICMAI CMA Foundation/Inter/Final",
+                    "conducting_body": "ICMAI",
+                    "purpose": "Cost & Management Accountancy"
+                },
+                {
+                    "name": "CUET",
+                    "conducting_body": "NTA",
+                    "purpose": "UG programmes in central universities"
+                },
+                {
+                    "name": "NPAT/SET/Christ/IPMAT",
+                    "conducting_body": "Respective universities",
+                    "purpose": "BBA/BMS/B.Com admissions"
+                },
+                {
+                    "name": "CLAT/AILET/LSAT—India",
+                    "conducting_body": "Consortium/Respective bodies",
+                    "purpose": "Law admissions"
+                }
+            ]
+        },
+        "top_colleges": [
+            "Delhi University (SRCC, St. Stephen’s, SSCBS, Hindu, etc.)",
+            "NMIMS (Mumbai/other campuses)",
+            "Christ University (Bengaluru)",
+            "Symbiosis colleges",
+            "St. Xavier’s (Mumbai/Kolkata/others)",
+            "IIT Kharagpur (Economics), Ashoka University (Economics)"
+        ],
+        "salary_expectations": {
+            "description": "Commerce careers range from compliance-heavy professions (CA/CS/CMA) to business roles. Compensation scales with qualification and sector.",
+            "salary_table": [
+                {
+                    "job_role": "CA (post-qualification)",
+                    "entry_level": "₹6-12 LPA",
+                    "mid_career": "₹15-40+ LPA"
+                },
+                {
+                    "job_role": "CS (post-qualification)",
+                    "entry_level": "₹5-9 LPA",
+                    "mid_career": "₹12-25+ LPA"
+                },
+                {
+                    "job_role": "CMA (post-qualification)",
+                    "entry_level": "₹5-9 LPA",
+                    "mid_career": "₹12-22+ LPA"
+                },
+                {
+                    "job_role": "BBA/BMS Corporate Roles",
+                    "entry_level": "₹3-8 LPA",
+                    "mid_career": "₹8-18+ LPA"
+                },
+                {
+                    "job_role": "Economist/Analyst (UG)",
+                    "entry_level": "₹4-10 LPA",
+                    "mid_career": "₹10-25+ LPA"
+                }
+            ],
+            "note": "Finance hubs (Mumbai, Bengaluru, Gurugram) and analytics skills can sharply improve packages."
+        },
+        "how_to_choose": {
+            "steps": [
+                "Decide between professional certification tracks (CA/CS/CMA) vs. managerial/analytics tracks (BBA/BMS/B.Com + MBA).",
+                "Build quantitative skills (Maths/Stats) for finance/economics and Excel/Python for analytics.",
+                "Pursue internships in accounting, startups, or marketing to sample day-to-day work.",
+                "Follow regulatory calendars if pursuing CA/CS/CMA to plan attempts and articleship."
+            ]
+        },
+        "conclusion": {
+            "description": "Commerce offers structured professional ladders and flexible business roles. With the right mix of credentials, internships, and analytics skills, you can grow into finance, consulting, entrepreneurship, or corporate leadership.",
+            "note": "Networking and certifications compound career growth in commerce-related fields."
+        }
+    },
+    "humanities": {
+        "title": "The Ultimate Guide to the Humanities/Arts Stream in India",
+        "introduction": "Humanities/Arts is perfect for students drawn to people, culture, policy, media, languages, and design. It offers deep specialisations in social sciences and creative fields with pathways to civil services, law, research, media, and design.",
+        "what_is_humanities": {
+            "description": "The stream develops critical thinking, writing, communication, and research skills across social sciences, languages, and creative disciplines.",
+            "core_subjects": [
+                "History",
+                "Political Science",
+                "Sociology",
+                "Psychology",
+                "Geography",
+                "English/Regional Language"
+            ],
+            "additional_subjects": [
+                "Economics",
+                "Mathematics",
+                "Fine Arts",
+                "Philosophy",
+                "Physical Education"
+            ],
+            "note": "Mathematics is useful for economics, psychology research methods, and design aptitude tests."
+        },
+        "major_career_paths": {
+            "description": "Graduates pursue roles in policy, media, design, social impact, law, academia, and public administration.",
+            "careers": [
+                {
+                    "name": "Civil Services (after Graduation)",
+                    "role": "Policy implementation and governance as IAS/IPS/IFS and allied services.",
+                    "entrance_exam": [
+                        "UPSC CSE (post graduation eligibility)"
+                    ],
+                    "top_colleges": [
+                        "Any UG; specialised coaching/common preparation pathways"
+                    ],
+                    "duration": "3-year UG + exam prep; service training thereafter",
+                    "salary": {
+                        "freshers": "₹10-16 LPA (CTC equivalent incl. allowances)",
+                        "experienced": "₹20-30+ LPA (seniority dependent)"
+                    },
+                    "working_conditions": "Transfers, field + secretariat roles, public-facing responsibilities; high impact and accountability."
+                },
+                {
+                    "name": "Law (B.A. LL.B)",
+                    "role": "Litigation, policy advocacy, corporate law, human rights, IPR.",
+                    "entrance_exam": [
+                        "CLAT",
+                        "AILET",
+                        "LSAT—India"
+                    ],
+                    "top_colleges": [
+                        "NLUs (NLSIU/NALSAR/NUJS/etc.)",
+                        "JGLS",
+                        "GNLU",
+                        "Symbiosis Law"
+                    ],
+                    "duration": "5 years (integrated)",
+                    "salary": {
+                        "freshers": "₹6-18 LPA",
+                        "experienced": "₹12-35+ LPA"
+                    },
+                    "working_conditions": "Court schedules/filings; research-heavy; client interaction; long days around hearings."
+                },
+                {
+                    "name": "Psychology (B.A./B.Sc.)",
+                    "role": "Counselling, HR/IO psychology, research, clinical (postgraduate licensure).",
+                    "entrance_exam": [
+                        "CUET",
+                        "University-specific tests/interviews"
+                    ],
+                    "top_colleges": [
+                        "DU Colleges",
+                        "Christ University",
+                        "Ashoka/Krea",
+                        "Private Universities"
+                    ],
+                    "duration": "3 years (+2-year M.A./M.Sc.; M.Phil/Ph.D. for clinical/research)",
+                    "salary": {
+                        "freshers": "₹3-7 LPA",
+                        "experienced": "₹8-18+ LPA (higher for clinical with licensure)"
+                    },
+                    "working_conditions": "Ethics-driven; client sessions; research methods; supervision needed for clinical practice."
+                },
+                {
+                    "name": "Journalism & Mass Communication (BJMC/BAJMC)",
+                    "role": "Reporting, editing, digital content, PR, advertising, media production.",
+                    "entrance_exam": [
+                        "CUET",
+                        "IIMC/University-specific assessments"
+                    ],
+                    "top_colleges": [
+                        "IIMC",
+                        "DU Colleges",
+                        "Symbiosis",
+                        "Asian College of Journalism (PG)"
+                    ],
+                    "duration": "3 years (UG)",
+                    "salary": {
+                        "freshers": "₹3-7 LPA",
+                        "experienced": "₹8-15+ LPA"
+                    },
+                    "working_conditions": "Deadlines, travel for stories, irregular hours; dynamic, creative environments."
+                },
+                {
+                    "name": "Design (B.Des / BFA)",
+                    "role": "UX/UI, product, communication, fashion, industrial and spatial design.",
+                    "entrance_exam": [
+                        "NID DAT",
+                        "UCEED/CEED",
+                        "NIFT"
+                    ],
+                    "top_colleges": [
+                        "NID",
+                        "IITs (Design)",
+                        "NIFT",
+                        "Private Design Schools"
+                    ],
+                    "duration": "4 years (B.Des/BFA)",
+                    "salary": {
+                        "freshers": "₹5-10 LPA",
+                        "experienced": "₹10-25+ LPA"
+                    },
+                    "working_conditions": "Studios; iterative user research; crits; portfolio-driven placements."
+                },
+                {
+                    "name": "Social Work / Development Studies",
+                    "role": "Program management, research, CSR, policy advocacy with NGOs, multilaterals, CSR arms.",
+                    "entrance_exam": [
+                        "CUET (UG)",
+                        "TISS (PG)",
+                        "University-specific"
+                    ],
+                    "top_colleges": [
+                        "TISS (PG)",
+                        "DU Colleges",
+                        "Azim Premji University"
+                    ],
+                    "duration": "3 years (UG); 2 years (MSW/Development)",
+                    "salary": {
+                        "freshers": "₹3-7 LPA",
+                        "experienced": "₹8-18+ LPA (project funding dependent)"
+                    },
+                    "working_conditions": "Field work; stakeholder engagement; project cycles; travel to sites/communities."
+                },
+                {
+                    "name": "International Relations / Public Policy",
+                    "role": "Policy research, think tanks, diplomatic services (separate exams), corporate public affairs.",
+                    "entrance_exam": [
+                        "CUET (UG)",
+                        "University-specific SOP/interviews"
+                    ],
+                    "top_colleges": [
+                        "JNU (PG strengths)",
+                        "Ashoka/Krea",
+                        "DU Colleges"
+                    ],
+                    "duration": "3 years (UG) + PG for specialisation",
+                    "salary": {
+                        "freshers": "₹4-9 LPA",
+                        "experienced": "₹10-22+ LPA"
+                    },
+                    "working_conditions": "Research, policy briefs, events, stakeholder consultations; periodic travel."
+                }
+            ]
+        },
+        "entrance_exams": {
+            "description": "Key admissions/tests across humanities disciplines.",
+            "exams": [
+                {
+                    "name": "CUET",
+                    "conducting_body": "NTA",
+                    "purpose": "Admissions to central universities for BA/BJMC/BSW, etc."
+                },
+                {
+                    "name": "CLAT/AILET/LSAT—India",
+                    "conducting_body": "Respective bodies",
+                    "purpose": "Law admissions"
+                },
+                {
+                    "name": "NID DAT / UCEED / NIFT",
+                    "conducting_body": "NID/IIT Bombay/NIFT",
+                    "purpose": "Design and fashion design admissions"
+                },
+                {
+                    "name": "IIMC",
+                    "conducting_body": "IIMC",
+                    "purpose": "Journalism and communication (UG/PG routes vary)"
+                }
+            ]
+        },
+        "top_colleges": [
+            "University of Delhi (top arts colleges)",
+            "JNU (noted for PG/Research)",
+            "Ashoka University / Krea University",
+            "TISS (for social work/development)",
+            "IIMC (journalism)",
+            "NID/NIFT/IITs (for design)"
+        ],
+        "salary_expectations": {
+            "description": "Humanities salaries vary widely by domain and city; policy/design/media roles often grow with portfolio and network strength.",
+            "salary_table": [
+                {
+                    "job_role": "Law Graduate (top schools)",
+                    "entry_level": "₹6-18 LPA",
+                    "mid_career": "₹12-35+ LPA"
+                },
+                {
+                    "job_role": "UX/UI or Communication Designer",
+                    "entry_level": "₹5-10 LPA",
+                    "mid_career": "₹10-25+ LPA"
+                },
+                {
+                    "job_role": "Journalist/Content Specialist",
+                    "entry_level": "₹3-7 LPA",
+                    "mid_career": "₹8-15+ LPA"
+                },
+                {
+                    "job_role": "Psychology (Counselling/HR/IO)",
+                    "entry_level": "₹3-7 LPA",
+                    "mid_career": "₹8-18+ LPA"
+                },
+                {
+                    "job_role": "Social Sector Program Exec",
+                    "entry_level": "₹3-7 LPA",
+                    "mid_career": "₹8-18+ LPA"
+                }
+            ],
+            "note": "Strong writing, portfolios, internships, and language skills accelerate growth."
+        },
+        "how_to_choose": {
+            "steps": [
+                "Select a major aligned to your curiosity—policy/law, people/psych, storytelling/media, or design/visual thinking.",
+                "Build a portfolio—writing samples, design work, research briefs, or field projects.",
+                "Leverage internships and volunteering to test fit and build networks.",
+                "Consider integrated pathways (e.g., BA LL.B) early if law is the goal."
+            ]
+        },
+        "conclusion": {
+            "description": "Humanities offers many high-impact careers for communicators, designers, and policy thinkers. With projects, portfolios, and internships, you can craft a distinctive path into public service, design, media, or research.",
+            "note": "Your voice, analytical depth, and portfolio will differentiate you."
+        }
+    },
+    "last_updated": "2025-09-07",
+    "version": "2.0 - Multi-Stream Edition"
+}

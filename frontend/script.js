@@ -1,533 +1,499 @@
-/* script.js
-   Controls the multi-step quiz, tag-scoring, UI interactions, and integration with the Flask backend.
-   Assumes backend endpoints:
-     POST   /quiz      -> returns { stream, colleges, scholarships, roadmap, ... }
-     GET    /colleges  -> returns list of colleges (for map preview)
-   Change BACKEND_URL below when deploying.
-*/
-
-const BACKEND_URL = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost")
-  ? "http://127.0.0.1:5000"
-  : "https://your-backend.onrender.com"; // update when deployed
+/**
+ * script.js — Firebase-backed prototype (frontend -> Flask backend)
+ *
+ * Expected backend endpoints:
+ *  - POST /signup           { email, password, full_name } -> { message, user_id, access_token? }
+ *  - POST /login            { email, password } -> { message, user_id, access_token, profile? }
+ *  - GET  /profile?user_id= -> { profile: {...} }
+ *  - POST /update-profile   { user_id, ...profileFields } -> { message }
+ *  - GET  /login-test       -> { user_id, profile }   (optional dev bypass)
+ *
+ * Notes:
+ *  - This is a prototype: tokens are stored in localStorage for convenience.
+ *  - Do NOT keep this in production.
+ */
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* -------------------------
-     Element references
-     ------------------------- */
-  const landingQuiz = document.getElementById("landing-quiz");
-  const startBtn = document.getElementById("startQuiz");
-  const ctaStartQuiz = document.getElementById("ctaStartQuiz");
-  const ctaBrowseColleges = document.getElementById("ctaBrowseColleges");
+  /* ---------------------------
+     Config
+     --------------------------- */
+  const API_BASE = "http://127.0.0.1:5000"; // backend base URL
 
-  const takeQuizWidget = document.getElementById("takeQuizWidget");
-  const quizMulti = document.getElementById("quizMulti");
-  const quizSteps = Array.from(document.querySelectorAll(".quiz-step"));
-  const totalStepsEl = document.getElementById("totalSteps");
-  const currentStepEl = document.getElementById("currentStep");
-  const quizProgressFill = document.getElementById("quizProgressFill");
-  const quizReview = document.getElementById("quizReview");
-
-  const quizStepForms = {
-    1: document.getElementById("quizStep1"),
-    2: document.getElementById("quizStep2"),
-    3: document.getElementById("quizStep3"),
-    4: document.getElementById("quizStep4")
+  /* ---------------------------
+     Session helpers (prototype)
+     --------------------------- */
+  const LS_USER_ID = "cg_user_id";
+  const LS_TOKEN = "cg_access_token";
+  const setSession = (userId, accessToken) => {
+    if (userId) localStorage.setItem(LS_USER_ID, userId);
+    if (accessToken) localStorage.setItem(LS_TOKEN, accessToken);
   };
+  const clearSession = () => {
+    localStorage.removeItem(LS_USER_ID);
+    localStorage.removeItem(LS_TOKEN);
+  };
+  const getUserId = () => localStorage.getItem(LS_USER_ID) || "";
+  const getToken = () => localStorage.getItem(LS_TOKEN) || "";
 
-  const assistantCard = document.getElementById("assistantCard");
-  const chatForm = document.getElementById("chatForm");
-  const chatInput = document.getElementById("chatInput");
-  const chatLog = document.getElementById("chatLog");
+  /* ---------------------------
+     DOM references
+     --------------------------- */
+  const openSignupBtn = document.getElementById("open-signup");
+  const signupModal = document.getElementById("signup-modal");
+  const signupForm = document.getElementById("signup-form");
+  const signupStatusEl = document.getElementById("signup-status");
 
-  const recList = document.getElementById("recList");
-  const snapshotName = document.getElementById("snapshotName");
-  const snapshotEducation = document.getElementById("snapshotEducation");
-  const snapshotIncome = document.getElementById("snapshotIncome");
-  const snapshotMode = document.getElementById("snapshotMode");
+  const careerOverlay = document.getElementById("career-setup-overlay");
+  const careerForm = document.getElementById("career-setup-form");
+  const stepEls = careerForm ? Array.from(careerForm.querySelectorAll(".wizard-step")) : [];
+  const prevBtn = document.getElementById("ws-prev");
+  const nextBtn = document.getElementById("ws-next");
+  const submitBtn = document.getElementById("ws-submit");
+  const progressBar = document.getElementById("progress-bar");
 
-  const mapListPreview = document.querySelector("#mapListPreview ul");
-  const nearbyCount = document.getElementById("nearbyCount");
-  const scholarshipCount = document.getElementById("scholarshipCount");
-  const savedList = document.getElementById("savedList");
+  const loginForm = document.getElementById("login-form");
+  const loginStatus = document.getElementById("login-status");
 
-  const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+  // Optional dev button: add <button id="test-login">Test login</button> to your HTML to use
+  const testLoginBtn = document.getElementById("test-login");
 
-  let currentStep = 1;
-  const totalSteps = quizSteps.length || 4;
-  totalStepsEl && (totalStepsEl.innerText = totalSteps);
-
-  // online/offline mode
-  let onlineMode = JSON.parse(localStorage.getItem("cg_online_mode") || "true");
-
-  /* -------------------------
-     Utility helpers
-     ------------------------- */
-  function show(el) { if (el) el.style.display = ""; }
-  function hide(el) { if (el) el.style.display = "none"; }
-  function setAriaHidden(el, hidden) {
-  if (el) {
-    el.setAttribute("aria-hidden", hidden);
-  }
-}
-
-  function setActiveNav(view) {
-    navLinks.forEach(link => {
-      const v = link.getAttribute("data-view");
-      if (v === view) link.classList.add("active");
-      else link.classList.remove("active");
-    });
+  /* ---------------------------
+     Guards
+     --------------------------- */
+  if (!signupModal || !signupForm || !careerOverlay || !careerForm) {
+    console.warn("script.js: some expected elements are missing. Check your HTML IDs.");
   }
 
-  function showView(view) {
-    // basic mapping of views to actions
-    setActiveNav(view);
-    // dashboard view
-    if (view === "dashboard") {
-      document.getElementById("dashboard").scrollIntoView({ behavior: "smooth" });
-      hide(takeQuizWidget);
-      // show other default things (assistant visible)
-      show(assistantCard);
-    }
-    if (view === "take-quiz") {
-      // show quiz widget and go to step 1
-      show(takeQuizWidget);
-      goToStep(1);
-      // optionally scroll into view
-      takeQuizWidget.scrollIntoView({ behavior: "smooth" });
-    }
-    if (view === "colleges") {
-      // reveal map card
-      const mapCard = document.getElementById("mapCard");
-      mapCard && mapCard.scrollIntoView({ behavior: "smooth" });
-    }
-    // other views can be wired similarly
-  }
-
-  /* -------------------------
-     Multi-step quiz logic
-     ------------------------- */
-  function goToStep(step) {
-    if (step < 1) step = 1;
-    if (step > totalSteps) step = totalSteps;
-    currentStep = step;
-
-    // hide all steps and show current
-    quizSteps.forEach(s => hide(s));
-    const el = document.querySelector(`.quiz-step[data-step="${step}"]`);
-    show(el);
-
-    // update UI progress
-    currentStepEl && (currentStepEl.innerText = step);
-    const percent = Math.round(((step - 1) / (totalSteps - 1)) * 100);
-    if (quizProgressFill) quizProgressFill.style.width = `${percent}%`;
-  }
-
-  function collectTagScores() {
-    // For step 2 question-cards: find selected inputs and build tagScores with weights
-    const tagScores = {}; // { tag: numericScore }
-    const qCards = Array.from(document.querySelectorAll(".question-card"));
-    qCards.forEach(card => {
-      // find checked input inside the card
-      const checked = card.querySelector("input[type='radio']:checked");
-      if (!checked) return;
-      const tagsAttr = checked.getAttribute("data-tags") || "";
-      const tags = tagsAttr.split(",").map(t => t.trim()).filter(Boolean);
-      const val = checked.value || "";
-      // map value to weight (customize mapping as needed)
-      let weight = 0;
-      const v = val.toLowerCase();
-      if (v === "always" || v === "always") weight = 2;
-      else if (v === "sometimes" || v === "sometimes") weight = 1;
-      else if (v === "rarely" || v === "rarely" || v === "never") weight = 0;
-      else {
-        // if numeric values present (e.g., 0..5), try parse
-        const n = parseFloat(val);
-        if (!isNaN(n)) weight = n;
-        else weight = 1;
-      }
-      tags.forEach(tag => {
-        tagScores[tag] = (tagScores[tag] || 0) + weight;
+  /* ---------------------------
+     Utilities
+     --------------------------- */
+  function safeJSON(resp) {
+    // try to parse JSON, otherwise return null
+    return resp.text()
+      .then(txt => {
+        try { return txt ? JSON.parse(txt) : {}; }
+        catch (e) { return null; }
       });
-    });
-    return tagScores;
   }
 
-  function collectAllQuizData() {
-    const data = {};
-    // Step 1 fields
-    const step1 = quizStepForms[1];
-    if (step1) {
-      const s1 = Object.fromEntries(new FormData(step1).entries());
-      Object.assign(data, s1);
-    }
-    // Step 3 (constraints)
-    const step3 = quizStepForms[3];
-    if (step3) {
-      const s3 = Object.fromEntries(new FormData(step3).entries());
-      Object.assign(data, s3);
-    }
-    // Step 2: interests & tagged answers
-    const answers = {};
-    const qCards = Array.from(document.querySelectorAll(".question-card"));
-    qCards.forEach(card => {
-      const qid = card.getAttribute("data-qid") || card.querySelector("[name]")?.name || null;
-      const checked = card.querySelector("input[type='radio']:checked");
-      if (qid && checked) {
-        answers[qid] = checked.value;
-      }
-    });
-    data.answers = answers;
-    // tag scores
-    data.tagScores = collectTagScores();
-
-    return data;
+  function showStatus(el, msg, ms = 2500) {
+    if (!el) return;
+    el.textContent = msg;
+    if (ms > 0) setTimeout(() => { try { el.textContent = ""; } catch {} }, ms);
   }
 
-  function renderReview(data) {
-    // Build a human-readable review summary
-    const lines = [];
-    if (data.name) lines.push(`<strong>Name:</strong> ${escapeHtml(data.name)}`);
-    if (data.education) lines.push(`<strong>Education:</strong> ${escapeHtml(data.education)}`);
-    if (data.location) lines.push(`<strong>Location:</strong> ${escapeHtml(data.location)}`);
-    if (data.budget) lines.push(`<strong>Budget (monthly):</strong> ₹${escapeHtml(data.budget)}`);
-    // tag summary
-    if (data.tagScores) {
-      const tags = Object.entries(data.tagScores)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 8)
-        .map(([t, s]) => `${escapeHtml(t)} (${s})`);
-      if (tags.length) lines.push(`<strong>Top skills/tags:</strong> ${tags.join(", ")}`);
-    }
-    quizReview.innerHTML = lines.length ? `<div>${lines.join("<br>")}</div>` : `<div>No answers yet.</div>`;
+  function getAuthHeaders() {
+    const token = getToken();
+    const headers = { "Content-Type": "application/json" };
+    if (token) headers["Authorization"] = `Bearer ${token}`;
+    return headers;
   }
 
-  function escapeHtml(str) {
-    if (str === undefined || str === null) return "";
-    return String(str)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
+  /* ---------------------------
+     Modal / focus-trap helpers
+     --------------------------- */
+  let lastFocusedBeforeOpen = null;
+  let removeFocusTrap = null;
+
+  function getFocusable(node) {
+    if (!node) return [];
+    const selector = 'a[href], area[href], input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    return Array.from(node.querySelectorAll(selector)).filter(el => el.offsetParent !== null);
   }
 
-  async function submitQuizData(payload) {
-    // show loading in assistant panel or recommendation area
-    appendChatMessage("ai", "Working on your personalized plan...");
-
-    try {
-      const res = await fetch(`${BACKEND_URL}/quiz`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      if (!res.ok) {
-        const text = await res.text();
-        throw new Error(`Backend error: ${res.status} ${text}`);
-      }
-      const result = await res.json();
-      appendChatMessage("ai", "Got results. Rendering recommendations.");
-      renderRecommendations(result, payload);
-      saveQuizLocal(payload, result);
-      return result;
-    } catch (err) {
-      console.error("submitQuizData error:", err);
-      appendChatMessage("ai", "Could not reach the server. You're probably offline or backend not running.");
-      // show some fallback if available
-      renderOfflineFallback(payload);
-      return null;
-    }
-  }
-
-  function renderRecommendations(result, payload = {}) {
-    // Update snapshot
-    snapshotName && (snapshotName.textContent = payload.name || "Guest User");
-    snapshotEducation && (snapshotEducation.textContent = payload.education || "—");
-    snapshotIncome && (snapshotIncome.textContent = payload.income ? `₹${payload.income}` : "—");
-    snapshotMode && (snapshotMode.textContent = payload.medium || payload.learning || "—");
-
-    // render quick rec list
-    recList.innerHTML = "";
-    if (!result) {
-      recList.innerHTML = "<li class='rec-item'>No recommendations available.</li>";
-      return;
-    }
-
-    // Primary stream
-    const primary = result.stream || "Not determined";
-    // Add top summary item
-    const mainItem = document.createElement("li");
-    mainItem.className = "rec-item";
-    mainItem.innerHTML = `
-      <div class="rec-left">
-        <div class="rec-title">Suggested Stream: ${escapeHtml(primary)}</div>
-        <div class="rec-meta">${escapeHtml(result.reason || "Based on your quiz responses")}</div>
-      </div>
-      <div class="rec-actions">
-        <button class="btn tiny" data-action="view-roadmap">View Roadmap</button>
-        <button class="btn tiny outline" data-action="save-rec">Save</button>
-      </div>
-    `;
-    recList.appendChild(mainItem);
-
-    // Colleges
-    if (Array.isArray(result.colleges)) {
-      result.colleges.slice(0, 6).forEach(col => {
-        const li = document.createElement("li");
-        li.className = "rec-item";
-        const name = typeof col === "string" ? col : (col.name || "Unknown College");
-        const meta = typeof col === "object"
-          ? `Medium: ${col.medium || "—"} • Hostel: ${col.hostel ? "Yes" : "No"} • ${col.distance_km ? `${col.distance_km} km` : ""} • Fees: ₹${col.fees || "—"}`
-          : "";
-        li.innerHTML = `
-          <div class="rec-left">
-            <div class="rec-title">${escapeHtml(name)}</div>
-            <div class="rec-meta">${escapeHtml(meta)}</div>
-          </div>
-          <div class="rec-actions">
-            <button class="btn tiny" data-action="view-college" data-college='${JSON.stringify(col)}'>Details</button>
-            <button class="btn tiny outline" data-action="save-college" data-college-name="${escapeHtml(name)}">Save</button>
-          </div>
-        `;
-        recList.appendChild(li);
-      });
-    }
-
-    // Scholarships
-    if (Array.isArray(result.scholarships)) {
-      scholarshipCount && (scholarshipCount.textContent = result.scholarships.length);
-    }
-
-    // Update map preview list
-    if (Array.isArray(result.colleges)) {
-      mapListPreview.innerHTML = "";
-      result.colleges.slice(0, 5).forEach(col => {
-        const name = typeof col === "string" ? col : (col.name || "Unknown College");
-        const li = document.createElement("li");
-        li.textContent = `${name} — ${col.streams ? col.streams.join(", ") : ""} — ${col.distance_km ? `${col.distance_km} km` : ""}`;
-        mapListPreview.appendChild(li);
-      });
-      nearbyCount && (nearbyCount.textContent = result.colleges.length);
-    }
-
-    // Roadmap / details panel
-    const roadmapEl = document.getElementById("roadmapResult");
-    if (roadmapEl) {
-      roadmapEl.innerHTML = result.roadmap
-        ? `<div><strong>Roadmap:</strong><div>${escapeHtml(result.roadmap)}</div></div>`
-        : "<div><strong>Roadmap:</strong> Basic guidance provided.</div>";
-    }
-
-    // Scholarships panel
-    const scholarshipEl = document.getElementById("scholarshipResult");
-    scholarshipEl && (scholarshipEl.innerHTML = result.scholarships && result.scholarships.length
-      ? `<div><strong>Scholarships:</strong><ul>${result.scholarships.map(s => `<li>${escapeHtml(s.title || s)}</li>`).join("")}</ul></div>`
-      : "<div><strong>Scholarships:</strong> None found</div>");
-  }
-
-  function renderOfflineFallback(payload) {
-    // Create a minimal local recommendation based on tagScores top tag heuristic
-    let fallbackStream = "General Arts/Commerce";
-    if (payload.tagScores) {
-      const tags = Object.entries(payload.tagScores).sort((a, b) => b[1] - a[1]);
-      if (tags.length) {
-        const top = tags[0][0];
-        if (top.includes("lab") || top.includes("practical") || top.includes("analytical") || top.includes("maths")) fallbackStream = "Science";
-        else if (top.includes("communication") || top.includes("arts")) fallbackStream = "Arts";
-        else if (top.includes("business") || top.includes("commerce")) fallbackStream = "Commerce";
+  function trapFocus(container) {
+    const focusable = getFocusable(container);
+    if (focusable.length === 0) return () => {};
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    function keyHandler(e) {
+      if (e.key === "Tab") {
+        if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else if (e.key === "Escape") {
+        // global ESC handling below
       }
     }
-    const mock = {
-      stream: fallbackStream,
-      colleges: [
-        { name: "Local Govt College 1", medium: "Hindi", hostel: true, distance_km: 6, fees: 1500 },
-        { name: "Local Govt College 2", medium: "English", hostel: false, distance_km: 18, fees: 1200 }
-      ],
-      scholarships: [],
-      reason: "Fallback recommendation (offline mode)"
-    };
-    renderRecommendations(mock, payload);
+    document.addEventListener("keydown", keyHandler);
+    return () => document.removeEventListener("keydown", keyHandler);
   }
 
-  function saveQuizLocal(payload, result) {
-    const saved = { timestamp: Date.now(), payload, result };
-    localStorage.setItem("cg_last_quiz", JSON.stringify(saved));
-    // also add saved quiz to saved items list for quick access
-    const entry = document.createElement("li");
-    entry.className = "saved-item";
-    entry.textContent = `${payload.name || "Guest"} — ${new Date(saved.timestamp).toLocaleString()}`;
-    savedList && savedList.prepend(entry);
+  function openModal(modalEl, triggerEl = null) {
+    if (!modalEl) return;
+    lastFocusedBeforeOpen = triggerEl || document.activeElement;
+    modalEl.classList.remove("hidden");
+    modalEl.setAttribute("aria-hidden", "false");
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    removeFocusTrap = trapFocus(modalEl);
+    const focusables = getFocusable(modalEl);
+    if (focusables.length) focusables[0].focus();
   }
 
-  /* -------------------------
-     Event delegation for quiz navigation buttons
-     ------------------------- */
-  document.addEventListener("click", (ev) => {
-    const btn = ev.target.closest("[data-action]");
-    if (!btn) return;
-    const action = btn.getAttribute("data-action");
-
-    if (action === "next-step") {
-      goToStep(Math.min(currentStep + 1, totalSteps));
-      // if moving to review step (last), update review summary
-      if (currentStep === totalSteps) {
-        const data = collectAllQuizData();
-        renderReview(data);
-      }
-    } else if (action === "prev-step") {
-      goToStep(Math.max(currentStep - 1, 1));
-    } else if (action === "submit-quiz") {
-      // collect all data and submit
-      const payload = collectAllQuizData();
-      submitQuizData(payload);
-      // hide quiz widget after submit to show recommendations in main dashboard
-      hide(takeQuizWidget);
-      // show dashboard but results will be rendered into recList
-      showView("dashboard");
-    } else if (action === "save-quiz") {
-      const payload = collectAllQuizData();
-      localStorage.setItem("cg_saved_incomplete", JSON.stringify({ payload, savedAt: Date.now() }));
-      appendChatMessage("ai", "Quiz saved locally. You can continue later.");
-    } else if (action === "view-roadmap") {
-      // open roadmap panel or scroll to roadmap area
-      const roadmapCard = document.getElementById("roadmapResult");
-      roadmapCard && roadmapCard.scrollIntoView({ behavior: "smooth" });
-    } else if (action === "save-college" || action === "save-rec") {
-      // simple save logic
-      const name = btn.getAttribute("data-college-name") || btn.closest(".rec-item")?.querySelector(".rec-title")?.innerText || "Saved item";
-      const li = document.createElement("li");
-      li.className = "saved-item";
-      li.textContent = `${name} — saved`;
-      savedList && savedList.prepend(li);
-      appendChatMessage("ai", `${name} saved to your list.`);
-    } else if (action === "view-college") {
-      // show details modal if desired (not implemented)
-      const colData = btn.getAttribute("data-college");
-      appendChatMessage("ai", `College details: ${colData || "No details"}`);
+  function closeModal(modalEl) {
+    if (!modalEl) return;
+    modalEl.classList.add("hidden");
+    modalEl.setAttribute("aria-hidden", "true");
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+    if (typeof removeFocusTrap === "function") { removeFocusTrap(); removeFocusTrap = null; }
+    if (lastFocusedBeforeOpen && lastFocusedBeforeOpen.focus) {
+      try { lastFocusedBeforeOpen.focus(); } catch (e) {}
+      lastFocusedBeforeOpen = null;
     }
-  });
+  }
 
-  /* -------------------------
-     Chat assistant form
-     ------------------------- */
-  if (chatForm) {
-    chatForm.addEventListener("submit", async (ev) => {
+  /* ---------------------------
+     Signup flow (calls backend /signup)
+     --------------------------- */
+  if (openSignupBtn && signupModal) {
+    openSignupBtn.addEventListener("click", (ev) => {
       ev.preventDefault();
-      const text = chatInput.value && chatInput.value.trim();
-      if (!text) return;
-      appendChatMessage("user", text);
-      chatInput.value = "";
+      openModal(signupModal, openSignupBtn);
+    });
+  }
 
-      // try backend assistant endpoint first
+  if (signupModal) {
+    signupModal.addEventListener("click", (ev) => {
+      if (ev.target === signupModal) closeModal(signupModal);
+      const action = ev.target.dataset && ev.target.dataset.action;
+      if (action === "close-signup" || action === "cancel-signup") {
+        closeModal(signupModal);
+      }
+    });
+  }
+
+  if (signupForm) {
+    signupForm.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      if (signupStatusEl) signupStatusEl.textContent = "";
+
+      const full_name = (signupForm.querySelector("input[name='full_name']") || {}).value || "";
+      const email = ((signupForm.querySelector("input[name='email']") || {}).value || "").trim().toLowerCase();
+      const password = (signupForm.querySelector("input[name='password']") || {}).value || "";
+      const password2 = (signupForm.querySelector("input[name='password2']") || {}).value || "";
+
+      if (!full_name || !email || !password) {
+        showStatus(signupStatusEl, "Please fill name, email and password.");
+        return;
+      }
+      if (password !== password2) {
+        showStatus(signupStatusEl, "Passwords do not match.");
+        return;
+      }
+
       try {
-        const res = await fetch(`${BACKEND_URL}/assistant`, {
+        showStatus(signupStatusEl, "Signing up...");
+        const resp = await fetch(`${API_BASE}/signup`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text })
+          body: JSON.stringify({ full_name, email, password })
         });
-        if (res.ok) {
-          const payload = await res.json();
-          appendChatMessage("ai", payload.reply || "(no reply)");
+
+        const j = await safeJSON(resp);
+        if (!resp.ok) {
+          const err = (j && (j.error || j.message)) || `Signup failed (${resp.status})`;
+          showStatus(signupStatusEl, err);
+          return;
+        }
+
+        // success: backend should return user_id and maybe access_token
+        const userId = (j && (j.user_id || j.user?.id)) || "";
+        const accessToken = (j && (j.access_token || j.token || j.id_token)) || "";
+
+        if (!userId) {
+          showStatus(signupStatusEl, "Signup succeeded but no user_id returned from server.");
+          return;
+        }
+
+        // save session (prototype)
+        setSession(userId, accessToken);
+
+        // close and open wizard, prefill name
+        closeModal(signupModal);
+        openWizardOverlay();
+        const wsFull = careerForm.querySelector("#ws-full_name");
+        if (wsFull) wsFull.value = full_name;
+
+      } catch (err) {
+        console.error("Signup error", err);
+        showStatus(signupStatusEl, "Network or server error during signup.");
+      }
+    });
+  }
+
+  /* ---------------------------
+     Wizard overlay (open/close/navigation)
+     --------------------------- */
+  function openWizardOverlay() {
+    if (!careerOverlay) return;
+    openModal(careerOverlay, document.getElementById("open-signup") || null);
+    currentStepIndex = 0;
+    updateWizardUI();
+  }
+  function closeWizardOverlay() {
+    if (!careerOverlay) return;
+    closeModal(careerOverlay);
+  }
+  if (careerOverlay) {
+    careerOverlay.addEventListener("click", (ev) => {
+      if (ev.target === careerOverlay) closeWizardOverlay();
+      const action = ev.target.dataset && ev.target.dataset.action;
+      if (action === "close-wizard") closeWizardOverlay();
+    });
+  }
+
+  let currentStepIndex = 0;
+  function updateWizardUI() {
+    if (!stepEls || stepEls.length === 0) return;
+    stepEls.forEach((el, i) => {
+      const active = i === currentStepIndex;
+      el.classList.toggle("active", active);
+      el.setAttribute("aria-hidden", active ? "false" : "true");
+    });
+    if (prevBtn) prevBtn.disabled = currentStepIndex === 0;
+    if (nextBtn) nextBtn.style.display = currentStepIndex === stepEls.length - 1 ? "none" : "inline-block";
+    if (submitBtn) submitBtn.style.display = currentStepIndex === stepEls.length - 1 ? "inline-block" : "none";
+    if (progressBar) {
+      const pct = Math.round(((currentStepIndex + 1) / Math.max(1, stepEls.length)) * 100);
+      progressBar.style.width = pct + "%";
+      progressBar.setAttribute("aria-valuenow", String(pct));
+    }
+  }
+  if (nextBtn) nextBtn.addEventListener("click", () => {
+    if (currentStepIndex < stepEls.length - 1) {
+      currentStepIndex++;
+      updateWizardUI();
+      const f = stepEls[currentStepIndex].querySelector("input, select, textarea, button");
+      if (f) f.focus();
+    }
+  });
+  if (prevBtn) prevBtn.addEventListener("click", () => {
+    if (currentStepIndex > 0) {
+      currentStepIndex--;
+      updateWizardUI();
+      const f = stepEls[currentStepIndex].querySelector("input, select, textarea, button");
+      if (f) f.focus();
+    }
+  });
+
+  /* ---------------------------
+     Helper: serialize form to JSON (handles checkboxes/radios/multiple)
+     --------------------------- */
+  function formToJson(formEl) {
+    const out = {};
+    if (!formEl) return out;
+
+    // Gather by input name
+    const elements = Array.from(formEl.elements).filter(Boolean);
+    const byName = {};
+    elements.forEach(el => {
+      if (!el.name) return;
+      if (!byName[el.name]) byName[el.name] = [];
+      byName[el.name].push(el);
+    });
+
+    for (const name in byName) {
+      const group = byName[name];
+
+      // If it's a set of checkboxes -> collect checked values array
+      if (group.every(el => el.type === "checkbox")) {
+        const vals = group.filter(el => el.checked).map(el => el.value);
+        out[name] = vals;
+        continue;
+      }
+
+      // If it's radios -> pick checked one
+      if (group.every(el => el.type === "radio")) {
+        const checked = group.find(el => el.checked);
+        out[name] = checked ? checked.value : null;
+        continue;
+      }
+
+      // If single select multiple
+      if (group.length === 1) {
+        const el = group[0];
+        if (el.tagName.toLowerCase() === "select" && el.multiple) {
+          out[name] = Array.from(el.selectedOptions).map(o => o.value);
+        } else if (el.type === "number") {
+          out[name] = el.value ? Number(el.value) : null;
         } else {
-          // fallback local echo
-          appendChatMessage("ai", "Assistant currently unavailable. Try the quick quiz or check resources.");
+          // normalize "skills" if it's comma separated text field
+          if (name === "skills" && typeof el.value === "string") {
+            const arr = el.value.split(",").map(s => s.trim()).filter(Boolean);
+            out[name] = arr;
+          } else {
+            out[name] = el.value;
+          }
+        }
+        continue;
+      }
+
+      // fallback: multiple inputs with same name but not checkbox/radio -> array
+      out[name] = group.map(el => el.value);
+    }
+
+    return out;
+  }
+
+  /* ---------------------------
+     Submit wizard: POST /update-profile
+     --------------------------- */
+  if (careerForm) {
+    careerForm.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+
+      const profile = formToJson(careerForm);
+      profile._saved_at = new Date().toISOString();
+
+      const userId = getUserId();
+      if (!userId) {
+        alert("You must be logged in to save your profile. Please sign up / login.");
+        return;
+      }
+      profile.user_id = userId;
+
+      try {
+        const headers = getAuthHeaders();
+        const resp = await fetch(`${API_BASE}/update-profile`, {
+          method: "POST",
+          headers,
+          body: JSON.stringify(profile)
+        });
+
+        const j = await safeJSON(resp);
+        if (!resp.ok) {
+          const err = (j && (j.error || j.message)) || `Profile save failed (${resp.status})`;
+          alert("Error saving profile: " + err);
+          return;
+        }
+
+        // success -> navigate or close
+        try {
+          window.location.href = "dashboard.html";
+        } catch (e) {
+          closeWizardOverlay();
+          alert("Profile saved. Redirect to dashboard failed; wizard closed.");
         }
       } catch (err) {
-        appendChatMessage("ai", "Assistant offline. Try again when connected.");
+        console.error("update-profile error", err);
+        alert("Network or server error while saving profile.");
       }
     });
   }
 
-  function appendChatMessage(who, text) {
-    if (!chatLog) return;
-    const div = document.createElement("div");
-    div.className = `chat-message ${who === "ai" ? "ai" : "user"}`;
-    div.innerText = text;
-    chatLog.appendChild(div);
-    chatLog.scrollTop = chatLog.scrollHeight;
-  }
-
-  /* -------------------------
-     Initial UI wiring & nav links
-     ------------------------- */
-  // Start buttons on landing / welcome
-  [startBtn, ctaStartQuiz].forEach(btn => {
-    if (!btn) return;
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      // Hide landing (if present) & show quiz widget step 1
-      landingQuiz && (landingQuiz.style.display = "none");
-      showView("take-quiz");
-    });
-  });
-
-  if (ctaBrowseColleges) {
-    ctaBrowseColleges.addEventListener("click", (e) => {
-      e.preventDefault();
-      showView("colleges");
-    });
-  }
-
-  // nav links
-  navLinks.forEach(link => {
-    link.addEventListener("click", (ev) => {
+  /* ---------------------------
+     Login: POST /login and optionally fetch profile
+     --------------------------- */
+  if (loginForm) {
+    loginForm.addEventListener("submit", async (ev) => {
       ev.preventDefault();
-      const view = link.getAttribute("data-view");
-      showView(view);
+      if (loginStatus) loginStatus.textContent = "";
+
+      const email = (loginForm.querySelector("input[name='email']") || {}).value || "";
+      const password = (loginForm.querySelector("input[name='password']") || {}).value || "";
+
+      if (!email || !password) {
+        showStatus(loginStatus, "Please enter email & password.");
+        return;
+      }
+
+      try {
+        showStatus(loginStatus, "Logging in...");
+        const resp = await fetch(`${API_BASE}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+
+        const j = await safeJSON(resp);
+        if (!resp.ok) {
+          const err = (j && (j.error || j.message)) || `Login failed (${resp.status})`;
+          showStatus(loginStatus, err);
+          return;
+        }
+
+        const userId = (j && (j.user_id || j.user?.id)) || "";
+        const accessToken = (j && (j.access_token || j.token || j.id_token)) || "";
+
+        if (!userId) {
+          showStatus(loginStatus, "Login succeeded but no user_id returned.");
+          return;
+        }
+
+        // Save session token & id
+        setSession(userId, accessToken);
+
+        // fetch profile to see if user has completed wizard
+        const headers = {};
+        if (accessToken) headers["Authorization"] = `Bearer ${accessToken}`;
+        const profResp = await fetch(`${API_BASE}/profile?user_id=${encodeURIComponent(userId)}`, { headers });
+
+        if (profResp.ok) {
+          const profJson = await safeJSON(profResp);
+          if (profJson && profJson.profile && Object.keys(profJson.profile).length > 0) {
+            // profile exists -> redirect to dashboard
+            window.location.href = "dashboard.html";
+            return;
+          }
+        }
+
+        // else open wizard to collect profile
+        openWizardOverlay();
+        const wsFull = careerForm.querySelector("#ws-full_name");
+        if (wsFull && (j.full_name || (typeof profResp !== "undefined" && profResp.full_name))) {
+          wsFull.value = j.full_name || (profResp && profResp.full_name) || "";
+        }
+      } catch (err) {
+        console.error("Login error", err);
+        showStatus(loginStatus, "Network or server error during login.");
+      }
     });
+  }
+
+  /* ---------------------------
+     Optional dev: login-test (bypass) button handling
+     --------------------------- */
+  if (testLoginBtn) {
+    testLoginBtn.addEventListener("click", async (ev) => {
+      ev.preventDefault();
+      try {
+        const resp = await fetch(`${API_BASE}/login-test`);
+        const j = await safeJSON(resp);
+        if (!resp.ok) {
+          alert("Test login failed: " + ((j && (j.error || j.message)) || resp.status));
+          return;
+        }
+        const userId = j.user_id;
+        const profile = j.profile || {};
+        // store session (no real token)
+        setSession(userId, "test-token");
+        // store profile optionally in localStorage if you want
+        localStorage.setItem("cg_profile", JSON.stringify(profile));
+        // go to dashboard
+        window.location.href = "dashboard.html";
+      } catch (err) {
+        console.error("Test login error", err);
+        alert("Network error during test login.");
+      }
+    });
+  }
+
+  /* ---------------------------
+     Global keyboard handling (ESC closes overlays)
+     --------------------------- */
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") {
+      if (signupModal && !signupModal.classList.contains("hidden")) closeModal(signupModal);
+      if (careerOverlay && !careerOverlay.classList.contains("hidden")) closeWizardOverlay();
+    }
   });
 
-  // default UI
-  showView("dashboard");
-  goToStep(1);
+  /* ---------------------------
+     Expose helpful dev functions
+     --------------------------- */
+  window._cg_session = {
+    getUserId, getToken, setSession, clearSession
+  };
 
-  /* -------------------------
-     Load saved quiz if any
-     ------------------------- */
-  const savedIncomplete = localStorage.getItem("cg_saved_incomplete");
-  if (savedIncomplete) {
-    try {
-      const parsed = JSON.parse(savedIncomplete);
-      appendChatMessage("ai", "You have a saved quiz. Click 'Start Quiz' > Continue to restore answers.");
-      // Optionally restore automatic - we keep it simple
-    } catch (e) {
-      console.warn("Invalid saved incomplete data", e);
-    }
-  }
-
-  /* -------------------------
-     Load initial college preview (from backend or fallback)
-     ------------------------- */
-  async function loadCollegePreview() {
-    try {
-      const res = await fetch(`${BACKEND_URL}/colleges`);
-      if (!res.ok) throw new Error("No colleges endpoint");
-      const list = await res.json();
-      if (Array.isArray(list)) {
-        mapListPreview.innerHTML = "";
-        list.slice(0, 6).forEach(c => {
-          const li = document.createElement("li");
-          const name = c.name || c;
-          li.textContent = `${name} — ${c.streams ? c.streams.join(", ") : ""} — ${c.distance_km ? `${c.distance_km} km` : ""}`;
-          mapListPreview.appendChild(li);
-        });
-        nearbyCount && (nearbyCount.textContent = list.length);
-      } else if (typeof list === "object") {
-        // if backend returns structured object with keys (science/arts)
-        const flattened = Object.values(list).flat();
-        mapListPreview.innerHTML = "";
-        flattened.slice(0, 6).forEach(c => {
-          const li = document.createElement("li");
-          const name = c.name || c;
-          li.textContent = `${name} — ${c.streams ? c.streams.join(", ") : ""} — ${c.distance_km ? `${c.distance_km} km` : ""}`;
-          mapListPreview.appendChild(li);
-        });
-        nearbyCount && (nearbyCount.textContent = flattened.length);
-      }
-    } catch (err) {
-      console.warn("Could not load colleges preview:", err);
-      mapListPreview.innerHTML = "<li>College preview unavailable (offline).</li>";
-    }
-  }
-  loadCollegePreview();
 });

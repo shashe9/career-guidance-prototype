@@ -1,0 +1,30 @@
+# ---------- Backend ----------
+backend/.env                 # environment variables
+backend/venv/                # virtual environment
+backend/__pycache__/         # Python cache
+backend/*.pyc                # compiled Python files
+backend/serviceAccountKey.json
+backend/.vscode/             # VS Code settings (optional)
+
+# ---------- Frontend ----------
+frontend/node_modules/       # if using npm/yarn
+frontend/.env                # frontend environment variables (if any)
+frontend/dist/               # build outputs
+frontend/.cache/             # caches (if any)
+frontend/.vscode/            # editor settings
+
+# ---------- System files ----------
+.DS_Store                    # macOS
+Thumbs.db                    # Windows
+*.log                        # log files
+*.swp                        # vim swap files
+
+# ---------- IDE files ----------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ---------- Misc ----------
+*.bak
+*.tmp

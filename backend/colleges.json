@@ -1,4 +1,871 @@
-{
-  "science": ["Govt Science College A", "Govt Science College B"],
-  "arts": ["Govt Arts College X", "Govt Arts College Y"]
-}
+[
+  {
+    "id": "jk001",
+    "name": "National Institute of Technology Srinagar (NIT Srinagar)",
+    "location": "Srinagar, Kashmir",
+    "type": "Engineering & Technology",
+    "website": "https://nitsri.ac.in",
+    "ranking": { "national": 79, "global": "NA" },
+    "programs_offered": [
+      { "course_id": "eng_nit_001", "name": "B.Tech in Computer Science & Engineering", "duration": "4 years", "eligibility": "JEE Main + JoSAA/CSAB Counseling", "fees_per_year": 135000 },
+      { "course_id": "eng_nit_002", "name": "M.Tech in Thermal Engineering", "duration": "2 years", "eligibility": "GATE Score", "fees_per_year": 89000 }
+    ],
+    "facilities": ["Hostel", "Central Library", "High-Tech Labs", "Sports Complex", "Wi-Fi Campus", "Medical Center"],
+    "placement_statistics": { "average_package": 1100000, "highest_package": 3850000, "placement_rate": 85 },
+    "opportunity_score": 92, "research_output": 88, "industry_connect": 90,
+    "tags": ["engineering", "institute-of-national-importance", "premier", "technical", "jee-main"]
+  },
+  {
+    "id": "jk002",
+    "name": "Indian Institute of Technology Jammu (IIT Jammu)",
+    "location": "Jammu, Jammu",
+    "type": "Engineering & Technology",
+    "website": "https://iitjammu.ac.in",
+    "ranking": { "national": 39, "global": "NA" },
+    "programs_offered": [
+      { "course_id": "eng_iit_001", "name": "B.Tech in Computer Science & Engineering", "duration": "4 years", "eligibility": "JEE Advanced + JoSAA Counseling", "fees_per_year": 207500 },
+      { "course_id": "eng_iit_002", "name": "B.Tech in Electrical Engineering", "duration": "4 years", "eligibility": "JEE Advanced + JoSAA Counseling", "fees_per_year": 207500 }
+    ],
+    "facilities": ["Hostel", "Research Parks", "Central Library", "Supercomputing Facility", "Sports Complex", "Auditorium"],
+    "placement_statistics": { "average_package": 1900000, "highest_package": 5200000, "placement_rate": 90 },
+    "opportunity_score": 98, "research_output": 95, "industry_connect": 96,
+    "tags": ["engineering", "iit", "premier", "research", "top-tier", "jee-advanced"]
+  },
+  {
+    "id": "jk003",
+    "name": "Government Medical College Srinagar",
+    "location": "Srinagar, Kashmir",
+    "type": "Medical",
+    "website": "http://gmcs.edu.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "med_gmc_001", "name": "MBBS", "duration": "5.5 years", "eligibility": "NEET-UG", "fees_per_year": 31000 },
+      { "course_id": "med_gmc_002", "name": "MD in General Medicine", "duration": "3 years", "eligibility": "NEET-PG", "fees_total_course": 75000 }
+    ],
+    "facilities": ["Teaching Hospital", "Hostel", "Library", "Anatomy Lab", "Auditorium"],
+    "placement_statistics": { "average_package": "N/A (Internship Stipend)", "highest_package": "N/A", "placement_rate": 100 },
+    "opportunity_score": 95, "research_output": 85, "industry_connect": 80,
+    "tags": ["medical", "government", "mbbs", "neet-ug", "neet-pg"]
+  },
+  {
+    "id": "jk004",
+    "name": "University of Kashmir",
+    "location": "Srinagar, Kashmir",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://kashmiruniversity.net",
+    "ranking": { "national": 51, "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_ku_001", "name": "MA English", "duration": "2 years", "eligibility": "Graduation + CUCET/University Entrance Test", "fees_per_year": 12000 },
+      { "course_id": "uni_ku_002", "name": "MSc Physics", "duration": "2 years", "eligibility": "BSc Physics + CUCET/University Entrance Test", "fees_per_year": 13000 },
+      { "course_id": "uni_ku_003", "name": "MBA", "duration": "2 years", "eligibility": "Graduation + CAT/MAT/CMAT", "fees_per_year": 35000 }
+    ],
+    "facilities": ["Central Library", "Hostels", "Sports Grounds", "Auditoriums", "Computer Labs"],
+    "placement_statistics": { "average_package": 400000, "highest_package": 1200000, "placement_rate": 70 },
+    "opportunity_score": 85, "research_output": 90, "industry_connect": 75,
+    "tags": ["university", "postgraduate", "research", "arts", "science", "commerce", "central-university"]
+  },
+  {
+    "id": "jk005",
+    "name": "Sri Pratap College",
+    "location": "Srinagar, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_sp_001", "name": "B.A. (Bachelor of Arts)", "duration": "3 years", "eligibility": "12th Standard (Merit-Based)", "fees_per_year": 5000 },
+      { "course_id": "asc_sp_002", "name": "B.Sc. (Bachelor of Science)", "duration": "3 years", "eligibility": "12th Standard (Science Stream, Merit-Based)", "fees_per_year": 6000 }
+    ],
+    "facilities": ["Library", "Laboratories", "Sports Ground", "Canteen"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 65, "research_output": 40, "industry_connect": 50,
+    "tags": ["college", "undergraduate", "general-degree", "heritage-college"]
+  },
+  {
+    "id": "jk006",
+    "name": "Government College of Engineering & Technology (GCET) Jammu",
+    "location": "Jammu, Jammu",
+    "type": "Engineering & Technology",
+    "website": "http://gcetjammu.org.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "eng_gcetj_001", "name": "B.Tech in Civil Engineering", "duration": "4 years", "eligibility": "JEE Main + JKBTECE Counseling", "fees_per_year": 46500 }
+    ],
+    "facilities": ["Hostel", "Library", "Workshops", "Labs", "Canteen"],
+    "placement_statistics": { "average_package": 300000, "highest_package": 1200000, "placement_rate": 75 },
+    "opportunity_score": 80, "research_output": 70, "industry_connect": 75,
+    "tags": ["engineering", "government", "technical", "btech", "jee-main"]
+  },
+  {
+    "id": "jk007",
+    "name": "Islamic University of Science & Technology (IUST)",
+    "location": "Awantipora, Kashmir",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://www.iust.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_iust_001", "name": "B.Tech in Computer Science Engineering", "duration": "4 years", "eligibility": "JEE Main / UniTest", "fees_per_year": 76000 },
+      { "course_id": "uni_iust_002", "name": "MBA", "duration": "2 years", "eligibility": "CAT / MAT / CMAT / UniTest", "fees_per_year": 85000 }
+    ],
+    "facilities": ["Hostel", "Library", "Labs", "Conference Hall", "Sports Facilities"],
+    "placement_statistics": { "average_package": 540000, "highest_package": 1100000, "placement_rate": 78 },
+    "opportunity_score": 82, "research_output": 80, "industry_connect": 78,
+    "tags": ["university", "engineering", "management", "multidisciplinary"]
+  },
+  {
+    "id": "jk008",
+    "name": "Sher-i-Kashmir Institute of Medical Sciences (SKIMS)",
+    "location": "Soura, Srinagar, Kashmir",
+    "type": "Medical",
+    "website": "https://www.skims.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "med_skims_001", "name": "MBBS", "duration": "5.5 years", "eligibility": "NEET-UG", "fees_total_course": 94500 },
+      { "course_id": "med_skims_002", "name": "M.Ch Neurosurgery", "duration": "3 years", "eligibility": "NEET-SS", "fees_total_course": 225000 }
+    ],
+    "facilities": ["Super-Specialty Hospital", "Nursing College", "Paramedical School", "Hostels", "Research Labs"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 100 },
+    "opportunity_score": 96, "research_output": 90, "industry_connect": 85,
+    "tags": ["medical", "deemed", "super-specialty", "research", "hospital"]
+  },
+  {
+    "id": "jk009",
+    "name": "University of Jammu",
+    "location": "Jammu, Jammu",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://www.jammuuniversity.ac.in",
+    "ranking": { "national": 59, "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_ju_001", "name": "MCA (Master of Computer Applications)", "duration": "2 years", "eligibility": "Graduation + NIMCET/JUET", "fees_total_course": 150000 },
+      { "course_id": "uni_ju_002", "name": "MSc Biotechnology", "duration": "2 years", "eligibility": "BSc (Biotech/Life Sciences) + Entrance Test", "fees_per_year": 20000 }
+    ],
+    "facilities": ["Central Library", "Hostels", "Computer Centre", "Sports Complex", "Auditorium"],
+    "placement_statistics": { "average_package": 458000, "highest_package": 1200000, "placement_rate": 72 },
+    "opportunity_score": 84, "research_output": 88, "industry_connect": 76,
+    "tags": ["university", "postgraduate", "research", "jammu", "central-university"]
+  },
+  {
+    "id": "jk010",
+    "name": "Amity University Jammu",
+    "location": "Jammu, Jammu",
+    "type": "University (Private)",
+    "website": "https://www.amity.edu/jammu/",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "priv_au_001", "name": "B.Tech (CSE)", "duration": "4 years", "eligibility": "10+2 (PCM) / JEE Main", "fees_per_year": 175000 },
+      { "course_id": "priv_au_002", "name": "BBA", "duration": "3 years", "eligibility": "10+2", "fees_per_year": 110000 }
+    ],
+    "facilities": ["Hostel", "Smart Classrooms", "Library", "Sports Complex"],
+    "placement_statistics": { "average_package": 458000, "highest_package": 900000, "placement_rate": 70 },
+    "opportunity_score": 75, "research_output": 65, "industry_connect": 75,
+    "tags": ["private", "university", "engineering", "management"]
+  },
+  {
+    "id": "jk011",
+    "name": "Government Medical College Jammu",
+    "location": "Jammu, Jammu",
+    "type": "Medical",
+    "website": "http://gmcjammu.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "med_gmcj_001", "name": "MBBS", "duration": "5.5 years", "eligibility": "NEET-UG", "fees_per_year": 31000 },
+      { "course_id": "med_gmcj_002", "name": "B.Sc Nursing", "duration": "4 years", "eligibility": "12th Standard (PCB)", "fees_per_year": 30000 }
+    ],
+    "facilities": ["Teaching Hospital", "Hostel", "Library", "Labs", "Auditorium"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 100 },
+    "opportunity_score": 88, "research_output": 75, "industry_connect": 78,
+    "tags": ["medical", "government", "mbbs", "nursing"]
+  },
+  {
+    "id": "jk012",
+    "name": "Government College for Women, Parade Ground",
+    "location": "Jammu, Jammu",
+    "type": "Arts, Science & Commerce (Women Only)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gcw_001", "name": "B.Com (Hons)", "duration": "3 years", "eligibility": "12th Standard (Commerce)", "fees_per_year": 5500 },
+      { "course_id": "asc_gcw_002", "name": "B.Sc. (Home Science)", "duration": "3 years", "eligibility": "12th Standard", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Women's Hostel", "Auditorium"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 10 },
+    "opportunity_score": 60, "research_output": 35, "industry_connect": 45,
+    "tags": ["college", "women", "general", "degree"]
+  },
+  {
+    "id": "jk013",
+    "name": "Model Institute of Engineering & Technology (MIET)",
+    "location": "Jammu, Jammu",
+    "type": "Engineering & Technology (Private)",
+    "website": "https://mietjammu.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "eng_miet_001", "name": "B.Tech in Computer Science & Engineering", "duration": "4 years", "eligibility": "JEE Main / State Entrance Test", "fees_per_year": 110000 },
+      { "course_id": "eng_miet_002", "name": "MBA", "duration": "2 years", "eligibility": "CAT / MAT / CMAT", "fees_per_year": 80000 }
+    ],
+    "facilities": ["Hostel", "Library", "Labs", "Wi-Fi", "Cafeteria", "Sports"],
+    "placement_statistics": { "average_package": 400000, "highest_package": 1000000, "placement_rate": 75 },
+    "opportunity_score": 78, "research_output": 70, "industry_connect": 77,
+    "tags": ["engineering", "private", "mba", "btech"]
+  },
+  {
+    "id": "jk014",
+    "name": "Sri Ranbir Institute of Industrial Engineering & Technology",
+    "location": "Jammu, Jammu",
+    "type": "Engineering & Technology (Polytechnic)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "poly_sri_001", "name": "Diploma in Mechanical Engineering", "duration": "3 years", "eligibility": "10th Standard", "fees_per_year": 20000 },
+      { "course_id": "poly_sri_002", "name": "Diploma in Civil Engineering", "duration": "3 years", "eligibility": "10th Standard", "fees_per_year": 20000 }
+    ],
+    "facilities": ["Workshops", "Labs", "Library", "Hostel"],
+    "placement_statistics": { "average_package": 180000, "highest_package": 300000, "placement_rate": 65 },
+    "opportunity_score": 65, "research_output": 20, "industry_connect": 70,
+    "tags": ["polytechnic", "diploma", "industrial", "engineering"]
+  },
+  {
+    "id": "jk015",
+    "name": "Government Degree College Anantnag",
+    "location": "Anantnag, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdca_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdca_002", "name": "B.Sc. (Mathematics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Science Labs", "Computer Lab", "Playground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 55, "research_output": 30, "industry_connect": 40,
+    "tags": ["college", "general", "degree", "anantnag"]
+  },
+  {
+    "id": "jk016",
+    "name": "Government Degree College Baramulla",
+    "location": "Baramulla, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcb_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcb_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 55, "research_output": 30, "industry_connect": 40,
+    "tags": ["college", "general", "degree", "baramulla"]
+  },
+  {
+    "id": "jk017",
+    "name": "Government Degree College Pulwama",
+    "location": "Pulwama, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcp_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcp_002", "name": "B.Sc. (Biology)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 50, "research_output": 25, "industry_connect": 35,
+    "tags": ["college", "general", "degree", "pulwama"]
+  },
+  {
+    "id": "jk018",
+    "name": "Government Degree College Sopore",
+    "location": "Sopore, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcs_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcs_002", "name": "B.Sc. (Physics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 52, "research_output": 28, "industry_connect": 38,
+    "tags": ["college", "general", "degree", "sopore"]
+  },
+  {
+    "id": "jk019",
+    "name": "Government Degree College Kulgam",
+    "location": "Kulgam, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdck_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdck_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 50, "research_output": 25, "industry_connect": 35,
+    "tags": ["college", "general", "degree", "kulgam"]
+  },
+  {
+    "id": "jk020",
+    "name": "Government Degree College Kupwara",
+    "location": "Kupwara, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdckw_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdckw_002", "name": "B.Sc. (Chemistry)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 50, "research_output": 25, "industry_connect": 35,
+    "tags": ["college", "general", "degree", "kupwara"]
+  },
+  {
+    "id": "jk021",
+    "name": "Government Degree College Udhampur",
+    "location": "Udhampur, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcu_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcu_002", "name": "B.Sc. (Mathematics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 55, "research_output": 30, "industry_connect": 40,
+    "tags": ["college", "general", "degree", "udhampur"]
+  },
+  {
+    "id": "jk022",
+    "name": "Government Degree College Kathua",
+    "location": "Kathua, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdckh_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdckh_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 55, "research_output": 30, "industry_connect": 40,
+    "tags": ["college", "general", "degree", "kathua"]
+  },
+  {
+    "id": "jk023",
+    "name": "Government Degree College Rajouri",
+    "location": "Rajouri, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcr_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcr_002", "name": "B.Sc. (Biology)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 53, "research_output": 28, "industry_connect": 38,
+    "tags": ["college", "general", "degree", "rajouri"]
+  },
+  {
+    "id": "jk024",
+    "name": "Government Degree College Poonch",
+    "location": "Poonch, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcpch_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcpch_002", "name": "B.Sc. (Physics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 52, "research_output": 27, "industry_connect": 37,
+    "tags": ["college", "general", "degree", "poonch"]
+  },
+  {
+    "id": "jk025",
+    "name": "Government Degree College Doda",
+    "location": "Doda, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcd_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcd_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 53, "research_output": 28, "industry_connect": 38,
+    "tags": ["college", "general", "degree", "doda"]
+  },
+  {
+    "id": "jk026",
+    "name": "Government Degree College Bhaderwah",
+    "location": "Bhaderwah, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcbw_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcbw_002", "name": "B.Sc. (Mathematics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 54, "research_output": 29, "industry_connect": 39,
+    "tags": ["college", "general", "degree", "bhaderwah"]
+  },
+  {
+    "id": "jk027",
+    "name": "Government Degree College Samba",
+    "location": "Samba, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcsba_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcsba_002", "name": "B.Sc. (Chemistry)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 55, "research_output": 30, "industry_connect": 40,
+    "tags": ["college", "general", "degree", "samba"]
+  },
+  {
+    "id": "jk028",
+    "name": "Government Degree College Ramban",
+    "location": "Ramban, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcrm_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcrm_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 52, "research_output": 27, "industry_connect": 37,
+    "tags": ["college", "general", "degree", "ramban"]
+  },
+  {
+    "id": "jk029",
+    "name": "Government Degree College Reasi",
+    "location": "Reasi, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcrs_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcrs_002", "name": "B.Sc. (Biology)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 52, "research_output": 27, "industry_connect": 37,
+    "tags": ["college", "general", "degree", "reasi"]
+  },
+  {
+    "id": "jk030",
+    "name": "Government Degree College Kishtwar",
+    "location": "Kishtwar, Jammu",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdckw_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdckw_002", "name": "B.Sc. (Physics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 51, "research_output": 26, "industry_connect": 36,
+    "tags": ["college", "general", "degree", "kishtwar"]
+  },
+  {
+    "id": "jk031",
+    "name": "Government Women's College Gandhi Nagar Jammu",
+    "location": "Jammu, Jammu",
+    "type": "Arts, Science & Commerce (Women Only)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gwcgn_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gwcgn_002", "name": "B.Sc. (Home Science)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Women's Hostel"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 10 },
+    "opportunity_score": 58, "research_output": 32, "industry_connect": 42,
+    "tags": ["college", "women", "general", "degree", "jammu"]
+  },
+  {
+    "id": "jk032",
+    "name": "Government Women's College MA Road Srinagar",
+    "location": "Srinagar, Kashmir",
+    "type": "Arts, Science & Commerce (Women Only)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gwcmr_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gwcmr_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Women's Hostel"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 10 },
+    "opportunity_score": 60, "research_output": 35, "industry_connect": 45,
+    "tags": ["college", "women", "general", "degree", "srinagar"]
+  },
+  {
+    "id": "jk033",
+    "name": "Government College of Education Jammu",
+    "location": "Jammu, Jammu",
+    "type": "Education",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "edu_gcej_001", "name": "B.Ed", "duration": "2 years", "eligibility": "Graduation + Entrance Test", "fees_per_year": 10000 }
+    ],
+    "facilities": ["Library", "Labs", "Classrooms"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 60 },
+    "opportunity_score": 65, "research_output": 40, "industry_connect": 50,
+    "tags": ["education", "bed", "teacher-training", "government"]
+  },
+  {
+    "id": "jk034",
+    "name": "Government College of Education Srinagar",
+    "location": "Srinagar, Kashmir",
+    "type": "Education",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "edu_gces_001", "name": "B.Ed", "duration": "2 years", "eligibility": "Graduation + Entrance Test", "fees_per_year": 10000 }
+    ],
+    "facilities": ["Library", "Labs", "Classrooms"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 60 },
+    "opportunity_score": 65, "research_output": 40, "industry_connect": 50,
+    "tags": ["education", "bed", "teacher-training", "government"]
+  },
+  {
+    "id": "jk035",
+    "name": "Baba Ghulam Shah Badshah University (BGSBU)",
+    "location": "Rajouri, Jammu",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://www.bgsbu.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_bgsbu_001", "name": "B.Tech (CSE)", "duration": "4 years", "eligibility": "JEE Main / University Test", "fees_per_year": 60000 },
+      { "course_id": "uni_bgsbu_002", "name": "MBA", "duration": "2 years", "eligibility": "CAT / MAT / CMAT / University Test", "fees_per_year": 50000 }
+    ],
+    "facilities": ["Hostel", "Library", "Labs", "Sports Complex", "Medical"],
+    "placement_statistics": { "average_package": 350000, "highest_package": 800000, "placement_rate": 70 },
+    "opportunity_score": 75, "research_output": 72, "industry_connect": 70,
+    "tags": ["university", "engineering", "management", "rajouri"]
+  },
+  {
+    "id": "jk036",
+    "name": "Central University of Kashmir (CUK)",
+    "location": "Ganderbal, Kashmir",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://www.cukashmir.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_cuk_001", "name": "MA Economics", "duration": "2 years", "eligibility": "Graduation + CUCET", "fees_per_year": 15000 },
+      { "course_id": "uni_cuk_002", "name": "MSc Mathematics", "duration": "2 years", "eligibility": "BSc Mathematics + CUCET", "fees_per_year": 16000 }
+    ],
+    "facilities": ["Hostel", "Central Library", "Labs", "Wi-Fi", "Auditorium"],
+    "placement_statistics": { "average_package": 380000, "highest_package": 900000, "placement_rate": 65 },
+    "opportunity_score": 78, "research_output": 80, "industry_connect": 72,
+    "tags": ["university", "central-university", "postgraduate", "research", "ganderbal"]
+  },
+  {
+    "id": "jk037",
+    "name": "Central University of Jammu (CUJ)",
+    "location": "Jammu, Jammu",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://www.cujammu.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_cuj_001", "name": "MA Psychology", "duration": "2 years", "eligibility": "Graduation + CUCET", "fees_per_year": 15000 },
+      { "course_id": "uni_cuj_002", "name": "MSc Environmental Science", "duration": "2 years", "eligibility": "BSc + CUCET", "fees_per_year": 16000 }
+    ],
+    "facilities": ["Hostel", "Central Library", "Labs", "Wi-Fi", "Auditorium"],
+    "placement_statistics": { "average_package": 400000, "highest_package": 950000, "placement_rate": 68 },
+    "opportunity_score": 80, "research_output": 82, "industry_connect": 75,
+    "tags": ["university", "central-university", "postgraduate", "research", "jammu"]
+  },
+  {
+    "id": "jk038",
+    "name": "Sher-e-Kashmir University of Agricultural Sciences and Technology of Kashmir (SKUAST-K)",
+    "location": "Shalimar, Srinagar, Kashmir",
+    "type": "University (Agriculture)",
+    "website": "https://www.skuastkashmir.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "agri_skuastk_001", "name": "B.Sc (Hons) Agriculture", "duration": "4 years", "eligibility": "12th Standard (PCB) + Entrance Test", "fees_per_year": 20000 },
+      { "course_id": "agri_skuastk_002", "name": "M.Sc Agriculture", "duration": "2 years", "eligibility": "B.Sc Agriculture + Entrance Test", "fees_per_year": 25000 }
+    ],
+    "facilities": ["Hostel", "Library", "Research Farms", "Labs", "Guest House"],
+    "placement_statistics": { "average_package": 300000, "highest_package": 600000, "placement_rate": 75 },
+    "opportunity_score": 78, "research_output": 85, "industry_connect": 70,
+    "tags": ["university", "agriculture", "horticulture", "research"]
+  },
+  {
+    "id": "jk039",
+    "name": "Sher-e-Kashmir University of Agricultural Sciences and Technology of Jammu (SKUAST-J)",
+    "location": "Jammu, Jammu",
+    "type": "University (Agriculture)",
+    "website": "https://www.skuast.org",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "agri_skuastj_001", "name": "B.Sc (Hons) Agriculture", "duration": "4 years", "eligibility": "12th Standard (PCB) + Entrance Test", "fees_per_year": 20000 },
+      { "course_id": "agri_skuastj_002", "name": "B.V.Sc & A.H. (Veterinary Science)", "duration": "5.5 years", "eligibility": "12th Standard (PCB) + Entrance Test", "fees_per_year": 25000 }
+    ],
+    "facilities": ["Hostel", "Library", "Research Farms", "Veterinary Hospital", "Labs"],
+    "placement_statistics": { "average_package": 320000, "highest_package": 650000, "placement_rate": 78 },
+    "opportunity_score": 80, "research_output": 84, "industry_connect": 72,
+    "tags": ["university", "agriculture", "veterinary", "research"]
+  },
+  {
+    "id": "jk040",
+    "name": "Shri Mata Vaishno Devi University (SMVDU)",
+    "location": "Kakryal, Katra, Jammu",
+    "type": "University (Multi-Disciplinary)",
+    "website": "https://www.smvdu.ac.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "uni_smvdu_001", "name": "B.Tech (ECE)", "duration": "4 years", "eligibility": "JEE Main / University Test", "fees_per_year": 80000 },
+      { "course_id": "uni_smvdu_002", "name": "MBA", "duration": "2 years", "eligibility": "CAT / MAT / CMAT / University Test", "fees_per_year": 70000 }
+    ],
+    "facilities": ["Hostel", "Library", "Labs", "Sports Complex", "Wi-Fi"],
+    "placement_statistics": { "average_package": 450000, "highest_package": 1000000, "placement_rate": 80 },
+    "opportunity_score": 82, "research_output": 75, "industry_connect": 78,
+    "tags": ["university", "engineering", "management", "katra"]
+  },
+  {
+    "id": "jk041",
+    "name": "Institute of Hotel Management (IHM) Srinagar",
+    "location": "Srinagar, Kashmir",
+    "type": "Hotel Management",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "hm_ihms_001", "name": "B.Sc in Hospitality & Hotel Administration", "duration": "3 years", "eligibility": "12th Standard + NCHMCT JEE", "fees_per_year": 60000 }
+    ],
+    "facilities": ["Training Kitchen", "Bakery", "Hostel", "Library", "Demo Rooms"],
+    "placement_statistics": { "average_package": 250000, "highest_package": 500000, "placement_rate": 85 },
+    "opportunity_score": 75, "research_output": 30, "industry_connect": 80,
+    "tags": ["hotel-management", "hospitality", "culinary", "government"]
+  },
+  {
+    "id": "jk042",
+    "name": "Government Polytechnic College Jammu",
+    "location": "Jammu, Jammu",
+    "type": "Engineering & Technology (Polytechnic)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "poly_gpcj_001", "name": "Diploma in Electrical Engineering", "duration": "3 years", "eligibility": "10th Standard", "fees_per_year": 15000 }
+    ],
+    "facilities": ["Workshops", "Labs", "Library"],
+    "placement_statistics": { "average_package": 150000, "highest_package": 250000, "placement_rate": 60 },
+    "opportunity_score": 60, "research_output": 20, "industry_connect": 65,
+    "tags": ["polytechnic", "diploma", "government", "technical"]
+  },
+  {
+    "id": "jk043",
+    "name": "Government Polytechnic College Srinagar",
+    "location": "Srinagar, Kashmir",
+    "type": "Engineering & Technology (Polytechnic)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "poly_gpcs_001", "name": "Diploma in Civil Engineering", "duration": "3 years", "eligibility": "10th Standard", "fees_per_year": 15000 }
+    ],
+    "facilities": ["Workshops", "Labs", "Library"],
+    "placement_statistics": { "average_package": 150000, "highest_package": 250000, "placement_rate": 60 },
+    "opportunity_score": 60, "research_output": 20, "industry_connect": 65,
+    "tags": ["polytechnic", "diploma", "government", "technical"]
+  },
+  {
+    "id": "jk044",
+    "name": "Acharya Shri Chander College of Medical Sciences (ASCOMS) & Hospital",
+    "location": "Jammu, Jammu",
+    "type": "Medical (Private)",
+    "website": "https://www.asscollege.edu.in",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "med_asc_001", "name": "MBBS", "duration": "5.5 years", "eligibility": "NEET-UG", "fees_per_year": 800000 },
+      { "course_id": "med_asc_002", "name": "B.Sc Nursing", "duration": "4 years", "eligibility": "12th Standard (PCB)", "fees_per_year": 80000 }
+    ],
+    "facilities": ["Hospital", "Hostel", "Library", "Labs", "Auditorium"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 100 },
+    "opportunity_score": 85, "research_output": 70, "industry_connect": 75,
+    "tags": ["medical", "private", "mbbs", "nursing"]
+  },
+  {
+    "id": "jk045",
+    "name": "SSM College of Engineering & Technology",
+    "location": "Pattan, Kashmir",
+    "type": "Engineering & Technology (Private)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "eng_ssm_001", "name": "B.Tech in Computer Science & Engineering", "duration": "4 years", "eligibility": "JEE Main / State Entrance Test", "fees_per_year": 90000 }
+    ],
+    "facilities": ["Hostel", "Library", "Labs", "Canteen"],
+    "placement_statistics": { "average_package": 250000, "highest_package": 600000, "placement_rate": 65 },
+    "opportunity_score": 70, "research_output": 50, "industry_connect": 65,
+    "tags": ["engineering", "private", "btech", "pattan"]
+  },
+  {
+    "id": "jk046",
+    "name": "Green Valley College of Education",
+    "location": "Srinagar, Kashmir",
+    "type": "Education (Private)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "edu_gvce_001", "name": "B.Ed", "duration": "2 years", "eligibility": "Graduation + Entrance Test", "fees_per_year": 30000 }
+    ],
+    "facilities": ["Library", "Labs", "Classrooms"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 50 },
+    "opportunity_score": 60, "research_output": 35, "industry_connect": 45,
+    "tags": ["education", "private", "bed", "teacher-training"]
+  },
+  {
+    "id": "jk047",
+    "name": "Global College of Education",
+    "location": "Jammu, Jammu",
+    "type": "Education (Private)",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "edu_gce_001", "name": "B.Ed", "duration": "2 years", "eligibility": "Graduation + Entrance Test", "fees_per_year": 35000 }
+    ],
+    "facilities": ["Library", "Labs", "Classrooms"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 55 },
+    "opportunity_score": 62, "research_output": 37, "industry_connect": 47,
+    "tags": ["education", "private", "bed", "teacher-training"]
+  },
+  {
+    "id": "jk048",
+    "name": "Government College of Physical Education",
+    "location": "Ganderbal, Kashmir",
+    "type": "Physical Education",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "pe_gcpe_001", "name": "BPEd", "duration": "2 years", "eligibility": "Graduation + Physical Fitness Test", "fees_per_year": 8000 }
+    ],
+    "facilities": ["Playgrounds", "Gymnasium", "Hostel", "Library"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 70 },
+    "opportunity_score": 65, "research_output": 30, "industry_connect": 60,
+    "tags": ["physical-education", "bped", "government", "sports"]
+  },
+  {
+    "id": "jk049",
+    "name": "Government College of Art & Design",
+    "location": "Srinagar, Kashmir",
+    "type": "Arts & Design",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "art_gcad_001", "name": "BFA (Bachelor of Fine Arts)", "duration": "4 years", "eligibility": "12th Standard + Aptitude Test", "fees_per_year": 10000 }
+    ],
+    "facilities": ["Studios", "Gallery", "Library"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 40 },
+    "opportunity_score": 55, "research_output": 45, "industry_connect": 40,
+    "tags": ["arts", "design", "fine-arts", "government"]
+  },
+  {
+    "id": "jk050",
+    "name": "Government Music College",
+    "location": "Srinagar, Kashmir",
+    "type": "Performing Arts",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "music_gmc_001", "name": "Bachelor of Performing Arts (Music)", "duration": "3 years", "eligibility": "12th Standard + Aptitude Test", "fees_per_year": 8000 }
+    ],
+    "facilities": ["Practice Rooms", "Auditorium", "Library"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 30 },
+    "opportunity_score": 50, "research_output": 40, "industry_connect": 35,
+    "tags": ["music", "performing-arts", "government"]
+  },
+  {
+    "id": "jk051",
+    "name": "Government Degree College for Boys Baramulla",
+    "location": "Baramulla, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcbb_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcbb_002", "name": "B.Sc. (IT)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 6000 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 54, "research_output": 29, "industry_connect": 39,
+    "tags": ["college", "general", "degree", "baramulla", "boys"]
+  },
+  {
+    "id": "jk052",
+    "name": "Government Degree College for Boys Anantnag",
+    "location": "Anantnag, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcba_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcba_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 54, "research_output": 29, "industry_connect": 39,
+    "tags": ["college", "general", "degree", "anantnag", "boys"]
+  },
+  {
+    "id": "jk053",
+    "name": "Government Degree College for Boys Sopore",
+    "location": "Sopore, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcbs_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcbs_002", "name": "B.Sc. (Mathematics)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 53, "research_output": 28, "industry_connect": 38,
+    "tags": ["college", "general", "degree", "sopore", "boys"]
+  },
+  {
+    "id": "jk054",
+    "name": "Government Degree College for Boys Kupwara",
+    "location": "Kupwara, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcbk_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcbk_002", "name": "B.Com", "duration": "3 years", "eligibility": "12th Standard (Commerce, Merit)", "fees_per_year": 5200 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 52, "research_output": 27, "industry_connect": 37,
+    "tags": ["college", "general", "degree", "kupwara", "boys"]
+  },
+  {
+    "id": "jk055",
+    "name": "Government Degree College for Boys Pulwama",
+    "location": "Pulwama, Kashmir",
+    "type": "Arts, Science & Commerce",
+    "website": "N/A",
+    "ranking": { "national": "NA", "global": "NA" },
+    "programs_offered": [
+      { "course_id": "asc_gdcbp_001", "name": "B.A. (General)", "duration": "3 years", "eligibility": "12th Standard (Merit)", "fees_per_year": 5000 },
+      { "course_id": "asc_gdcbp_002", "name": "B.Sc. (Biology)", "duration": "3 years", "eligibility": "12th Standard (Science, Merit)", "fees_per_year": 5500 }
+    ],
+    "facilities": ["Library", "Labs", "Computer Lab", "Ground"],
+    "placement_statistics": { "average_package": "N/A", "highest_package": "N/A", "placement_rate": 5 },
+    "opportunity_score": 52, "research_output": 27, "industry_connect": 37,
+    "tags": ["college", "general", "degree", "pulwama", "boys"]
+  }
+]

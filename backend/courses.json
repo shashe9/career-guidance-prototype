@@ -1,0 +1,1946 @@
+[
+  {
+    "id": "med001",
+    "name": "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
+    "category": "Healthcare",
+    "duration": "5.5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Medical Ethics",
+      "Patient Care"
+    ],
+    "career_paths": [
+      "Doctor",
+      "Surgeon",
+      "Medical Researcher"
+    ],
+    "average_salary_range": "6-30 LPA",
+    "future_scope": "Consistent demand due to growing healthcare needs worldwide",
+    "tags": [
+      "medicine",
+      "surgery",
+      "research"
+    ]
+  },
+  {
+    "id": "med002",
+    "name": "MS (Master of Surgery)",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Surgical Techniques",
+      "Critical Thinking",
+      "Emergency Care"
+    ],
+    "career_paths": [
+      "Surgeon",
+      "Orthopedic Specialist",
+      "Neurosurgeon"
+    ],
+    "average_salary_range": "8-50 LPA",
+    "future_scope": "High demand for specialized surgical care and trauma centers",
+    "tags": [
+      "surgery",
+      "trauma",
+      "specialization"
+    ]
+  },
+  {
+    "id": "med003",
+    "name": "BDS (Bachelor of Dental Surgery)",
+    "category": "Healthcare",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Dental Anatomy",
+      "Patient Communication",
+      "Manual Dexterity"
+    ],
+    "career_paths": [
+      "Dentist",
+      "Orthodontist",
+      "Dental Surgeon"
+    ],
+    "average_salary_range": "4-20 LPA",
+    "future_scope": "Growing awareness of oral health and cosmetic dentistry",
+    "tags": [
+      "dental",
+      "healthcare",
+      "surgery"
+    ]
+  },
+  {
+    "id": "med005",
+    "name": "BSc Nursing",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Patient Care",
+      "Medical Procedures",
+      "Communication"
+    ],
+    "career_paths": [
+      "Nurse",
+      "ICU Specialist",
+      "Public Health Worker"
+    ],
+    "average_salary_range": "3-8 LPA",
+    "future_scope": "Increasing demand in hospitals, clinics, and global health sectors",
+    "tags": [
+      "nursing",
+      "patient care",
+      "healthcare"
+    ]
+  },
+  {
+    "id": "med006",
+    "name": "MSc in Genetics",
+    "category": "Healthcare",
+    "duration": "2 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Genetic Research",
+      "Laboratory Techniques",
+      "Data Analysis"
+    ],
+    "career_paths": [
+      "Geneticist",
+      "Research Scientist",
+      "Biotech Consultant"
+    ],
+    "average_salary_range": "5-22 LPA",
+    "future_scope": "Expanding role in personalized medicine and biotech industries",
+    "tags": [
+      "genetics",
+      "research",
+      "biotech"
+    ]
+  },
+  {
+    "id": "health001",
+    "name": "BPT (Bachelor of Physiotherapy)",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "med007",
+    "name": "Pharmacy (BPharm)",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Pharmaceutical Knowledge",
+      "Drug Formulation",
+      "Patient Counseling"
+    ],
+    "career_paths": [
+      "Pharmacist",
+      "Clinical Researcher",
+      "Drug Safety Analyst"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "High scope in drug development, healthcare services, and global supply chains",
+    "tags": [
+      "pharmacy",
+      "drugs",
+      "healthcare"
+    ]
+  },
+  {
+    "id": "med008",
+    "name": "Master of Public Health (MPH)",
+    "category": "Healthcare",
+    "duration": "2 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Epidemiology",
+      "Health Policy",
+      "Data Analysis"
+    ],
+    "career_paths": [
+      "Public Health Officer",
+      "Health Policy Advisor",
+      "Epidemiologist"
+    ],
+    "average_salary_range": "5-18 LPA",
+    "future_scope": "Growing focus on global health, preventive care, and policy-making",
+    "tags": [
+      "public health",
+      "epidemiology",
+      "policy"
+    ]
+  },
+  {
+    "id": "med009",
+    "name": "Diploma in Medical Laboratory Technology (DMLT)",
+    "category": "Healthcare",
+    "duration": "2 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Laboratory Techniques",
+      "Sample Analysis",
+      "Safety Protocols"
+    ],
+    "career_paths": [
+      "Lab Technician",
+      "Pathology Assistant",
+      "Clinical Analyst"
+    ],
+    "average_salary_range": "2-6 LPA",
+    "future_scope": "High demand in diagnostic labs, hospitals, and research facilities",
+    "tags": [
+      "lab",
+      "medical",
+      "analysis"
+    ]
+  },
+  {
+    "id": "med010",
+    "name": "BSc in Microbiology",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Microbial Research",
+      "Lab Techniques",
+      "Data Interpretation"
+    ],
+    "career_paths": [
+      "Microbiologist",
+      "Clinical Researcher",
+      "Biotech Specialist"
+    ],
+    "average_salary_range": "4-14 LPA",
+    "future_scope": "Important in vaccine development, diagnostics, and healthcare research",
+    "tags": [
+      "microbiology",
+      "lab",
+      "research"
+    ]
+  },
+  {
+    "id": "eng001",
+    "name": "B.Tech in Computer Science",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "eng003",
+    "name": "B.Tech in Mechanical Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Thermodynamics",
+      "Machine Design",
+      "Problem-Solving"
+    ],
+    "career_paths": [
+      "Mechanical Engineer",
+      "Automobile Designer",
+      "Production Manager"
+    ],
+    "average_salary_range": "4-20 LPA",
+    "future_scope": "Increasing demand in automotive, manufacturing, and robotics industries",
+    "tags": [
+      "mechanical",
+      "design",
+      "manufacturing"
+    ]
+  },
+  {
+    "id": "eng004",
+    "name": "B.Tech in Civil Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Structural Analysis",
+      "Construction Planning",
+      "Project Management"
+    ],
+    "career_paths": [
+      "Civil Engineer",
+      "Site Manager",
+      "Urban Planner"
+    ],
+    "average_salary_range": "3-15 LPA",
+    "future_scope": "Strong growth in infrastructure, real estate, and transportation sectors",
+    "tags": [
+      "civil",
+      "construction",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "eng005",
+    "name": "B.Tech in Electrical Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Circuit Design",
+      "Power Systems",
+      "Signal Processing"
+    ],
+    "career_paths": [
+      "Electrical Engineer",
+      "Power System Analyst",
+      "Control Systems Designer"
+    ],
+    "average_salary_range": "5-22 LPA",
+    "future_scope": "Rising energy needs, renewable energy projects, and automation systems",
+    "tags": [
+      "electrical",
+      "power",
+      "automation"
+    ]
+  },
+  {
+    "id": "eng006",
+    "name": "B.Tech in Aerospace Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Aerodynamics",
+      "Propulsion",
+      "Materials Science"
+    ],
+    "career_paths": [
+      "Aerospace Engineer",
+      "Flight Systems Analyst",
+      "Research Scientist"
+    ],
+    "average_salary_range": "6-30 LPA",
+    "future_scope": "Growth in space exploration, defense, and aviation sectors",
+    "tags": [
+      "aerospace",
+      "aviation",
+      "defense"
+    ]
+  },
+  {
+    "id": "eng007",
+    "name": "B.Tech in Chemical Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Process Design",
+      "Chemical Analysis",
+      "Safety Management"
+    ],
+    "career_paths": [
+      "Chemical Engineer",
+      "Process Designer",
+      "Environmental Consultant"
+    ],
+    "average_salary_range": "4-18 LPA",
+    "future_scope": "High scope in pharmaceuticals, energy, and manufacturing industries",
+    "tags": [
+      "chemical",
+      "process",
+      "safety"
+    ]
+  },
+  {
+    "id": "eng008",
+    "name": "B.Tech in Environmental Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Water Treatment",
+      "Waste Management",
+      "Environmental Policy"
+    ],
+    "career_paths": [
+      "Environmental Engineer",
+      "Sustainability Analyst",
+      "Consultant"
+    ],
+    "average_salary_range": "3-12 LPA",
+    "future_scope": "Rising demand for sustainable development and environmental conservation",
+    "tags": [
+      "environment",
+      "sustainability",
+      "consulting"
+    ]
+  },
+  {
+    "id": "eng009",
+    "name": "B.Tech in Industrial Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Operations Research",
+      "Process Optimization",
+      "Data Analysis"
+    ],
+    "career_paths": [
+      "Industrial Engineer",
+      "Operations Manager",
+      "Efficiency Consultant"
+    ],
+    "average_salary_range": "4-16 LPA",
+    "future_scope": "High demand in manufacturing, logistics, and process optimization industries",
+    "tags": [
+      "industrial",
+      "operations",
+      "efficiency"
+    ]
+  },
+  {
+    "id": "eng010",
+    "name": "B.Tech in Robotics Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Automation",
+      "Control Systems",
+      "Machine Learning"
+    ],
+    "career_paths": [
+      "Robotics Engineer",
+      "AI Specialist",
+      "Automation Consultant"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Growing use of robotics in manufacturing, healthcare, and space exploration",
+    "tags": [
+      "robotics",
+      "automation",
+      "ai"
+    ]
+  },
+  {
+    "id": "eng011",
+    "name": "B.Tech in Biotechnology Engineering",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Biological Systems",
+      "Genetics",
+      "Bioinformatics"
+    ],
+    "career_paths": [
+      "Biotech Engineer",
+      "Research Scientist",
+      "Pharmaceutical Consultant"
+    ],
+    "average_salary_range": "5-22 LPA",
+    "future_scope": "Expanding biotech and healthcare industries with innovations in medicine and agriculture",
+    "tags": [
+      "biotech",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "eng002",
+    "name": "B.Arch (Bachelor of Architecture)",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Creativity",
+      "Design",
+      "Mathematics"
+    ],
+    "career_paths": [
+      "Architect",
+      "Urban Planner",
+      "Interior Designer"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "sci001",
+    "name": "BSc in Biotechnology",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Research Scientist",
+      "Geneticist",
+      "Pharmaceutical Expert"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "hea005",
+    "name": "M Science in Marketing",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "hea006",
+    "name": "B Science in Nutrition",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "sci007",
+    "name": "B Arts in Computer Science",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "4-12 LPA",
+    "future_scope": "Innovation in chemical industries and labs",
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "hea009",
+    "name": "B Management in Computer Science",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "sci010",
+    "name": "B Arts in Nutrition",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "eng012",
+    "name": "B Science in Economics",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "eng013",
+    "name": "B Science in Marketing",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "hea014",
+    "name": "M Science in Physics",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "sci015",
+    "name": "M Engineering in Biotechnology",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Research Scientist",
+      "Geneticist",
+      "Pharmaceutical Expert"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "sci018",
+    "name": "M Management in Economics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "sci021",
+    "name": "B Engineering in Design",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "sci023",
+    "name": "M Science in Physics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "4-12 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "sci028",
+    "name": "B Engineering in Physics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Innovation in chemical industries and labs",
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "hea032",
+    "name": "M Technology in Economics",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "3-8 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "hea033",
+    "name": "M Management in Marketing",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Growing need for emergency and critical care services",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "eng034",
+    "name": "M Arts in Marketing",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "hea035",
+    "name": "B Management in Computer Science",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Paramedic",
+      "Emergency Medical Technician",
+      "Critical Care Nurse"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "hea036",
+    "name": "B Engineering in Physics",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Paramedic",
+      "Emergency Medical Technician",
+      "Critical Care Nurse"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "eng038",
+    "name": "B Arts in Biotechnology",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Architect",
+      "Urban Planner",
+      "Interior Designer"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "hea040",
+    "name": "M Engineering in Design",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "eng042",
+    "name": "M Science in Design",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Network Engineer",
+      "Cybersecurity Analyst",
+      "System Architect"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "hea045",
+    "name": "B Management in Economics",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "3-8 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "hea046",
+    "name": "M Arts in Computer Science",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "eng053",
+    "name": "B Arts in Physics",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Network Engineer",
+      "Cybersecurity Analyst",
+      "System Architect"
+    ],
+    "average_salary_range": "7-30 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "hea055",
+    "name": "B Technology in Nutrition",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Paramedic",
+      "Emergency Medical Technician",
+      "Critical Care Nurse"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Growing need for emergency and critical care services",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "eng056",
+    "name": "B Management in Biotechnology",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Network Engineer",
+      "Cybersecurity Analyst",
+      "System Architect"
+    ],
+    "average_salary_range": "7-30 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "eng057",
+    "name": "B Arts in Economics",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "7-30 LPA",
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "sci061",
+    "name": "B Technology in Economics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "eng065",
+    "name": "M Management in Marketing",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "hea067",
+    "name": "B Engineering in Computer Science",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "sci068",
+    "name": "M Engineering in Computer Science",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "sci070",
+    "name": "B Science in Physics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Physics",
+      "Mathematical Modeling",
+      "Research"
+    ],
+    "career_paths": [
+      "Research Scientist",
+      "Geneticist",
+      "Pharmaceutical Expert"
+    ],
+    "average_salary_range": "4-12 LPA",
+    "future_scope": "Innovation in chemical industries and labs",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "eng071",
+    "name": "B Science in Economics",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "career_paths": [
+      "Architect",
+      "Urban Planner",
+      "Interior Designer"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "eng073",
+    "name": "M Science in Economics",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "eng075",
+    "name": "B Science in Biotechnology",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "7-30 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "hea076",
+    "name": "B Arts in Nutrition",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Growing need for emergency and critical care services",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "sci077",
+    "name": "B Technology in Computer Science",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "eng079",
+    "name": "M Science in Computer Science",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Design",
+      "Critical Thinking",
+      "Physics"
+    ],
+    "career_paths": [
+      "Network Engineer",
+      "Cybersecurity Analyst",
+      "System Architect"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "sci080",
+    "name": "B Engineering in Nutrition",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Physics",
+      "Mathematical Modeling",
+      "Research"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "5-20 LPA",
+    "future_scope": "Innovation in chemical industries and labs",
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "hea081",
+    "name": "B Science in Computer Science",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "sci082",
+    "name": "M Management in Design",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Physics",
+      "Mathematical Modeling",
+      "Research"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "hea083",
+    "name": "B Management in Physics",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "3-8 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "eng084",
+    "name": "M Technology in Biotechnology",
+    "category": "Engineering",
+    "duration": "5 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "career_paths": [
+      "Architect",
+      "Urban Planner",
+      "Interior Designer"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "sci086",
+    "name": "M Technology in Physics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Research Scientist",
+      "Geneticist",
+      "Pharmaceutical Expert"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Innovation in chemical industries and labs",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "hea088",
+    "name": "M Management in Economics",
+    "category": "Healthcare",
+    "duration": "3 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Emergency Response",
+      "Critical Thinking",
+      "First Aid"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "sci090",
+    "name": "M Technology in Economics",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "sci091",
+    "name": "M Arts in Biotechnology",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Physicist",
+      "Aerospace Engineer",
+      "Data Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "High demand in aerospace and advanced technologies",
+    "tags": [
+      "chemistry",
+      "labs",
+      "analysis"
+    ]
+  },
+  {
+    "id": "hea094",
+    "name": "B Technology in Economics",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "career_paths": [
+      "Paramedic",
+      "Emergency Medical Technician",
+      "Critical Care Nurse"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "emergency",
+      "firstaid",
+      "critical"
+    ]
+  },
+  {
+    "id": "eng097",
+    "name": "B Technology in Nutrition",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "High demand in IT, AI, and Cloud Computing",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "hea098",
+    "name": "B Management in Nutrition",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Physiotherapist",
+      "Sports Therapist",
+      "Rehabilitation Specialist"
+    ],
+    "average_salary_range": "3-10 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "hea100",
+    "name": "M Technology in Biotechnology",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "career_paths": [
+      "Dietician",
+      "Health Coach",
+      "Nutrition Consultant"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Awareness of lifestyle diseases and preventive care",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "sci101",
+    "name": "B Technology in Computer Science",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Chemistry",
+      "Experimentation",
+      "Observation"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "4-12 LPA",
+    "future_scope": "Rapid growth in healthcare and research industries",
+    "tags": [
+      "physics",
+      "aerospace",
+      "modeling"
+    ]
+  },
+  {
+    "id": "sci102",
+    "name": "B Arts in Nutrition",
+    "category": "Science",
+    "duration": "3 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Lab Work",
+      "Biology",
+      "Critical Thinking"
+    ],
+    "career_paths": [
+      "Chemist",
+      "Lab Technician",
+      "Quality Analyst"
+    ],
+    "average_salary_range": "6-25 LPA",
+    "future_scope": "Innovation in chemical industries and labs",
+    "tags": [
+      "biology",
+      "genetics",
+      "research"
+    ]
+  },
+  {
+    "id": "eng103",
+    "name": "B Engineering in Economics",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "7-30 LPA",
+    "future_scope": "Cybersecurity and networking opportunities expanding",
+    "tags": [
+      "tech",
+      "cs",
+      "ai"
+    ]
+  },
+  {
+    "id": "hea104",
+    "name": "B Technology in Computer Science",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Nutrition",
+      "Health Awareness",
+      "Communication"
+    ],
+    "career_paths": [
+      "Paramedic",
+      "Emergency Medical Technician",
+      "Critical Care Nurse"
+    ],
+    "average_salary_range": "3-8 LPA",
+    "future_scope": "Rising demand due to aging population and sports injuries",
+    "tags": [
+      "nutrition",
+      "wellness",
+      "health"
+    ]
+  },
+  {
+    "id": "hea105",
+    "name": "M Science in Nutrition",
+    "category": "Healthcare",
+    "duration": "4 years",
+    "difficulty_level": "Medium",
+    "skills_required": [
+      "Anatomy Knowledge",
+      "Patient Care",
+      "Rehabilitation"
+    ],
+    "career_paths": [
+      "Paramedic",
+      "Emergency Medical Technician",
+      "Critical Care Nurse"
+    ],
+    "average_salary_range": "4-15 LPA",
+    "future_scope": "Growing need for emergency and critical care services",
+    "tags": [
+      "healthcare",
+      "rehabilitation",
+      "fitness"
+    ]
+  },
+  {
+    "id": "eng108",
+    "name": "M Management in Computer Science",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "career_paths": [
+      "Architect",
+      "Urban Planner",
+      "Interior Designer"
+    ],
+    "average_salary_range": "5-25 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "eng109",
+    "name": "B Arts in Nutrition",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Math",
+      "Problem-Solving",
+      "Programming"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "8-40 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "design",
+      "architecture",
+      "planning"
+    ]
+  },
+  {
+    "id": "eng110",
+    "name": "B Arts in Nutrition",
+    "category": "Engineering",
+    "duration": "4 years",
+    "difficulty_level": "High",
+    "skills_required": [
+      "Analytical Skills",
+      "Electronics",
+      "Software Tools"
+    ],
+    "career_paths": [
+      "Software Engineer",
+      "Data Scientist",
+      "AI Researcher"
+    ],
+    "average_salary_range": "7-30 LPA",
+    "future_scope": "Growing urban development and infrastructure projects",
+    "tags": [
+      "networking",
+      "security",
+      "infrastructure"
+    ]
+  }
+]
