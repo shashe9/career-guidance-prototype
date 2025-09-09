@@ -7,6 +7,9 @@
 
   <!-- styles only - you will create style.css -->
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet" />
+
   <!-- no script tag here by request; you'll add script.js separately -->
 </head>
 <body>
@@ -239,10 +242,167 @@
   <!-- ===========================
      DASHBOARD PLACEHOLDER
      =========================== -->
-  <div id="dashboardShell" class="hidden">
-    <h1>Welcome to your dashboard!</h1>
-    <p>This will be replaced with real content later.</p>
+  <!-- ===========================
+     DASHBOARD SHELL
+     =========================== -->
+  <div id="db-shell" class="hidden">
+    
+  
+
+    <!-- main app layout -->
+    <div class="db-app-shell">
+      
+      <!-- sidebar -->
+      <aside class="db-sidebar">
+        <div class="db-sidebar-top">
+          <div class="db-brand">
+            <img src="https://placehold.co/44x44/800000/ffffff?text=S" alt="Logo" class="db-brand-logo">
+            <h1 class="db-brand-title">StudentPath AI</h1>
+          </div>
+          <div class="db-profile-mini">
+            <img src="https://placehold.co/48x48/ffffff/111111?text=U" alt="User Avatar" class="db-avatar">
+            <div class="db-profile-info">
+              <span id="db-profile-name">Alex Doe</span>
+              <span id="db-profile-status">Undergraduate Aspirant</span>
+            </div>
+          </div>
+          <nav class="db-nav">
+            <ul>
+              <li><a href="#" class="db-nav-link active"><i class="ph-bold ph-gauge"></i> Dashboard</a></li>
+              <li><a href="#db-ai" class="db-nav-link"><i class="ph-bold ph-brain"></i> AI Assistant</a></li>
+              <li><a href="#db-colleges" class="db-nav-link"><i class="ph-bold ph-buildings"></i> Colleges</a></li>
+              <li><a href="#db-scholarships" class="db-nav-link"><i class="ph-bold ph-student"></i> Scholarships</a></li>
+              <li><a href="#db-info" class="db-nav-link"><i class="ph-bold ph-info"></i> Info Hub</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="db-sidebar-bottom">
+          <button class="db-icon-btn"><i class="ph ph-gear"></i></button>
+          <button class="db-icon-btn" onclick="logout()"><i class="ph ph-log-out"></i></button>
+
+        </div>
+      </aside>
+
+      <!-- main content -->
+      <main class="db-main-content">
+        
+        <!-- top bar -->
+        <div class="db-topbar">
+          <div class="db-topbar-left">
+            <h2>Hello, <span id="db-user-firstname">Alex</span>!</h2>
+          </div>
+          <div class="db-topbar-right">
+            <button class="db-icon-btn"><i class="ph ph-bell"></i></button>
+          </div>
+        </div>
+
+        <!-- dashboard grid -->
+        <div class="db-page-grid">
+          
+          <div class="db-dashboard-column">
+            
+            <!-- welcome card -->
+            <div class="db-card db-welcome-card">
+              <h2>Your Journey Starts Here</h2>
+              <p class="db-extra-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio maiores laborum aut nesciunt!</p>
+              <p class="db-extra-info db-text-muted">Complete your assessments and explore opportunities tailored just for you.</p>
+            </div>
+
+            <!-- dashboard cards -->
+            <div class="db-dashboard-cards-grid">
+              
+              <div id="db-card-quiz" class="db-dash-card db-card">
+                <div class="db-info-symbol">
+                  <i id="db-proper-symbol" class="db-dash-card-icon ph-bold ph-list-checks"></i>
+                  <i class="bx bx-info-circle"></i>
+                </div>
+                <div class="db-card-content-wrapper">
+                  <h3>Career Aptitude Quiz</h3>
+                  <p class="db-text-muted">Your progress on the initial assessment.</p>
+                  <div class="db-progress-bar">
+                    <div id="db-quiz-progress" class="db-progress-fill" style="width: 25%;"></div>
+                  </div>
+                  <a href="#db-ai" class="db-btn db-small db-outline">Continue with AI</a>
+                </div>
+                <div class="db-hidden-info">
+                  <p>AI assisted quizzes for better analysis of your career choice for a better recommendation.</p>
+                </div>
+              </div>
+
+              <!-- Career Aptitude Quiz Modal -->
+              <div id="career-quiz-modal" class="hidden db-quiz-modal">
+                <div class="db-card">
+                  <h2>Career Aptitude Quiz</h2>
+                  <div id="quiz-container"></div>
+                  <button id="quiz-next-btn" class="db-btn">Next</button>
+                  <button id="quiz-submit-btn" class="db-btn hidden">Submit</button>
+                </div>
+              </div>
+
+            
+              <div id="db-card-colleges" class="db-dash-card db-card">
+                <div class="db-info-symbol">
+                  <i class="db-dash-card-icon ph-bold ph-buildings" style="color: #a65b4a;"></i>
+                  <i class="bx bx-info-circle"></i>
+                </div>
+                <div class="db-card-content-wrapper">
+                  <h3>Nearby Colleges</h3>
+                  <p class="db-text-muted">Discover top-rated colleges and universities in your area.</p>
+                  <a href="#db-colleges" class="db-btn db-small">Explore Colleges</a>
+                </div>
+                <div class="db-hidden-info">
+                  <p>Get details about nearby colleges based on your profile.</p>
+                </div>
+              </div>
+            
+              <div id="db-card-scholarships" class="db-dash-card db-card">
+                <div class="db-info-symbol">
+                  <i class="db-dash-card-icon ph-bold ph-student" style="color: #7a3b2b;"></i>
+                  <i class="bx bx-info-circle"></i>
+                </div>
+                <div class="db-card-content-wrapper">
+                  <h3>Find Scholarships</h3>
+                  <p class="db-text-muted">Access a database of scholarships to fund your education.</p>
+                  <a href="#db-scholarships" class="db-btn db-small">Search Now</a>
+                </div>
+                <div class="db-hidden-info">
+                  <p>Find scholarships tailored to your academic achievements and interests.</p>
+                </div>
+              </div>
+            
+              <div id="db-card-info" class="db-dash-card db-card">
+                <div class="db-info-symbol">
+                  <i class="db-dash-card-icon ph-bold ph-info" style="color: #4b1f1f;"></i>
+                  <i class="bx bx-info-circle"></i>
+                </div>
+                <div class="db-card-content-wrapper">
+                  <h3>Information Hub</h3>
+                  <p class="db-text-muted">Get guidance on applications, interviews, and more.</p>
+                  <a href="#db-info" class="db-btn db-small">Learn More</a>
+                </div>
+                <div class="db-hidden-info">
+                  <p>Access articles and guides to help with your career planning.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- insights card -->
+            <div class="db-card db-user-insights-card">
+              <div class="db-insight-icon">
+                <i class="ph-bold ph-user-focus"></i>
+              </div>
+              <div class="db-insight-text">
+                <h3>Your Profile Insights</h3>
+                <p class="db-text-muted">Complete the quiz to unlock personalized insights based on your answers. The AI will analyze your strengths and suggest a path for you.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
   </div>
+
 
 
 

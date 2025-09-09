@@ -370,7 +370,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // success -> navigate or close
         try {
-          window.location.href = "dashboard.html";
+          // Hide landing + signup
+            document.getElementById("landing-container").classList.add("hidden");
+            document.getElementById("signup-modal").classList.add("hidden");
+
+            // Show dashboard
+            document.getElementById("db-shell").classList.remove("hidden");
+
+            // Save session so refresh keeps user in dashboard
+            saveSession(userData); // whatever you’re calling the session save
+
         } catch (e) {
           closeWizardOverlay();
           alert("Profile saved. Redirect to dashboard failed; wizard closed.");
@@ -433,7 +442,14 @@ document.addEventListener("DOMContentLoaded", () => {
           const profJson = await safeJSON(profResp);
           if (profJson && profJson.profile && Object.keys(profJson.profile).length > 0) {
             // profile exists -> redirect to dashboard
-            window.location.href = "dashboard.html";
+            document.getElementById("landing-container").classList.add("hidden");
+            document.getElementById("signup-modal").classList.add("hidden");
+
+            // Show dashboard
+            document.getElementById("db-shell").classList.remove("hidden");
+
+            // Save session so refresh keeps user in dashboard
+            saveSession(userData); // whatever you’re calling the session save
             return;
           }
         }
@@ -471,7 +487,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // store profile optionally in localStorage if you want
         localStorage.setItem("cg_profile", JSON.stringify(profile));
         // go to dashboard
-        window.location.href = "dashboard.html";
+        document.getElementById("landing-container").classList.add("hidden");
+        document.getElementById("signup-modal").classList.add("hidden");
+
+        // Show dashboard
+        document.getElementById("db-shell").classList.remove("hidden");
+
+        // Save session so refresh keeps user in dashboard
+        saveSession(userData); // whatever you’re calling the session save
       } catch (err) {
         console.error("Test login error", err);
         alert("Network error during test login.");
@@ -497,3 +520,151 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------------
+//dashboard utilities
+//=========================================
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const session = getSession(); // your own function that checks localStorage/cookies
+
+  if (session) {
+    // Already logged in
+    document.getElementById("landing-container").classList.add("hidden");
+    document.getElementById("signup-modal").classList.add("hidden");
+    document.getElementById("db-shell").classList.remove("hidden");
+
+    // (optional) update profile info in dashboard
+    document.getElementById("db-profile-name").textContent = session.full_name;
+    document.getElementById("db-user-firstname").textContent = session.full_name.split(" ")[0];
+  } else {
+    // Not logged in → show landing
+    document.getElementById("landing-container").classList.remove("hidden");
+    document.getElementById("db-shell").classList.add("hidden");
+  }
+});
+
+
+function logout() {
+  localStorage.removeItem("session");
+  document.getElementById("db-shell").classList.add("hidden");
+  document.getElementById("landing-container").classList.remove("hidden");
+}
+
+
+
+
+
+
+//Quiz===========================================================================
+//===============================================================================
+
+// Open quiz modal when user clicks the quiz card button
+document.getElementById("db-card-quiz").addEventListener("click", () => {
+  document.getElementById("career-quiz-modal").classList.remove("hidden");
+  currentQuestion = 0;  // reset quiz if reopened
+  answers = {};
+  loadQuestion(currentQuestion);
+});
+
+// Optional: close modal when clicking outside
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("career-quiz-modal");
+  if (!modal.classList.contains("hidden") && e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
+
+
+const quizData = [
+  {
+    id: "q1",
+    question: "Which subject excites you the most?",
+    options: ["Physics", "Biology", "Mathematics", "Arts", "Commerce", "Computer Science"]
+  },
+  {
+    id: "q2",
+    question: "Which type of work appeals to you?",
+    options: ["Helping People", "Building Technology", "Doing Research", "Creative Arts", "Business/Commerce"]
+  },
+  {
+    id: "q3",
+    question: "Rate your Analytical Skills (1-5)",
+    options: ["1", "2", "3", "4", "5"]
+  },
+  {
+    id: "q4",
+    question: "What is more important for you?",
+    options: ["High Salary Early", "Job Security", "Long-Term Growth", "Work-Life Balance"]
+  },
+  {
+    id: "q5",
+    question: "Do you want to study outside Jammu & Kashmir?",
+    options: ["Yes", "No"]
+  }
+];
+
+let currentQuestion = 0;
+const answers = {};
+
+const quizContainer = document.getElementById("quiz-container");
+const nextBtn = document.getElementById("quiz-next-btn");
+const submitBtn = document.getElementById("quiz-submit-btn");
+
+function loadQuestion(index) {
+  const q = quizData[index];
+  quizContainer.innerHTML = `
+    <h3>${q.question}</h3>
+    ${q.options.map(opt => `
+      <label>
+        <input type="radio" name="${q.id}" value="${opt}" required> ${opt}
+      </label><br>
+    `).join("")}
+  `;
+}
+
+nextBtn.addEventListener("click", () => {
+  const selected = document.querySelector(`input[name="${quizData[currentQuestion].id}"]:checked`);
+  if (!selected) return alert("Please select an option");
+  answers[quizData[currentQuestion].id] = selected.value;
+  
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion(currentQuestion);
+  } else {
+    nextBtn.classList.add("hidden");
+    submitBtn.classList.remove("hidden");
+  }
+});
+
+submitBtn.addEventListener("click", () => {
+  // 🔹 Save to Firestore (example)
+  const userId = localStorage.getItem("userId");
+  // db.collection("users").doc(userId).collection("quizResults").doc("careerAptitude").set(answers);
+
+  console.log("Quiz submitted:", answers);
+  alert("Quiz submitted successfully!");
+
+  document.getElementById("career-quiz-modal").classList.add("hidden");
+});
+
+// Load first question
+loadQuestion(currentQuestion);
