@@ -28,8 +28,19 @@ if not FIREBASE_WEB_API_KEY:
     logger.warning("FIREBASE_WEB_API_KEY not set in .env — login via password will fail until set.")
 
 # ---------- Initialize Flask & CORS ----------
+# ---------- Initialize Flask & CORS ----------
 app = Flask(__name__)
-CORS(app)
+
+# Read allowed origins from env (comma-separated). Default "*" for dev.
+_allowed = os.getenv("ALLOWED_ORIGINS", "*")
+if _allowed and _allowed != "*":
+    origins = [o.strip() for o in _allowed.split(",") if o.strip()]
+else:
+    origins = "*"  # Careful: "*" allows ALL origins; tighten in production.
+
+# allow credentials (cookies/Authorization) and explicit headers
+CORS(app, origins=origins, supports_credentials=True)
+app.config['CORS_HEADERS'] = 'Content-Type,Authorization'
 
 # ---------- Initialize Firebase Admin ----------
 try:
