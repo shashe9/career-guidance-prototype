@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------------------------
      Config
      --------------------------- */
-  const API_BASE = "http://127.0.0.1:5000"; // backend base URL
+  const API_BASE = "https://career-guidance-prototype-r1ot.onrender.com/"; // backend base URL
 
   /* ---------------------------
      Session helpers (prototype)
