@@ -558,9 +558,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       headers: getAuthHeaders()
     });
     const j = await resp.json();
+    console.log("Profile response:", j);
 
     if (resp.ok && j.profile) {
-      const fullName = j.profile.full_name || "User";
+      const fullName = j.profile.full_name || j.profile.name || j.profile.email ||"User";
 
       // Hide landing, show dashboard
       document.getElementById("landing-container").classList.add("hidden");
