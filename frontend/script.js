@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------------------------
      Config
      --------------------------- */
-  const API_BASE = "https://career-guidance-prototype-r1ot.onrender.com/"; // backend base URL
+  const API_BASE = "https://career-guidance-prototype-r1ot.onrender.com"; // backend base URL
 
   /* ---------------------------
      Session helpers (prototype)
@@ -543,24 +543,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const session = getSession(); // your own function that checks localStorage/cookies
-
-  if (session) {
-    // Already logged in
-    document.getElementById("landing-container").classList.add("hidden");
-    document.getElementById("signup-modal").classList.add("hidden");
-    document.getElementById("db-shell").classList.remove("hidden");
-
-    // (optional) update profile info in dashboard
-    document.getElementById("db-profile-name").textContent = session.full_name;
-    document.getElementById("db-user-firstname").textContent = session.full_name.split(" ")[0];
-  } else {
+document.addEventListener("DOMContentLoaded", async () => {
+  const userId = getUserId();
+  if (!userId) {
     // Not logged in → show landing
     document.getElementById("landing-container").classList.remove("hidden");
     document.getElementById("db-shell").classList.add("hidden");
+    return;
+  }
+
+  try {
+    // fetch profile from backend
+    const resp = await fetch(`${API_BASE}/profile?user_id=${encodeURIComponent(userId)}`, {
+      headers: getAuthHeaders()
+    });
+    const j = await resp.json();
+
+    if (resp.ok && j.profile) {
+      const fullName = j.profile.full_name || "User";
+
+      // Hide landing, show dashboard
+      document.getElementById("landing-container").classList.add("hidden");
+      document.getElementById("signup-modal").classList.add("hidden");
+      document.getElementById("db-shell").classList.remove("hidden");
+
+      // Update dashboard name
+      document.getElementById("db-profile-name").textContent = fullName;
+      document.getElementById("db-user-firstname").textContent = fullName.split(" ")[0];
+    }
+  } catch (err) {
+    console.error("Error fetching profile for dashboard:", err);
   }
 });
+
 
 
 function logout() {
