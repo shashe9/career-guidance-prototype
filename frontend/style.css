@@ -606,3 +606,50 @@ input,select,textarea,button{touch-action:manipulation}
 
 
 
+/*Career Aptitude quiz*/
+/*===========================================================================*/
+/*===========================================================================*/
+
+/* Career Quiz Modal (reuses intro quiz styles) */
+#career-quiz-modal.db-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--overlay-backdrop);
+  z-index: 2000;
+  padding: clamp(14px, 3vw, 40px);
+}
+
+#career-quiz-modal .db-modal-content {
+  width: 100%;
+  max-width: 600px;
+  background: var(--db-panel-2);
+  border-radius: var(--db-radius);
+  padding: 22px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.65);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: var(--white);
+  position: relative;
+}
+
+#career-quiz-modal .db-icon-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.1rem;
+}
+
+#career-quiz-modal .quiz-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 18px;
+}
+
+#career-quiz-modal .db-quiz-form h3 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #e9ded6;
+}

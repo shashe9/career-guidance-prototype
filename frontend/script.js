@@ -592,16 +592,22 @@ function logout() {
 
 //Quiz===========================================================================
 //===============================================================================
-
-// Open quiz modal when user clicks the quiz card button
-document.getElementById("db-card-quiz").addEventListener("click", () => {
+// Open quiz modal
+document.querySelector("#db-card-quiz .db-btn").addEventListener("click", (e) => {
+  e.preventDefault();
   document.getElementById("career-quiz-modal").classList.remove("hidden");
-  currentQuestion = 0;  // reset quiz if reopened
-  answers = {};
+  currentQuestion = 0;
+  for (const key in answers) delete answers[key]; // reset
   loadQuestion(currentQuestion);
+  updateProgress();
 });
 
-// Optional: close modal when clicking outside
+// Close quiz modal
+document.getElementById("quiz-close-btn").addEventListener("click", () => {
+  document.getElementById("career-quiz-modal").classList.add("hidden");
+});
+
+// Click outside closes modal
 document.addEventListener("click", (e) => {
   const modal = document.getElementById("career-quiz-modal");
   if (!modal.classList.contains("hidden") && e.target === modal) {
@@ -609,33 +615,12 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 const quizData = [
-  {
-    id: "q1",
-    question: "Which subject excites you the most?",
-    options: ["Physics", "Biology", "Mathematics", "Arts", "Commerce", "Computer Science"]
-  },
-  {
-    id: "q2",
-    question: "Which type of work appeals to you?",
-    options: ["Helping People", "Building Technology", "Doing Research", "Creative Arts", "Business/Commerce"]
-  },
-  {
-    id: "q3",
-    question: "Rate your Analytical Skills (1-5)",
-    options: ["1", "2", "3", "4", "5"]
-  },
-  {
-    id: "q4",
-    question: "What is more important for you?",
-    options: ["High Salary Early", "Job Security", "Long-Term Growth", "Work-Life Balance"]
-  },
-  {
-    id: "q5",
-    question: "Do you want to study outside Jammu & Kashmir?",
-    options: ["Yes", "No"]
-  }
+  { id: "q1", question: "Which subject excites you the most?", options: ["Physics","Biology","Mathematics","Arts","Commerce","Computer Science"] },
+  { id: "q2", question: "Which type of work appeals to you?", options: ["Helping People","Building Technology","Doing Research","Creative Arts","Business/Commerce"] },
+  { id: "q3", question: "Rate your Analytical Skills (1-5)", options: ["1","2","3","4","5"] },
+  { id: "q4", question: "What is more important for you?", options: ["High Salary Early","Job Security","Long-Term Growth","Work-Life Balance"] },
+  { id: "q5", question: "Do you want to study outside Jammu & Kashmir?", options: ["Yes","No"] }
 ];
 
 let currentQuestion = 0;
@@ -644,25 +629,35 @@ const answers = {};
 const quizContainer = document.getElementById("quiz-container");
 const nextBtn = document.getElementById("quiz-next-btn");
 const submitBtn = document.getElementById("quiz-submit-btn");
+const progressFill = document.getElementById("db-quiz-progress");
 
 function loadQuestion(index) {
   const q = quizData[index];
   quizContainer.innerHTML = `
     <h3>${q.question}</h3>
-    ${q.options.map(opt => `
-      <label>
-        <input type="radio" name="${q.id}" value="${opt}" required> ${opt}
-      </label><br>
-    `).join("")}
+    <div class="db-quiz-options">
+      ${q.options.map(opt => `
+        <label>
+          <input type="radio" name="${q.id}" value="${opt}"> ${opt}
+        </label>
+      `).join("")}
+    </div>
   `;
+}
+
+function updateProgress() {
+  const percent = Math.round((Object.keys(answers).length / quizData.length) * 100);
+  progressFill.style.width = percent + "%";
 }
 
 nextBtn.addEventListener("click", () => {
   const selected = document.querySelector(`input[name="${quizData[currentQuestion].id}"]:checked`);
   if (!selected) return alert("Please select an option");
   answers[quizData[currentQuestion].id] = selected.value;
-  
+
   currentQuestion++;
+  updateProgress();
+
   if (currentQuestion < quizData.length) {
     loadQuestion(currentQuestion);
   } else {
@@ -672,15 +667,11 @@ nextBtn.addEventListener("click", () => {
 });
 
 submitBtn.addEventListener("click", () => {
-  // 🔹 Save to Firestore (example)
-  const userId = localStorage.getItem("userId");
-  // db.collection("users").doc(userId).collection("quizResults").doc("careerAptitude").set(answers);
-
   console.log("Quiz submitted:", answers);
   alert("Quiz submitted successfully!");
 
+  // Final progress 100%
+  progressFill.style.width = "100%";
+
   document.getElementById("career-quiz-modal").classList.add("hidden");
 });
-
-// Load first question
-loadQuestion(currentQuestion);

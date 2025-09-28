@@ -330,12 +330,16 @@
               </div>
 
               <!-- Career Aptitude Quiz Modal -->
-              <div id="career-quiz-modal" class="hidden db-quiz-modal">
-                <div class="db-card">
+              <div id="career-quiz-modal" class="db-modal-overlay hidden">
+                <div class="db-modal-content">
+                  <button id="quiz-close-btn" class="db-icon-btn" aria-label="Close quiz">✕</button>
                   <h2>Career Aptitude Quiz</h2>
-                  <div id="quiz-container"></div>
-                  <button id="quiz-next-btn" class="db-btn">Next</button>
-                  <button id="quiz-submit-btn" class="db-btn hidden">Submit</button>
+                  <div id="quiz-container" class="db-quiz-form"></div>
+
+                  <div class="quiz-actions">
+                    <button id="quiz-next-btn" class="db-btn">Next</button>
+                    <button id="quiz-submit-btn" class="db-btn hidden">Submit</button>
+                  </div>
                 </div>
               </div>
 
