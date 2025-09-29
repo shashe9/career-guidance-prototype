@@ -675,3 +675,260 @@ submitBtn.addEventListener("click", () => {
 
   document.getElementById("career-quiz-modal").classList.add("hidden");
 });
+
+
+
+
+
+
+
+//timeline============================================================================//
+//====================================================================================//
+//====================================================================================//
+//====================================================================================//
+
+/* ---------------------------
+   Career Roadmap — frontend helpers
+   --------------------------- */
+
+function renderTimelineInModal(timelineObj) {
+  const statusEl = document.getElementById("timeline-status");
+  const container = document.getElementById("timeline-container");
+  container.innerHTML = "";
+
+  if (!timelineObj || !timelineObj.steps || timelineObj.steps.length === 0) {
+    statusEl.textContent = "No recommendations available. Try 'Regenerate' or complete the introductory quiz.";
+    return;
+  }
+
+  // Header
+  if (timelineObj.generated_at) {
+    try {
+      statusEl.textContent = `Generated: ${new Date(timelineObj.generated_at).toLocaleString()} · Source: ${timelineObj.source || 'auto'}`;
+    } catch (e) {
+      statusEl.textContent = "";
+    }
+  } else {
+    statusEl.textContent = "";
+  }
+
+  timelineObj.steps.forEach((s, idx) => {
+    const node = document.createElement("div");
+    node.className = "timeline-node";
+    node.innerHTML = `
+      <div class="node-header">
+        <h3>${s.title || `Step ${idx+1}`}</h3>
+        <span class="node-duration">${s.duration || ""}</span>
+      </div>
+      <p>${s.description || ""}</p>
+      <div class="node-tips"><strong>Tips:</strong>
+        <ul style="margin:.3rem 0 0; padding-left:1.05rem;">
+          ${(s.tips || []).map(t => `<li>${t}</li>`).join("")}
+        </ul>
+      </div>
+    `;
+    container.appendChild(node);
+  });
+}
+
+// open modal and request timeline
+async function openCareerRoadmapModal(regenerate=false) {
+  const modal = document.getElementById("career-timeline-modal");
+  const statusEl = document.getElementById("timeline-status");
+  openModal(modal);
+  statusEl.textContent = "Loading recommendations...";
+
+  const userId = getUserId();
+  if (!userId) {
+    statusEl.textContent = "You must be logged in to view your roadmap.";
+    return;
+  }
+
+  try {
+    const resp = await fetch(`${API_BASE}/generate-timeline`, {
+      method: "POST",
+      headers: getAuthHeaders(),
+      body: JSON.stringify({ user_id: userId, regenerate: regenerate })
+    });
+
+    const j = await safeJSON(resp);
+    if (!resp.ok) {
+      const errMsg = (j && (j.error || j.message)) || `Failed to generate (${resp.status})`;
+      statusEl.textContent = "Error: " + errMsg;
+      console.error("generate-timeline error", j);
+      return;
+    }
+
+    // Response shape: { message, timeline }
+    const timeline = j.timeline || j.timeline?.steps ? j.timeline : (j.timeline || j); // defensive
+    // If timeline is nested as an object with steps -> pass it; if resp is an array, handle that too.
+    if (Array.isArray(timeline)) {
+      renderTimelineInModal({ steps: timeline, generated_at: new Date().toISOString(), source: "server" });
+    } else {
+      renderTimelineInModal(timeline);
+    }
+
+    // When a roadmap exists, mark the quiz progress bar to 100%
+    const progEl = document.getElementById("db-quiz-progress");
+    if (progEl) {
+      progEl.style.width = "100%";
+      progEl.setAttribute("aria-valuenow", "100");
+    }
+
+    statusEl.textContent = ""; // clear
+  } catch (err) {
+    console.error("Timeline request error:", err);
+    statusEl.textContent = "Network error while requesting recommendations.";
+  }
+}
+
+// wire up Access Now link and Regenerate button
+document.addEventListener("DOMContentLoaded", () => {
+  // Access Now — attach to the button inside #db-card-scholarships
+  const accessNow = document.querySelector("#db-card-scholarships .db-btn, #db-card-scholarships a");
+  if (accessNow) {
+    accessNow.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      openCareerRoadmapModal(false);
+    });
+  }
+
+  // Regenerate button inside modal
+  const regenBtn = document.getElementById("timeline-regenerate");
+  if (regenBtn) {
+    regenBtn.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      openCareerRoadmapModal(true);
+    });
+  }
+
+  // Close buttons in modal (close via data-action)
+  document.querySelectorAll('[data-action="close-timeline"]').forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const modal = document.getElementById("career-timeline-modal");
+      if (modal) closeModal(modal);
+    });
+  });
+
+  // Also close when backdrop clicked (optional)
+  const timelineModalWrapper = document.getElementById("career-timeline-modal");
+  if (timelineModalWrapper) {
+    timelineModalWrapper.addEventListener("click", (e) => {
+      if (e.target === timelineModalWrapper) {
+        closeModal(timelineModalWrapper);
+      }
+    });
+  }
+});
+
+
+
+
+//new===================================================================================//
+//======================================================================================//
+
+
+// --- Roadmap logic --- (paste after your other code, inside same script file)
+(function () {
+  // helper to safely get userId
+  function safeGetUserId() {
+    try {
+      if (window._cg_session && typeof window._cg_session.getUserId === "function") {
+        return window._cg_session.getUserId();
+      }
+    } catch (e) {}
+    return localStorage.getItem("cg_user_id") || "";
+  }
+
+  const roadmapModal = document.getElementById("roadmap-modal");
+  const roadmapContent = document.getElementById("roadmap-content");
+  const roadmapStatus = document.getElementById("roadmap-status");
+  const openRoadmapBtn = document.getElementById("open-roadmap");
+  const roadmapClose = document.getElementById("roadmap-close");
+  const roadmapRegenerate = document.getElementById("roadmap-regenerate");
+
+  async function fetchTimeline(userId, force=false) {
+    roadmapStatus.textContent = "Loading roadmap...";
+    const headers = getAuthHeaders();
+    try {
+      const resp = await fetch(`${API_BASE}/generate-timeline`, {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify({ user_id: userId, force: !!force })
+      });
+      const j = await safeJSON(resp);
+      if (!resp.ok) {
+        const err = (j && (j.error || j.message)) || `Request failed (${resp.status})`;
+        throw new Error(err);
+      }
+      roadmapStatus.textContent = "";
+      return j.career_timeline;
+    } catch (err) {
+      console.error("Roadmap fetch error", err);
+      roadmapStatus.textContent = "Failed to load roadmap: " + (err.message || err);
+      return null;
+    }
+  }
+
+  function renderTimeline(tl) {
+    if (!tl || !tl.nodes || !tl.nodes.length) {
+      roadmapContent.innerHTML = `<div class="small db-text-muted">No recommendations yet. Click regenerate to create a plan.</div>`;
+      return;
+    }
+    const nodes = tl.nodes;
+    roadmapContent.innerHTML = nodes.map(n => {
+      const tipsHtml = (n.tips && n.tips.length) ? `<ul class="r-list r-tips">${n.tips.map(t => `<li>${t}</li>`).join("")}</ul>` : "";
+      const collegesHtml = (n.colleges && n.colleges.length) ? `<div class="r-desc"><strong>Colleges:</strong> ${n.colleges.map(c=>`<a href="${c.website||'#'}" target="_blank">${c.name}</a>`).join(", ")}</div>` : "";
+      return `
+        <div class="roadmap-node" data-node-id="${n.id}">
+          <div class="r-title">${n.title}</div>
+          <div class="r-desc">${n.description || ""}</div>
+          ${collegesHtml}
+          ${tipsHtml}
+        </div>
+      `;
+    }).join("");
+  }
+
+  // open modal handler
+  async function openRoadmap(force=false) {
+    const userId = safeGetUserId();
+    if (!userId) {
+      alert("Please login or signup to view your roadmap.");
+      return;
+    }
+    // open modal
+    roadmapModal.classList.remove("hidden");
+    // fetch or get existing timeline
+    const tl = await fetchTimeline(userId, !!force);
+    if (tl) renderTimeline(tl);
+  }
+
+  // wire buttons
+  if (openRoadmapBtn) {
+    openRoadmapBtn.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      openRoadmap(false);
+    });
+  }
+  if (roadmapClose) {
+    roadmapClose.addEventListener("click", () => {
+      roadmapModal.classList.add("hidden");
+    });
+  }
+  if (roadmapRegenerate) {
+    roadmapRegenerate.addEventListener("click", async () => {
+      const userId = safeGetUserId();
+      if (!userId) { alert("Login required."); return; }
+      const tl = await fetchTimeline(userId, true);
+      if (tl) renderTimeline(tl);
+    });
+  }
+
+  // also close when clicking backdrop
+  roadmapModal.addEventListener("click", (ev) => {
+    if (ev.target === roadmapModal) {
+      roadmapModal.classList.add("hidden");
+    }
+  });
+})();

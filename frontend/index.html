@@ -348,14 +348,37 @@
                   <i class="bx bx-info-circle"></i>
                 </div>
                 <div class="db-card-content-wrapper">
-                  <h3>Find Scholarships</h3>
-                  <p class="db-text-muted">Access a database of scholarships to fund your education.</p>
-                  <a href="#db-scholarships" class="db-btn db-small">Search Now</a>
+                  <h3>Career Roadmap</h3>
+                  <p class="db-text-muted">Full College,Courses,Career personalised report</p>
+                  <a href="#" id="open-roadmap" class="db-btn db-small">Access Now</a>
                 </div>
                 <div class="db-hidden-info">
-                  <p>Find scholarships tailored to your academic achievements and interests.</p>
+                  <p>Find Recommendations tailored to your academic achievements and interests.</p>
                 </div>
               </div>
+
+              <!-- Career Roadmap Modal -->
+              <!-- Career Roadmap Modal -->
+              <div id="roadmap-modal" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="roadmap-title" aria-hidden="true">
+                <div class="overlay-modal" role="document" aria-describedby="roadmap-desc">
+                  <button class="modal-close" aria-label="Close roadmap" data-action="close-roadmap">✕</button>
+                  <h2 id="roadmap-title">Career Roadmap</h2>
+                  <p id="roadmap-desc" class="small">Personalized timeline from current studies → course → college → career.</p>
+
+                  <div id="roadmap-status" class="small db-text-muted" style="margin-bottom:8px;"></div>
+
+                  <div id="roadmap-content">
+                    <!-- timeline will be injected here -->
+                  </div>
+
+                  <div style="margin-top:14px;display:flex;gap:10px;justify-content:flex-end;">
+                    <button id="roadmap-regenerate" class="btn secondary">Regenerate</button>
+                    <button id="roadmap-close" class="btn primary">Close</button>
+                  </div>
+                </div>
+              </div>
+
+
             
               <div id="db-card-colleges" class="db-dash-card db-card">
                 <div class="db-info-symbol">
